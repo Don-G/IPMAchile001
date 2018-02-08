@@ -1,0 +1,69 @@
+<ion-nav id="nav" [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+<ion-header>
+
+  <ion-navbar color="stable">
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="page-login">
+   
+  <div>
+    <ion-card>
+      <ion-card-header class="storeCardHeader">
+        <ion-icon name="key"></ion-icon>
+      </ion-card-header>
+
+      <div class="card-header">
+        <ion-row >
+          <ion-col width-100>
+            <span *ngIf="title == 'Login'" >Provide your Name and Email</span>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <ion-card-content *ngIf="title == 'Login'">
+        <ion-row >
+          <ion-col>
+            <ion-list  inset>
+              
+              <ion-item>
+                <ion-input type="text" placeholder="Name" name="name" [(ngModel)]="name" required></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="email" required></ion-input>
+              </ion-item>
+              
+            </ion-list>
+          </ion-col>
+        </ion-row>
+    </ion-card-content>
+
+    <div class="card-footer">
+        <button full (click)="action('sign')">
+          {{buttonTextSig}}
+        </button>
+    </div>
+   </ion-card>
+  </div>
+
+    <ion-card *ngIf="title == 'Login'">
+      <div class="card-header">
+        <ion-row >
+          <ion-col width-100>
+            <span>Or use Facebook to get access</span>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="card-footer">
+          <button full (click)="action('log')">
+            {{buttonText}}
+          </button>
+      </div>
+    </ion-card>
+</ion-content>

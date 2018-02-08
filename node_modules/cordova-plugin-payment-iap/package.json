@@ -1,0 +1,104 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-payment-iap@2.0.52",
+        "scope": null,
+        "escapedName": "cordova-plugin-payment-iap",
+        "name": "cordova-plugin-payment-iap",
+        "rawSpec": "2.0.52",
+        "spec": "2.0.52",
+        "type": "version"
+      },
+      "C:\\Users\\Jair Acevedo\\IONIC_PROJECTS\\Quizionic2Evanto\\Quizionic2\\node_modules"
+    ]
+  ],
+  "_from": "cordova-plugin-payment-iap@2.0.52",
+  "_id": "cordova-plugin-payment-iap@2.0.52",
+  "_inCache": true,
+  "_location": "/cordova-plugin-payment-iap",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-payment-iap-2.0.52.tgz_1471656103371_0.21521962340921164"
+  },
+  "_npmUser": {
+    "name": "cranberrygame",
+    "email": "cranberrygame@yahoo.com"
+  },
+  "_npmVersion": "1.4.28",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-payment-iap@2.0.52",
+    "scope": null,
+    "escapedName": "cordova-plugin-payment-iap",
+    "name": "cordova-plugin-payment-iap",
+    "rawSpec": "2.0.52",
+    "spec": "2.0.52",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-payment-iap/-/cordova-plugin-payment-iap-2.0.52.tgz",
+  "_shasum": "6e68b1aaf7f85c4fbd2c4e4ffabddc9ae46b6fe0",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-payment-iap@2.0.52",
+  "_where": "C:\\Users\\Jair Acevedo\\IONIC_PROJECTS\\Quizionic2Evanto\\Quizionic2\\node_modules",
+  "author": {
+    "name": "cranberrygame"
+  },
+  "bugs": {
+    "url": "https://github.com/cranberrygame/cordova-plugin-payment-iap/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-payment-iap",
+    "platforms": [
+      "android",
+      "ios",
+      "wp8"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova IAP plugin",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "6e68b1aaf7f85c4fbd2c4e4ffabddc9ae46b6fe0",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-payment-iap/-/cordova-plugin-payment-iap-2.0.52.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "gitHead": "74ad074da076983f124bfddec5a9b928f2f3a481",
+  "homepage": "https://github.com/cranberrygame/cordova-plugin-payment-iap#readme",
+  "keywords": [
+    "cordova",
+    "plugin",
+    "payment",
+    "IAP",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-wp8"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "cranberrygame",
+      "email": "cranberrygame@yahoo.com"
+    }
+  ],
+  "name": "cordova-plugin-payment-iap",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cranberrygame/cordova-plugin-payment-iap.git"
+  },
+  "scripts": {},
+  "version": "2.0.52"
+}

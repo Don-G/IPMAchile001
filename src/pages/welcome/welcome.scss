@@ -1,0 +1,18 @@
+welcome {
+
+  div.scroll-content {
+    font-weight: light;
+    background-image: url('../assets/img/background.jpg');
+    background-size: cover;
+  }
+
+  img {
+    margin-bottom: 18px;
+  }
+
+  p {
+    padding: 0 20px;
+    color: map-get($colors, light);
+  }
+
+}

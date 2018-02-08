@@ -1,0 +1,8 @@
+{
+  "name": "ipmachile",
+  "app_id": "a9cb1162",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
