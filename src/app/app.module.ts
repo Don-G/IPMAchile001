@@ -24,6 +24,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { AdMob } from '@ionic-native/admob';
+import { MasInfoPage } from '../pages/mas-info/mas-info';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AdMob } from '@ionic-native/admob';
     StoreListPage,
     LoginPage,
     Pin,
-    PINDetailPage
+    PINDetailPage,
+    MasInfoPage
 
   ],
   imports: [
@@ -60,7 +62,8 @@ import { AdMob } from '@ionic-native/admob';
     StoreListPage,
     LoginPage,
     Pin,
-    PINDetailPage
+    PINDetailPage,
+    MasInfoPage
   ],
   providers: [
     StatusBar, SplashScreen, GoogleAnalytics, Device, AdMob, SQLite, DbService, StoreService, 

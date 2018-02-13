@@ -16,6 +16,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { AdMob } from '@ionic-native/admob';
+import { MasInfoPage } from '../pages/mas-info/mas-info';
 
 
 enableProdMode();
@@ -61,6 +62,7 @@ export class MyApp {
           {title: 'Bienvenido', component: WelcomePage, icon: 'bookmark', paid: 0},
           {title: 'Exámenes', component: ExamListPage, icon: 'cube', paid: 0},
           {title: 'Resultados', component: TrackerListPage, icon: "arrow-graph-up-right", paid: 1},
+          {title: 'Más Info', component: MasInfoPage, icon: "arrow-graph-up-right", paid: 0},
           // {title: 'Tienda', component: StoreListPage, icon: "card", paid: 0},
           // {title: 'PIN', component: Pin, icon: "card", paid: 0}
           // add your custom page here

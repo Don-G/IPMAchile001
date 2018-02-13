@@ -32007,6 +32007,13 @@ page-login img {
   margin-bottom: 18px;
 }
 
+page-mas-info img.level_D {
+  height: 45%;
+  width: 45%;
+  margin-left: 25%;
+  margin-right: 20%;
+}
+
 page-pin div.scroll-content {
   font-weight: light;
   background-image: url("../assets/img/background.jpg");
