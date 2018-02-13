@@ -26,7 +26,6 @@ buildscript {
     repositories {
         mavenCentral()
         jcenter()
-        maven { url "https://maven.google.com" }
     }
 
     dependencies {
@@ -71,7 +70,6 @@ android {
         exclude 'META-INF/DEPENDENCIES'
         exclude 'META-INF/NOTICE'
     }
-    buildToolsVersion '26.0.2'
 }
 
 install {

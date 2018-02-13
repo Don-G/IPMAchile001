@@ -27,7 +27,6 @@ buildscript {
             url 'https://maven.google.com/'
             name 'Google'
         }
-        google()
     }
 
     // Switch the Android Gradle plugin version requirement depending on the
@@ -48,7 +47,6 @@ allprojects {
             url 'https://maven.google.com/'
             name 'Google'
         }
-        google()
     }
 }
 
@@ -58,10 +56,6 @@ task wrapper(type: Wrapper) {
 
 // Configuration properties. Set these via environment variables, build-extras.gradle, or gradle.properties.
 // Refer to: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
-
-// compileSdkVersion 26
-// buildToolsVersion '26.0.2'
-
 ext {
     apply from: 'CordovaLib/cordova.gradle'
     // The value for android.compileSdkVersion.
@@ -257,7 +251,6 @@ android {
     if (cdvDebugSigningPropertiesFile) {
         addSigningProps(cdvDebugSigningPropertiesFile, signingConfigs.debug)
     }
-    buildToolsVersion '26.0.2'
 }
 
 dependencies {
