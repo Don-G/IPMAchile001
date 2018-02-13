@@ -3,7 +3,7 @@
     <button menuToggle>
         <ion-icon name="trackerDetail"></ion-icon>
     </button>
-    <ion-title>Your progress</ion-title>
+    <ion-title>Tu progreso</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -27,8 +27,8 @@
                 <h2 item-left padding >#{{p.index}}</h2>
           <ion-icon *ngIf="p.Passed=='YES'" item-right color="secondary" name="checkmark-circle"></ion-icon>
           <ion-icon *ngIf="p.Passed=='NO'" item-right color="danger" name="close-circle"></ion-icon>
-                <h2>Score: {{p.Scored}}%</h2>
-                <p>Date & Time: {{p.dt_time}}</p>
+                <h2>Puntaje: {{p.Scored}}%</h2>
+                <p>Fecha & Hora: {{p.dt_time}}</p>
         </ion-item>
       </ion-list>
   </div>

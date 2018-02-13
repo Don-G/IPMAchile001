@@ -16,117 +16,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1e404d1-9da2-4eee-88e6-211e158305eb" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/assets/img/BeatingHeart.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/assets/img/Canada_flag_map.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/assets/img/brokers.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/assets/img/cadillac.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/assets/img/favorites.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/assets/img/honda.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/assets/img/house.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/assets/img/lexus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/assets/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/assets/img/q2text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/assets/img/sold.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/assets/img/sqlite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/www/assets/img/toyota.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/assets/fonts/ionicons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/assets/fonts/ionicons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/assets/fonts/ionicons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/assets/fonts/ionicons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/assets/fonts/noto-sans-bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/assets/fonts/noto-sans-bold.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/assets/fonts/noto-sans-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/assets/fonts/noto-sans-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/assets/fonts/noto-sans.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/assets/fonts/roboto-bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/assets/fonts/roboto-light.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/assets/fonts/roboto-medium.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/assets/fonts/roboto-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ios/www/assets/fonts/roboto.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../src/assets/img/BeatingHeart.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../src/assets/img/Canada_flag_map.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../src/assets/img/brokers.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../src/assets/img/cadillac.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../src/assets/img/favorites.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../src/assets/img/honda.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../src/assets/img/house.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../src/assets/img/lexus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../src/assets/img/sold.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../src/assets/img/sqlite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../src/assets/img/toyota.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/outputs/aar/CordovaLib-debug.aar" afterPath="$PROJECT_DIR$/CordovaLib/build/outputs/aar/CordovaLib-debug.aar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/Q2data.db" afterPath="$PROJECT_DIR$/assets/www/Q2data.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/assets/Q2data.db" afterPath="$PROJECT_DIR$/assets/www/assets/Q2data.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/assets/img/titulo_ipma.png" afterPath="$PROJECT_DIR$/assets/www/assets/img/titulo_ipma.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/www/Q2data.db" afterPath="$PROJECT_DIR$/../ios/www/Q2data.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/assets/img/titulo_ipma.png" afterPath="$PROJECT_DIR$/../../src/assets/img/titulo_ipma.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../www/Q2data.db" afterPath="$PROJECT_DIR$/../../www/Q2data.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../www/assets/Q2data.db" afterPath="$PROJECT_DIR$/../../www/assets/Q2data.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.sourcemaps/main.js.map" afterPath="$PROJECT_DIR$/../../.sourcemaps/main.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_runtime_1_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_runtime_1_0_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_animated_vector_drawable_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_animated_vector_drawable_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_appcompat_v7_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_appcompat_v7_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_cardview_v7_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_cardview_v7_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_customtabs_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_customtabs_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_compat_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_compat_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_ui_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_ui_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_utils_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_utils_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_fragment_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_fragment_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_media_compat_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_media_compat_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_vector_drawable_27_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_vector_drawable_27_0_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_android_sdk_4_30_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_android_sdk_4_30_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_applinks_4_30_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_applinks_4_30_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_common_4_30_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_common_4_30_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_core_4_30_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_core_4_30_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_login_4_30_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_login_4_30_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_messenger_4_30_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_messenger_4_30_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_places_4_30_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_places_4_30_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_share_4_30_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_share_4_30_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_lite_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_lite_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_lite_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_lite_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_impl_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_impl_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_impl_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_impl_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_analytics_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gass_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gass_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gass_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_gass_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_v4_impl_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_v4_impl_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_v4_impl_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tagmanager_v4_impl_license_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_11_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_license_11_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_license_11_8_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/CordovaLib.iml" afterPath="$PROJECT_DIR$/CordovaLib/CordovaLib.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build.gradle" afterPath="$PROJECT_DIR$/CordovaLib/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android.iml" afterPath="$PROJECT_DIR$/android.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/build/main.css" afterPath="$PROJECT_DIR$/assets/www/build/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/build/main.js" afterPath="$PROJECT_DIR$/assets/www/build/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/build/main.js.map" afterPath="$PROJECT_DIR$/assets/www/build/main.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/build/vendor.js.map" afterPath="$PROJECT_DIR$/assets/www/build/vendor.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../www/assets/fonts/ionicons.scss" afterPath="$PROJECT_DIR$/../../www/assets/fonts/ionicons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../www/assets/fonts/ionicons.svg" afterPath="$PROJECT_DIR$/../../www/assets/fonts/ionicons.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../www/assets/fonts/noto-sans.scss" afterPath="$PROJECT_DIR$/../../www/assets/fonts/noto-sans.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../www/assets/fonts/roboto.scss" afterPath="$PROJECT_DIR$/../../www/assets/fonts/roboto.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../www/build/main.js" afterPath="$PROJECT_DIR$/../../www/build/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../www/build/main.js.map" afterPath="$PROJECT_DIR$/../../www/build/main.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../www/build/vendor.js.map" afterPath="$PROJECT_DIR$/../../www/build/vendor.js.map" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -2228,7 +2130,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518532258447" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518535241948" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2276,7 +2178,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518532258447" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518535241948" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2459,7 +2361,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518532258449" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518535241951" />
       </method>
     </configuration>
     <list size="1">

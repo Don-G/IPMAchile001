@@ -59,7 +59,7 @@ export class MyApp {
       //set app's pages. paid = 0, option always present in menu, paid = 1, only displayed in full version
       this.pages = [
           {title: 'Bienvenido', component: WelcomePage, icon: 'bookmark', paid: 0},
-          {title: 'Examenes', component: ExamListPage, icon: 'cube', paid: 0},
+          {title: 'Exámenes', component: ExamListPage, icon: 'cube', paid: 0},
           {title: 'Resultados', component: TrackerListPage, icon: "arrow-graph-up-right", paid: 1},
           // {title: 'Tienda', component: StoreListPage, icon: "card", paid: 0},
           // {title: 'PIN', component: Pin, icon: "card", paid: 0}
