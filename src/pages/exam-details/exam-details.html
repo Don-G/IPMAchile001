@@ -14,7 +14,7 @@
           {{time}}
       </ion-item>
       <ion-item id="validate" *ngIf="multiAnswer">
-        <button id="valButton" full (click)="validateAnswer()"> Validate Answer</button>
+        <button id="valButton" full (click)="validateAnswer()"> Validar Respuesta</button>
       </ion-item>
 
   <div *ngIf="question" class="selection" style="position: relative">
@@ -23,13 +23,13 @@
         <div class="card-header">
           <ion-row >
             <ion-col width-35>
-              <span small >Question: {{indexQ}}/{{qty}}</span>
+              <span small >Pregunta: {{indexQ}}/{{qty}}</span>
             </ion-col>
             <ion-col width-25>
               <span>QId: #{{question.Id}}</span>
             </ion-col>
             <ion-col width-45>
-              <span>Explanations left: {{expQty}}</span>
+              <!-- <span>Explanations left: {{expQty}}</span> -->
             </ion-col>
           </ion-row>
         </div>
@@ -42,10 +42,10 @@
             <h2 [innerHTML]="question.Question"></h2>
         </ion-card-content>
 
-        <div class="card-footer">
+        <!-- <div class="card-footer">
           <button *ngIf="ExplaAvailable" full (click)="explanation(question.Id)"> Click here for Explanation/Tip
           </button>
-        </div>
+        </div> -->
 
       <ion-list id="options" class="options">
           <ion-item text-wrap class="item-text-wrap" [ngClass]="{normal: question._f['A']==0, correct: question._f['A']==1, selected: question._f['A']==2, invalid: question._f['A']<0}" id="A" *ngIf="question.A !==''"(click)="clickedRow('A')">
