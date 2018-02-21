@@ -72,12 +72,12 @@
               <ion-icon *ngIf="question._f['D']==1" name="checkmark" item-right color=dark></ion-icon>
               <ion-icon *ngIf="question._f['D']<0" name="close" item-right color=dark></ion-icon>
           </ion-item>
-          <ion-item text-wrap class="item-text-wrap" [ngClass]="{normal: question._f['E']==0, correct: question._f['E']==1, selected: question._f['E']==2, invalid: question._f['E']<0}" id="E" *ngIf="question.E !==''" (click)="clickedRow('E')">
+          <!-- <ion-item text-wrap class="item-text-wrap" [ngClass]="{normal: question._f['E']==0, correct: question._f['E']==1, selected: question._f['E']==2, invalid: question._f['E']<0}" id="E" *ngIf="question.E !==''" (click)="clickedRow('E')">
               <h2>E</h2>
               <p [innerHTML]="question.E"></p>
               <ion-icon *ngIf="question._f['E']==1" name="checkmark" item-right color=dark></ion-icon>
               <ion-icon *ngIf="question._f['E']<0" name="close" item-right color=dark></ion-icon>
-          </ion-item>
+          </ion-item> -->
       </ion-list>
     </ion-card>
   </div>

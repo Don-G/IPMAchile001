@@ -205,12 +205,12 @@ export class ExamDetailsPage {
 
       switch (condition) {
         case "timeOut":
-              tit='Time Over';
-              subTit='Your Score was: ' + testScore + '%';
+              tit='Tiempo Terminado';
+              subTit='Tu puntaje fué: ' + testScore + '%';
               break;
         case "lastQuestion":
-              tit='Exam completed';
-              subTit='Your Score: ' + testScore + '%';
+              tit='Exámen completado';
+              subTit='Tu Puntaje: ' + testScore + '%';
               break;
 
       }
@@ -311,10 +311,10 @@ export class ExamDetailsPage {
       console.log(userHighlight);
 
       if(this.question.Answer === answerTemp){
-        console.log('CORRECT ANSWERED');
+        console.log('RESPUESTA CORRECTA');
         this.scoreArrayID[this.indexQ-1]= _score;
       } else {
-        console.log('INCORRECT ANSWERED');
+        console.log('RESPUESTA INCORRECTA');
         // Highlight wrong answers
         this.scoreArrayID[this.indexQ-1]= 0;
         if(_highlight) {
