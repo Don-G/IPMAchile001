@@ -17,6 +17,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { AdMob } from '@ionic-native/admob';
 import { MasInfoPage } from '../pages/mas-info/mas-info';
+import { ListReviewPage } from '../pages/list-review/list-review';
 
 
 enableProdMode();

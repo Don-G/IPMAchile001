@@ -272,9 +272,13 @@ webpackEmptyAsyncContext.id = 116;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"../pages/list-review/list-review.module": [
+		287,
+		3
+	],
 	"../pages/mas-info/mas-info.module": [
 		286,
-		0
+		4
 	]
 };
 function webpackAsyncContext(req) {
@@ -887,6 +891,7 @@ ExamListPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_analytics__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_admob__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_storage__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__list_review_list_review__ = __webpack_require__(288);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -896,6 +901,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -930,6 +936,8 @@ var ExamDetailsPage = (function () {
         this.navParams = navParams;
         this.storage = storage;
         this.dbService = dbService;
+        // orderId = Orden en que aparecio la pregunta, question = texto de la pregunta, selectedAnswer = texto respuesta seleccionada, correctAnswer = texto respuesta correcta
+        this._answer = [];
         _click = false;
         _examOver = false;
         _timeOver = false;
@@ -948,6 +956,7 @@ var ExamDetailsPage = (function () {
         this.title = _exam.ExamTitle;
         this.qty = _exam.Qty;
         this.scoreArrayID = new Array(this.qty);
+        this.answersReview = new Array(this._answer); //mi lista
         this.recordProgress = _exam.Progress;
         this.nextExam = _exam.NextExam;
         this.minScore = _exam.MinScore;
@@ -1068,10 +1077,13 @@ var ExamDetailsPage = (function () {
             case "timeOut":
                 tit = 'Tiempo Terminado';
                 subTit = 'Tu puntaje fué: ' + testScore + '%';
+                // this.getReview();
                 break;
             case "lastQuestion":
                 tit = 'Exámen completado';
                 subTit = 'Tu Puntaje: ' + testScore + '%';
+                // Llamar a List View
+                // this.getReview();
                 break;
         }
         //cancel the timer if is it not yet cancelled.
@@ -1089,13 +1101,18 @@ var ExamDetailsPage = (function () {
                         var alertTransition = alert.dismiss();
                         alertTransition.then(function () {
                             _this.nav.pop();
+                            // this.nav.push(ListReviewPage) // ver resumen de buenas y malas obligado
                         });
                         return false;
                     }
-                }
+                },
             ]
         });
         alert.present();
+    };
+    // Ir a Resumen de respuestas
+    ExamDetailsPage.prototype.getReview = function () {
+        this.nav.push(__WEBPACK_IMPORTED_MODULE_6__list_review_list_review__["a" /* ListReviewPage */]);
     };
     ExamDetailsPage.prototype.getNextQuestionId = function () {
         if (!_timeOver && !_examOver) {
@@ -1129,6 +1146,9 @@ var ExamDetailsPage = (function () {
         }
     };
     ExamDetailsPage.prototype.clickedRow = function (rowId) {
+        console.log('question: ' + this.question.Answer); // question.Answer = correcta
+        console.log('row: ' + rowId); // rowId = seleccionada
+        // Crear una lista con las correctas y las malas para ser desplegadas al final
         // check for multiAnswer
         if (this.multiAnswer) {
             if (this.question._f[rowId] == 0) {
@@ -1143,7 +1163,7 @@ var ExamDetailsPage = (function () {
             _click = true;
             if (this.question.Answer === rowId) {
                 this.question._f[rowId] = 1;
-                this.scoreArrayID[this.indexQ - 1] = _score;
+                this.scoreArrayID[this.indexQ - 1] = _score; // lista de respuestas
             }
             else {
                 this.question._f[rowId] = -1;
@@ -1353,15 +1373,16 @@ var ExamDetailsPage = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]) === "function" && _a || Object)
 ], ExamDetailsPage.prototype, "content", void 0);
 ExamDetailsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'exam-details',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-details\exam-details.html"*/'<ion-header>\n  <ion-navbar color="stable">\n    <button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{title}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="exam">\n\n      <ion-item *ngIf="timed" id="myTimer" [ngClass]="{timer: isNormal, timerout: isOut}">\n          <ion-icon subtle name="stopwatch"></ion-icon>\n          {{time}}\n      </ion-item>\n      <ion-item id="validate" *ngIf="multiAnswer">\n        <button id="valButton" full (click)="validateAnswer()"> Validar Respuesta</button>\n      </ion-item>\n\n  <div *ngIf="question" class="selection" style="position: relative">\n\n      <ion-card class="adv-map">\n        <div class="card-header">\n          <ion-row >\n            <ion-col width-35>\n              <span small >Pregunta: {{indexQ}}/{{qty}}</span>\n            </ion-col>\n            <ion-col width-25>\n              <span>QId: #{{question.Id}}</span>\n            </ion-col>\n            <ion-col width-45>\n              <!-- <span>Explanations left: {{expQty}}</span> -->\n            </ion-col>\n          </ion-row>\n        </div>\n\n        <div *ngIf="question.Image">\n          <p [innerHTML]="question.Image"></p>\n        </div>\n\n        <ion-card-content secondary>\n            <h2 [innerHTML]="question.Question"></h2>\n        </ion-card-content>\n\n        <!-- <div class="card-footer">\n          <button *ngIf="ExplaAvailable" full (click)="explanation(question.Id)"> Click here for Explanation/Tip\n          </button>\n        </div> -->\n\n      <ion-list id="options" class="options">\n          <ion-item text-wrap class="item-text-wrap" [ngClass]="{normal: question._f[\'A\']==0, correct: question._f[\'A\']==1, selected: question._f[\'A\']==2, invalid: question._f[\'A\']<0}" id="A" *ngIf="question.A !==\'\'"(click)="clickedRow(\'A\')">\n              <h2>A</h2>\n              <p [innerHTML]="question.A"></p>\n              <ion-icon *ngIf="question._f[\'A\']==1" name="checkmark" item-right color=dark></ion-icon>\n              <ion-icon *ngIf="question._f[\'A\']<0" name="close" item-right color=dark></ion-icon>\n          </ion-item>\n          <ion-item text-wrap class="item-text-wrap" [ngClass]="{normal: question._f[\'B\']==0, correct: question._f[\'B\']==1, selected: question._f[\'B\']==2, invalid: question._f[\'B\']<0}" id="B" *ngIf="question.B !==\'\'"(click)="clickedRow(\'B\')">\n              <h2>B</h2>\n              <p [innerHTML]="question.B"></p>\n              <ion-icon *ngIf="question._f[\'B\']==1" name="checkmark" item-right color=dark></ion-icon>\n              <ion-icon *ngIf="question._f[\'B\']<0" name="close" item-right color=dark></ion-icon>\n          </ion-item>\n          <ion-item text-wrap class="item-text-wrap" [ngClass]="{normal: question._f[\'C\']==0, correct: question._f[\'C\']==1, selected: question._f[\'C\']==2, invalid: question._f[\'C\']<0}" id="C" *ngIf="question.C !==\'\'" (click)="clickedRow(\'C\')">\n              <h2>C</h2>\n              <p [innerHTML]="question.C"></p>\n              <ion-icon *ngIf="question._f[\'C\']==1" name="checkmark" item-right color=dark></ion-icon>\n              <ion-icon *ngIf="question._f[\'C\']<0" name="close" item-right color=dark></ion-icon>\n          </ion-item>\n          <ion-item text-wrap class="item-text-wrap" [ngClass]="{normal: question._f[\'D\']==0, correct: question._f[\'D\']==1, selected: question._f[\'D\']==2, invalid: question._f[\'D\']<0}" id="D" *ngIf="question.D !==\'\'" (click)="clickedRow(\'D\')">\n              <h2>D</h2>\n              <p [innerHTML]="question.D"></p>\n              <ion-icon *ngIf="question._f[\'D\']==1" name="checkmark" item-right color=dark></ion-icon>\n              <ion-icon *ngIf="question._f[\'D\']<0" name="close" item-right color=dark></ion-icon>\n          </ion-item>\n          <!-- <ion-item text-wrap class="item-text-wrap" [ngClass]="{normal: question._f[\'E\']==0, correct: question._f[\'E\']==1, selected: question._f[\'E\']==2, invalid: question._f[\'E\']<0}" id="E" *ngIf="question.E !==\'\'" (click)="clickedRow(\'E\')">\n              <h2>E</h2>\n              <p [innerHTML]="question.E"></p>\n              <ion-icon *ngIf="question._f[\'E\']==1" name="checkmark" item-right color=dark></ion-icon>\n              <ion-icon *ngIf="question._f[\'E\']<0" name="close" item-right color=dark></ion-icon>\n          </ion-item> -->\n      </ion-list>\n    </ion-card>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-details\exam-details.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_native_google_analytics__["a" /* GoogleAnalytics */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_admob__["a" /* AdMob */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_2__providers_db_service__["a" /* DbService */]])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_analytics__["a" /* GoogleAnalytics */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_analytics__["a" /* GoogleAnalytics */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_admob__["a" /* AdMob */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_admob__["a" /* AdMob */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _e || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_2__providers_db_service__["a" /* DbService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_db_service__["a" /* DbService */]) === "function" && _k || Object])
 ], ExamDetailsPage);
 
+var _a, _b, _c, _d, _e, _g, _h, _j, _k;
 //# sourceMappingURL=exam-details.js.map
 
 /***/ }),
@@ -1860,12 +1881,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__ionic_native_google_analytics__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ionic_native_admob__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__ = __webpack_require__(288);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1913,7 +1936,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_13__pages_login_login__["a" /* LoginPage */],
             __WEBPACK_IMPORTED_MODULE_14__pages_pin_pin__["a" /* Pin */],
             __WEBPACK_IMPORTED_MODULE_15__pages_pin_detail_pin_detail__["a" /* PINDetailPage */],
-            __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__["a" /* MasInfoPage */]
+            __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__["a" /* MasInfoPage */],
+            __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__["a" /* ListReviewPage */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["a" /* BrowserModule */],
@@ -1921,7 +1945,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                 links: [
-                    { loadChildren: '../pages/mas-info/mas-info.module#MasInfoPageModule', name: 'MasInfoPage', segment: 'mas-info', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/mas-info/mas-info.module#MasInfoPageModule', name: 'MasInfoPage', segment: 'mas-info', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/list-review/list-review.module#ListReviewPageModule', name: 'ListReviewPage', segment: 'list-review', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -1939,7 +1964,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_13__pages_login_login__["a" /* LoginPage */],
             __WEBPACK_IMPORTED_MODULE_14__pages_pin_pin__["a" /* Pin */],
             __WEBPACK_IMPORTED_MODULE_15__pages_pin_detail_pin_detail__["a" /* PINDetailPage */],
-            __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__["a" /* MasInfoPage */]
+            __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__["a" /* MasInfoPage */],
+            __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__["a" /* ListReviewPage */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_22__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_23__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_24__ionic_native_google_analytics__["a" /* GoogleAnalytics */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_device__["a" /* Device */], __WEBPACK_IMPORTED_MODULE_25__ionic_native_admob__["a" /* AdMob */], __WEBPACK_IMPORTED_MODULE_19__ionic_native_sqlite__["a" /* SQLite */], __WEBPACK_IMPORTED_MODULE_18__providers_db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_20__providers_store_service__["a" /* StoreService */],
@@ -2170,24 +2196,17 @@ var MyApp = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */])
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */]) === "function" && _a || Object)
 ], MyApp.prototype, "nav", void 0);
 MyApp = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'app',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\app\app.html"*/'<ion-menu #menu [content]="content" side="left" id="menu">\n\n<ion-header id="header">\n\n    <ion-toolbar id="toolbarT">\n\n      <ion-title *ngIf="_Paid==0">Free version</ion-title>\n\n      <!-- <ion-title *ngIf="_Paid==1">Full version</ion-title> -->\n\n      <ion-title *ngIf="_Paid==1">CCDP IPMA Chile</ion-title>\n\n    </ion-toolbar>\n\n      <div class="ava">\n\n      <ion-item class="item-avatar" item-left *ngIf="user!=\'\'">\n\n        <ion-avatar item-left>\n\n            <img spinner-on-load src="{{picture}}">\n\n        </ion-avatar>\n\n        <h2>Hola {{user}}</h2>\n\n        <p>{{email}}</p>\n\n    </ion-item>\n\n  </div>\n\n</ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list *ngFor="let p of pages" >\n\n        <button menuClose ion-item *ngIf="p.paid<=_Paid"(click)="openPage(p)">\n\n          {{p.title}}\n\n        </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n  <!-- <ion-footer class="ftitle">\n\n           <button menuClose ion-button icon-only (click)="openDeveloperPage()">\n\n            <ion-icon name="build"></ion-icon>\n\n          </button> -->\n\n          <!-- <ion-title>IPMA chile 001</ion-title>\n\n  </ion-footer> -->\n\n</ion-menu>\n\n\n\n<ion-view>\n\n  <ion-nav id="nav" [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>\n\n</ion-view>\n\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\app\app.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_5__providers_db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_4__providers_store_service__["a" /* StoreService */]]
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Platform */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */],
-        __WEBPACK_IMPORTED_MODULE_5__providers_db_service__["a" /* DbService */],
-        __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
-        __WEBPACK_IMPORTED_MODULE_4__providers_store_service__["a" /* StoreService */],
-        __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__["a" /* StatusBar */],
-        __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__["a" /* SplashScreen */],
-        __WEBPACK_IMPORTED_MODULE_12__ionic_native_google_analytics__["a" /* GoogleAnalytics */],
-        __WEBPACK_IMPORTED_MODULE_13__ionic_native_admob__["a" /* AdMob */]])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__providers_db_service__["a" /* DbService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__providers_db_service__["a" /* DbService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__providers_store_service__["a" /* StoreService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_store_service__["a" /* StoreService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_12__ionic_native_google_analytics__["a" /* GoogleAnalytics */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_12__ionic_native_google_analytics__["a" /* GoogleAnalytics */]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_13__ionic_native_admob__["a" /* AdMob */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_13__ionic_native_admob__["a" /* AdMob */]) === "function" && _k || Object])
 ], MyApp);
 
+var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
@@ -2433,6 +2452,52 @@ StoreListPage = __decorate([
 ], StoreListPage);
 
 //# sourceMappingURL=store-list.js.map
+
+/***/ }),
+
+/***/ 288:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListReviewPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the ListReviewPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ListReviewPage = (function () {
+    function ListReviewPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    ListReviewPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ListReviewPage');
+    };
+    return ListReviewPage;
+}());
+ListReviewPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPage */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-list-review',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\list-review\list-review.html"*/'<!--\n  Generated template for the ListReviewPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Resumen</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<p>Hola Mundo</p>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\list-review\list-review.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]])
+], ListReviewPage);
+
+//# sourceMappingURL=list-review.js.map
 
 /***/ }),
 

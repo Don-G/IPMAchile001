@@ -6,6 +6,8 @@ import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { AdMob } from '@ionic-native/admob';
 import {Storage} from '@ionic/storage';
 
+import { ListReviewPage } from '../list-review/list-review';
+
 let _highlight: boolean;
 let _qID;
 let _score;
@@ -23,6 +25,7 @@ let _expQuantity;
 let _explaAvailabilty;
 let _npbutton: boolean;
 
+
 @Component({
     selector: 'exam-details',
     templateUrl: 'exam-details.html',
@@ -33,6 +36,9 @@ export class ExamDetailsPage {
   private _nextID: any;
   private questionArrayID:{};
   private scoreArrayID: Array<number>;
+  // orderId = Orden en que aparecio la pregunta, question = texto de la pregunta, selectedAnswer = texto respuesta seleccionada, correctAnswer = texto respuesta correcta
+  private _answer: { orderId: number, question: string, selectedAnswer: string, correctAnswer: string }[] = []; 
+  private answersReview: Array<Object>; // Debe ser una lista de Objetos 
   public question: any;
   private ExplaAvailable: Boolean;
   private indexQ: any;
@@ -82,6 +88,7 @@ export class ExamDetailsPage {
       this.title = _exam.ExamTitle;
       this.qty = _exam.Qty;
       this.scoreArrayID = new Array(this.qty);
+      this.answersReview = new Array(this._answer); //mi lista
       this.recordProgress = _exam.Progress;
       this.nextExam = _exam.NextExam;
       this.minScore = _exam.MinScore;
@@ -207,10 +214,13 @@ export class ExamDetailsPage {
         case "timeOut":
               tit='Tiempo Terminado';
               subTit='Tu puntaje fué: ' + testScore + '%';
+              // this.getReview();
               break;
         case "lastQuestion":
               tit='Exámen completado';
               subTit='Tu Puntaje: ' + testScore + '%';
+              // Llamar a List View
+              // this.getReview();
               break;
 
       }
@@ -231,12 +241,19 @@ export class ExamDetailsPage {
                 let alertTransition = alert.dismiss();
                 alertTransition.then(()=>{
                   this.nav.pop();
+                  // this.nav.push(ListReviewPage) // ver resumen de buenas y malas obligado
                 });
                 return false;
               }
-          }]
+          },
+      ]
       });
       alert.present();
+    }
+
+    // Ir a Resumen de respuestas
+    getReview(){
+      this.nav.push(ListReviewPage)
     }
 
     getNextQuestionId(){
@@ -270,6 +287,10 @@ export class ExamDetailsPage {
     }
 
     clickedRow(rowId){
+      console.log('question: '+ this.question.Answer); // question.Answer = correcta
+      console.log('row: '+ rowId); // rowId = seleccionada
+      // Crear una lista con las correctas y las malas para ser desplegadas al final
+
       // check for multiAnswer
       if(this.multiAnswer){
         if(this.question._f[rowId]==0){
@@ -281,9 +302,9 @@ export class ExamDetailsPage {
       else if(!_click && !_examOver){
         //we avoid rebounce of touch/tap events
         _click = true;
-        if(this.question.Answer === rowId) {
+        if(this.question.Answer === rowId) { //Guarda solo las correctas
           this.question._f[rowId] = 1;
-          this.scoreArrayID[this.indexQ-1]= _score;
+          this.scoreArrayID[this.indexQ-1]= _score; // lista de respuestas
         } else {
           this.question._f[rowId] = -1;
           this.scoreArrayID[this.indexQ-1]= 0;

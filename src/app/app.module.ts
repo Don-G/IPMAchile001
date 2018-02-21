@@ -25,6 +25,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { AdMob } from '@ionic-native/admob';
 import { MasInfoPage } from '../pages/mas-info/mas-info';
+import { ListReviewPage } from '../pages/list-review/list-review';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MasInfoPage } from '../pages/mas-info/mas-info';
     LoginPage,
     Pin,
     PINDetailPage,
-    MasInfoPage
+    MasInfoPage,
+    ListReviewPage
 
   ],
   imports: [
@@ -63,7 +65,8 @@ import { MasInfoPage } from '../pages/mas-info/mas-info';
     LoginPage,
     Pin,
     PINDetailPage,
-    MasInfoPage
+    MasInfoPage,
+    ListReviewPage
   ],
   providers: [
     StatusBar, SplashScreen, GoogleAnalytics, Device, AdMob, SQLite, DbService, StoreService, 
