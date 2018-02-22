@@ -1,10 +1,11 @@
-import {Component, ViewChild} from '@angular/core';
-import { Content } from 'ionic-angular';
+import {Component, ViewChild, Injectable} from '@angular/core';
+import { Content, List } from 'ionic-angular';
 import {NavController, NavParams, AlertController, ActionSheetController} from 'ionic-angular';
 import {DbService} from '../../providers/db-service';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { AdMob } from '@ionic-native/admob';
 import {Storage} from '@ionic/storage';
+
 
 import { ListReviewPage } from '../list-review/list-review';
 
@@ -24,6 +25,8 @@ let _explanation: boolean;
 let _expQuantity;
 let _explaAvailabilty;
 let _npbutton: boolean;
+let _answer: Array<any>; // [orderID, question, selectedAnswer, correctAnswer, argumentAnswer] para cada respuesta
+let _orderID: number; // orden en que se despliegan las preguntas
 
 
 @Component({
@@ -32,13 +35,13 @@ let _npbutton: boolean;
     //directives: [NgClass]
 })
 
+
 export class ExamDetailsPage {
   private _nextID: any;
   private questionArrayID:{};
   private scoreArrayID: Array<number>;
-  // orderId = Orden en que aparecio la pregunta, question = texto de la pregunta, selectedAnswer = texto respuesta seleccionada, correctAnswer = texto respuesta correcta
-  private _answer: { orderId: number, question: string, selectedAnswer: string, correctAnswer: string }[] = []; 
-  private answersReview: Array<Object>; // Debe ser una lista de Objetos 
+  private orderId: number;
+  public answersReview: Array<any>; // Lista que contiene "_answer"
   public question: any;
   private ExplaAvailable: Boolean;
   private indexQ: any;
@@ -69,7 +72,8 @@ export class ExamDetailsPage {
   @ViewChild(Content) content: Content;
 
 
-    constructor(private analytics: GoogleAnalytics, private admob: AdMob, public actionSheetCtrl: ActionSheetController, public alertCtrl: AlertController, public nav: NavController, public navParams: NavParams, public storage: Storage, public dbService: DbService) {
+    constructor(private analytics: GoogleAnalytics, private admob: AdMob, public actionSheetCtrl: ActionSheetController, public alertCtrl: AlertController, public nav: NavController, public navParams: NavParams, public storage: Storage, public dbService: DbService, public navCtrl: NavController) {
+      _orderID = 0;
       _click = false;
       _examOver = false;
       _timeOver = false;
@@ -88,7 +92,7 @@ export class ExamDetailsPage {
       this.title = _exam.ExamTitle;
       this.qty = _exam.Qty;
       this.scoreArrayID = new Array(this.qty);
-      this.answersReview = new Array(this._answer); //mi lista
+      this.answersReview = new Array(); // Inicializa array vacio
       this.recordProgress = _exam.Progress;
       this.nextExam = _exam.NextExam;
       this.minScore = _exam.MinScore;
@@ -241,6 +245,12 @@ export class ExamDetailsPage {
                 let alertTransition = alert.dismiss();
                 alertTransition.then(()=>{
                   this.nav.pop();
+                //   this.navCtrl.push(SecondPage, {
+                //     param1: 'John', param2: 'Johnson'
+                // });
+                  console.log(this.answersReview);
+                  this.navCtrl.push(ListReviewPage, this.answersReview);
+                  // this.nav.push(ListReviewPage);
                   // this.nav.push(ListReviewPage) // ver resumen de buenas y malas obligado
                 });
                 return false;
@@ -251,9 +261,24 @@ export class ExamDetailsPage {
       alert.present();
     }
 
-    // Ir a Resumen de respuestas
-    getReview(){
-      this.nav.push(ListReviewPage)
+   
+
+    // Guarda todas las respuestas
+    // Implementado solo para "one answer", trabajo futuro "multiAnswer"
+    getAnswer(question, correctAnswer, selectedAnswer, argumentAnswer){
+      console.log('Dentro de getAnswer()');
+      _orderID ++;
+      console.log('_orderID: '+_orderID);
+      _answer = [_orderID, question, correctAnswer, selectedAnswer, argumentAnswer]
+      this.answersReview.push(_answer);
+      console.log('Respuesta guardada')
+      console.log(this.answersReview);
+    }
+
+    getResume(){
+      // this.datosTienda = this.navParams.get('datosTienda');
+      this.answersReview = this.navParams.get('answersReview');
+      // return this.answersReview;
     }
 
     getNextQuestionId(){
@@ -287,9 +312,12 @@ export class ExamDetailsPage {
     }
 
     clickedRow(rowId){
-      console.log('question: '+ this.question.Answer); // question.Answer = correcta
-      console.log('row: '+ rowId); // rowId = seleccionada
+      console.log('Pregunta: '+ this.question.Question); // question
+      console.log('Correcta: '+ this.question.Answer); // question.Answer = correcta
+      console.log('Seleccionada: '+ rowId); // rowId = seleccionada
+      console.log('Razón: '+ this.question.Explanation);
       // Crear una lista con las correctas y las malas para ser desplegadas al final
+      this.getAnswer(this.question.Question, this.question.Answer,  rowId, this.question.Explanation);
 
       // check for multiAnswer
       if(this.multiAnswer){

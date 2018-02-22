@@ -4,6 +4,7 @@ import {ExamDetailsPage} from '../exam-details/exam-details';
 import {DbService} from '../../providers/db-service';
 import {Storage} from '@ionic/storage';
 
+
 @Component({
     selector: 'exam-list',
     templateUrl: 'exam-list.html'
