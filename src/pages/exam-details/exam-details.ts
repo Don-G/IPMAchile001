@@ -269,7 +269,13 @@ export class ExamDetailsPage {
       console.log('Dentro de getAnswer()');
       _orderID ++;
       console.log('_orderID: '+_orderID);
-      _answer = [_orderID, question, correctAnswer, selectedAnswer, argumentAnswer]
+      let color: string;
+      if (correctAnswer == selectedAnswer){
+        color = 'correct';
+      }else{
+        color = 'wrong';
+      }
+      _answer = [_orderID, question, correctAnswer, selectedAnswer, argumentAnswer, color]
       this.answersReview.push(_answer);
       console.log('Respuesta guardada')
       console.log(this.answersReview);

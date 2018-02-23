@@ -13,6 +13,28 @@
 </ion-header>
 
 
-<ion-content padding>
-<p>Hola Mundo</p>
+<ion-content>
+  <ion-card>
+      <div class="card-header">
+        <ion-row >
+          <ion-col width-100>
+            <span>Resultados</span>
+          </ion-col>
+        </ion-row>
+      </div>
+    <ion-list>
+       
+          
+      <!--on-changes-->
+        <ion-item *ngFor="let answer of answersResume" >
+          <button ion-item class="{{ answer[5] }}">
+            <p><strong>Pregunta N° {{ answer[0] }}</strong></p>
+            <p>{{ answer[1] }}</p>
+          </button>
+            
+
+        </ion-item>
+      <!--/on-changes-->
+    </ion-list>
+  </ion-card>
 </ion-content>

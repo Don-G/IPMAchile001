@@ -17,7 +17,6 @@ import {ExamDetailsPage} from '../exam-details/exam-details';
   templateUrl: 'list-review.html',
 })
 
-//var resume = ExamDetailsPage.prototype.getResume();
 
 export class ListReviewPage {
 
@@ -25,13 +24,6 @@ export class ListReviewPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
-    //this.answersResume = ExamDetailsPage.prototype.getResume();
-    //this.answersResume = ExamDetailsPage.prototype.getResume();
-    // this.answersResume = this.examDetailsPage.getResume();
-    // this.answersResume = resume;
-    // this.datosTienda = navParams.data;
-    // this.answersResume = ExamDetailsPage.prototype.answersReview;
-    // this.parameter1 = navParams.get('param1'); 
     this.answersResume = navParams.data;
     
 

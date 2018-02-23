@@ -47,10 +47,12 @@ exam-list {
     border-bottom-width: 1px !important;
     border-bottom-color: map-get($colors, primary) !important;
     background-color: map-get($colors,light) !important;
+    // background-color: map-get($colors,danger);
     color: map-get($colors, dark);
   }
   ion-list .item p {
     color: map-get($colors, primary);
+    // background-color: map-get($colors,danger);
   }
 
   ion-list .item .item-inner {
@@ -58,6 +60,7 @@ exam-list {
     border-bottom-style: solid;
     border-bottom-color: map-get($colors, light);
   }
+  
 
   img {
     margin-bottom: 18px;
