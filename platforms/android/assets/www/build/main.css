@@ -31933,6 +31933,58 @@ exam-list img {
   margin-bottom: 18px;
 }
 
+page-list-review ion-card div.card-header {
+  background-color: #6d7f9b;
+  color: #f4f4f4;
+  font-size: 1em !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+page-list-review ion-card {
+  border-radius: 12px !important;
+}
+
+page-list-review ion-list .item .wrong {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px !important;
+  border-bottom-color: #6d7f9b !important;
+  border-radius: 12px !important;
+  background-color: #f53d3d !important;
+  color: #222;
+}
+
+page-list-review ion-list .item .correct {
+  width: 100%;
+  border-bottom: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px !important;
+  border-bottom-color: #6d7f9b !important;
+  border-radius: 12px !important;
+  background-color: #32db64 !important;
+  color: #222;
+}
+
+page-list-review ion-list .item .wrong p {
+  color: #222;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow-wrap: break-word;
+}
+
+page-list-review ion-list .item .correct p {
+  color: #222;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow-wrap: break-word;
+}
+
 page-login div.scroll-content {
   font-weight: light;
   background-image: url("../assets/img/background.jpg");

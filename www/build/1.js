@@ -1,14 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 288:
+/***/ 289:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MasInfoPageModule", function() { return MasInfoPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListReviewPageModule", function() { return ListReviewPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mas_info__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__list_review__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MasInfoPageModule = (function () {
-    function MasInfoPageModule() {
+var ListReviewPageModule = (function () {
+    function ListReviewPageModule() {
     }
-    return MasInfoPageModule;
+    return ListReviewPageModule;
 }());
-MasInfoPageModule = __decorate([
+ListReviewPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__mas_info__["a" /* MasInfoPage */],
+            __WEBPACK_IMPORTED_MODULE_2__list_review__["a" /* ListReviewPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__mas_info__["a" /* MasInfoPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__list_review__["a" /* ListReviewPage */]),
         ],
     })
-], MasInfoPageModule);
+], ListReviewPageModule);
 
-//# sourceMappingURL=mas-info.module.js.map
+//# sourceMappingURL=list-review.module.js.map
 
 /***/ })
 
