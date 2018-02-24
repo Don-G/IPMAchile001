@@ -1,4 +1,4 @@
-webpackJsonp([2],{
+webpackJsonp([3],{
 
 /***/ 104:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -212,6 +212,7 @@ WelcomePage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListReviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__detail_review_detail_review__ = __webpack_require__(290);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -221,6 +222,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 /**
@@ -239,12 +241,15 @@ var ListReviewPage = (function () {
         console.log('ionViewDidLoad ListReviewPage');
         console.log(this.answersResume);
     };
+    ListReviewPage.prototype.goToDetailReviewPage = function (answer) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__detail_review_detail_review__["a" /* DetailReviewPage */], answer);
+    };
     return ListReviewPage;
 }());
 ListReviewPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-list-review',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\list-review\list-review.html"*/'<!--\n  Generated template for the ListReviewPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Resumen</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-card>\n      <div class="card-header">\n        <ion-row >\n          <ion-col width-100>\n            <span>Resultados</span>\n          </ion-col>\n        </ion-row>\n      </div>\n    <ion-list>\n       \n          \n      <!--on-changes-->\n        <ion-item *ngFor="let answer of answersResume" >\n          <button ion-item class="{{ answer[5] }}">\n            <p><strong>Pregunta N° {{ answer[0] }}</strong></p>\n            <p>{{ answer[1] }}</p>\n          </button>\n            \n\n        </ion-item>\n      <!--/on-changes-->\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\list-review\list-review.html"*/,
+        selector: 'page-list-review',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\list-review\list-review.html"*/'<!--\n\n  Generated template for the ListReviewPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Resumen</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-card>\n\n      <div class="card-header">\n\n        <ion-row >\n\n          <ion-col width-100>\n\n            <span>Resultados</span>\n\n          </ion-col>\n\n        </ion-row>\n\n      </div>\n\n    <ion-list>\n\n       \n\n          \n\n      <!--on-changes-->\n\n        <ion-item *ngFor="let answer of answersResume" >\n\n          <button ion-item class="{{ answer[5] }}" (click)="goToDetailReviewPage(answer)">\n\n            <p><strong>Pregunta N° {{ answer[0] }}</strong></p>\n\n            <p>{{ answer[1] }}</p>\n\n          </button>\n\n        </ion-item>\n\n      <!--/on-changes-->\n\n    </ion-list>\n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\list-review\list-review.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]])
 ], ListReviewPage);
@@ -320,13 +325,17 @@ webpackEmptyAsyncContext.id = 117;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"../pages/detail-review/detail-review.module": [
+		289,
+		0
+	],
 	"../pages/list-review/list-review.module": [
 		287,
-		1
+		2
 	],
 	"../pages/mas-info/mas-info.module": [
 		288,
-		0
+		1
 	]
 };
 function webpackAsyncContext(req) {
@@ -1168,7 +1177,7 @@ var ExamDetailsPage = (function () {
     };
     // Guarda todas las respuestas
     // Implementado solo para "one answer", trabajo futuro "multiAnswer"
-    ExamDetailsPage.prototype.getAnswer = function (question, correctAnswer, selectedAnswer, argumentAnswer) {
+    ExamDetailsPage.prototype.getAnswer = function (question, correctAnswer, selectedAnswer, argumentAnswer, textCorrectAnswer, textSelectedAnswer) {
         console.log('Dentro de getAnswer()');
         _orderID++;
         console.log('_orderID: ' + _orderID);
@@ -1179,7 +1188,10 @@ var ExamDetailsPage = (function () {
         else {
             color = 'wrong';
         }
-        _answer = [_orderID, question, correctAnswer, selectedAnswer, argumentAnswer, color];
+        if (argumentAnswer == 'NULL') {
+            argumentAnswer = 'Esta respuesta no posee argumento por ahora';
+        }
+        _answer = [_orderID, question, correctAnswer, selectedAnswer, argumentAnswer, color, textCorrectAnswer, textSelectedAnswer];
         this.answersReview.push(_answer);
         console.log('Respuesta guardada');
         console.log(this.answersReview);
@@ -1225,8 +1237,40 @@ var ExamDetailsPage = (function () {
         console.log('Correcta: ' + this.question.Answer); // question.Answer = correcta
         console.log('Seleccionada: ' + rowId); // rowId = seleccionada
         console.log('Razón: ' + this.question.Explanation);
+        var text_correctAnswer;
+        var text_selectedAnswer;
+        // Casos para Respuesta Correcta
+        switch (this.question.Answer) {
+            case 'A':
+                text_correctAnswer = this.question.A;
+                break;
+            case 'B':
+                text_correctAnswer = this.question.B;
+                break;
+            case 'C':
+                text_correctAnswer = this.question.C;
+                break;
+            case 'D':
+                text_correctAnswer = this.question.D;
+                break;
+        }
+        // Casos para la Respuesta Seleccionada
+        switch (rowId) {
+            case 'A':
+                text_selectedAnswer = this.question.A;
+                break;
+            case 'B':
+                text_selectedAnswer = this.question.B;
+                break;
+            case 'C':
+                text_selectedAnswer = this.question.C;
+                break;
+            case 'D':
+                text_selectedAnswer = this.question.D;
+                break;
+        }
         // Crear una lista con las correctas y las malas para ser desplegadas al final
-        this.getAnswer(this.question.Question, this.question.Answer, rowId, this.question.Explanation);
+        this.getAnswer(this.question.Question, this.question.Answer, rowId, this.question.Explanation, text_correctAnswer, text_selectedAnswer);
         // check for multiAnswer
         if (this.multiAnswer) {
             if (this.question._f[rowId] == 0) {
@@ -1959,12 +2003,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ionic_native_admob__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_detail_review_detail_review__ = __webpack_require__(290);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -2014,7 +2060,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_14__pages_pin_pin__["a" /* Pin */],
             __WEBPACK_IMPORTED_MODULE_15__pages_pin_detail_pin_detail__["a" /* PINDetailPage */],
             __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__["a" /* MasInfoPage */],
-            __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__["a" /* ListReviewPage */]
+            __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__["a" /* ListReviewPage */],
+            __WEBPACK_IMPORTED_MODULE_28__pages_detail_review_detail_review__["a" /* DetailReviewPage */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["a" /* BrowserModule */],
@@ -2023,7 +2070,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                 links: [
                     { loadChildren: '../pages/list-review/list-review.module#ListReviewPageModule', name: 'ListReviewPage', segment: 'list-review', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/mas-info/mas-info.module#MasInfoPageModule', name: 'MasInfoPage', segment: 'mas-info', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/mas-info/mas-info.module#MasInfoPageModule', name: 'MasInfoPage', segment: 'mas-info', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/detail-review/detail-review.module#DetailReviewPageModule', name: 'DetailReviewPage', segment: 'detail-review', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -2042,7 +2090,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_14__pages_pin_pin__["a" /* Pin */],
             __WEBPACK_IMPORTED_MODULE_15__pages_pin_detail_pin_detail__["a" /* PINDetailPage */],
             __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__["a" /* MasInfoPage */],
-            __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__["a" /* ListReviewPage */]
+            __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__["a" /* ListReviewPage */],
+            __WEBPACK_IMPORTED_MODULE_28__pages_detail_review_detail_review__["a" /* DetailReviewPage */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_22__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_23__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_24__ionic_native_google_analytics__["a" /* GoogleAnalytics */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_device__["a" /* Device */], __WEBPACK_IMPORTED_MODULE_25__ionic_native_admob__["a" /* AdMob */], __WEBPACK_IMPORTED_MODULE_19__ionic_native_sqlite__["a" /* SQLite */], __WEBPACK_IMPORTED_MODULE_18__providers_db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_20__providers_store_service__["a" /* StoreService */],
@@ -2536,6 +2585,53 @@ StoreListPage = __decorate([
 ], StoreListPage);
 
 //# sourceMappingURL=store-list.js.map
+
+/***/ }),
+
+/***/ 290:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailReviewPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the DetailReviewPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var DetailReviewPage = (function () {
+    function DetailReviewPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.answer = navParams.data;
+    }
+    DetailReviewPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DetailReviewPage');
+    };
+    return DetailReviewPage;
+}());
+DetailReviewPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPage */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-detail-review',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\detail-review\detail-review.html"*/'<!--\n  Generated template for the DetailReviewPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Detalle de Pregunta</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n      <ion-card-header>\n         Pregunta N°{{ answer[0] }}\n        </ion-card-header>\n        <ion-card-content>\n            {{answer[1]}}\n        </ion-card-content>\n\n        <!-- <ion-card-content>\n          <p> <strong> Correcta: {{ answer[2]}} "{{ answer[6] }}" </strong> </p>\n          <p> Seleccionada: {{ answer[3] }} "{{ answer[7] }}"</p>\n          <p> <strong>Argumento: {{ answer[4] }}</strong> </p>\n        </ion-card-content> -->\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header>\n      Respuesta Correcta\n    </ion-card-header>\n\n    <ion-card-content>\n      <strong>{{ answer[2]}}</strong> {{ answer[6] }}\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header>\n      Respuesta Seleccionada\n    </ion-card-header>\n\n    <ion-card-content>\n      <strong>{{ answer[3] }}</strong> {{ answer[7] }}\n    </ion-card-content>\n  </ion-card>\n  \n  <ion-card>\n    <ion-card-header>\n      Argumento\n    </ion-card-header>\n\n    <ion-card-content>\n        {{ answer[4] }}\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\detail-review\detail-review.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]])
+], DetailReviewPage);
+
+//# sourceMappingURL=detail-review.js.map
 
 /***/ }),
 

@@ -27,12 +27,10 @@
           
       <!--on-changes-->
         <ion-item *ngFor="let answer of answersResume" >
-          <button ion-item class="{{ answer[5] }}">
+          <button ion-item class="{{ answer[5] }}" (click)="goToDetailReviewPage(answer)">
             <p><strong>Pregunta N° {{ answer[0] }}</strong></p>
             <p>{{ answer[1] }}</p>
           </button>
-            
-
         </ion-item>
       <!--/on-changes-->
     </ion-list>

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 
 import {ExamDetailsPage} from '../exam-details/exam-details';
+import { DetailReviewPage } from '../detail-review/detail-review';
 
 /**
  * Generated class for the ListReviewPage page.
@@ -33,6 +34,10 @@ export class ListReviewPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListReviewPage');
     console.log(this.answersResume);
+  }
+
+  goToDetailReviewPage(answer){
+    this.navCtrl.push(DetailReviewPage, answer);
   }
 
 

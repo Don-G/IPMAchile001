@@ -20,6 +20,7 @@ import { MasInfoPage } from '../pages/mas-info/mas-info';
 import { ListReviewPage } from '../pages/list-review/list-review';
 
 
+
 enableProdMode();
 
 declare var window: any;

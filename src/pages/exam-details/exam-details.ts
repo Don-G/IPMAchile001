@@ -265,7 +265,7 @@ export class ExamDetailsPage {
 
     // Guarda todas las respuestas
     // Implementado solo para "one answer", trabajo futuro "multiAnswer"
-    getAnswer(question, correctAnswer, selectedAnswer, argumentAnswer){
+    getAnswer(question, correctAnswer, selectedAnswer, argumentAnswer, textCorrectAnswer, textSelectedAnswer){
       console.log('Dentro de getAnswer()');
       _orderID ++;
       console.log('_orderID: '+_orderID);
@@ -275,7 +275,12 @@ export class ExamDetailsPage {
       }else{
         color = 'wrong';
       }
-      _answer = [_orderID, question, correctAnswer, selectedAnswer, argumentAnswer, color]
+
+      if (argumentAnswer == 'NULL'){
+        argumentAnswer = 'Esta respuesta no posee argumento por ahora';
+      }
+
+      _answer = [_orderID, question, correctAnswer, selectedAnswer, argumentAnswer, color, textCorrectAnswer, textSelectedAnswer]
       this.answersReview.push(_answer);
       console.log('Respuesta guardada')
       console.log(this.answersReview);
@@ -322,8 +327,52 @@ export class ExamDetailsPage {
       console.log('Correcta: '+ this.question.Answer); // question.Answer = correcta
       console.log('Seleccionada: '+ rowId); // rowId = seleccionada
       console.log('Razón: '+ this.question.Explanation);
+
+      let text_correctAnswer: any;
+      let text_selectedAnswer: any;
+
+
+      // Casos para Respuesta Correcta
+      switch (this.question.Answer){
+
+        case 'A':
+          text_correctAnswer = this.question.A;
+          break;
+        
+        case 'B':
+          text_correctAnswer = this.question.B;
+          break;
+
+        case 'C':
+          text_correctAnswer = this.question.C;
+          break;
+
+        case 'D':
+          text_correctAnswer = this.question.D;
+          break;
+      }
+
+      // Casos para la Respuesta Seleccionada
+      switch (rowId){
+        case 'A':
+          text_selectedAnswer = this.question.A;
+          break;
+
+        case 'B':
+          text_selectedAnswer = this.question.B;
+          break;
+
+        case 'C':
+          text_selectedAnswer = this.question.C;
+          break;
+
+        case 'D':
+          text_selectedAnswer = this.question.D;
+          break;
+      }
+
       // Crear una lista con las correctas y las malas para ser desplegadas al final
-      this.getAnswer(this.question.Question, this.question.Answer,  rowId, this.question.Explanation);
+      this.getAnswer(this.question.Question, this.question.Answer,  rowId, this.question.Explanation, text_correctAnswer, text_selectedAnswer);
 
       // check for multiAnswer
       if(this.multiAnswer){

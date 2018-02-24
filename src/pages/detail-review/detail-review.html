@@ -1,0 +1,61 @@
+<!--
+  Generated template for the DetailReviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detalle de Pregunta</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+      <ion-card-header>
+         Pregunta N°{{ answer[0] }}
+        </ion-card-header>
+        <ion-card-content>
+            {{answer[1]}}
+        </ion-card-content>
+
+        <!-- <ion-card-content>
+          <p> <strong> Correcta: {{ answer[2]}} "{{ answer[6] }}" </strong> </p>
+          <p> Seleccionada: {{ answer[3] }} "{{ answer[7] }}"</p>
+          <p> <strong>Argumento: {{ answer[4] }}</strong> </p>
+        </ion-card-content> -->
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Respuesta Correcta
+    </ion-card-header>
+
+    <ion-card-content>
+      <strong>{{ answer[2]}}</strong> {{ answer[6] }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Respuesta Seleccionada
+    </ion-card-header>
+
+    <ion-card-content>
+      <strong>{{ answer[3] }}</strong> {{ answer[7] }}
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-header>
+      Argumento
+    </ion-card-header>
+
+    <ion-card-content>
+        {{ answer[4] }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
