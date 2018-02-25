@@ -276,10 +276,11 @@ export class ExamDetailsPage {
         color = 'wrong';
       }
 
-      if (argumentAnswer == 'NULL'){
+      if (argumentAnswer == null){
         argumentAnswer = 'Esta respuesta no posee argumento por ahora';
       }
 
+      console.log('argumentAnswer: '+argumentAnswer)
       _answer = [_orderID, question, correctAnswer, selectedAnswer, argumentAnswer, color, textCorrectAnswer, textSelectedAnswer]
       this.answersReview.push(_answer);
       console.log('Respuesta guardada')
