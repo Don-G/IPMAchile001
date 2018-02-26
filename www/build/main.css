@@ -31938,6 +31938,130 @@ exam-list img {
   margin-bottom: 18px;
 }
 
+page-exam-list-cat div.scroll-content {
+  font-weight: light;
+  background-image: url("../assets/img/background.jpg");
+  background-size: cover;
+}
+
+page-exam-list-cat ion-card {
+  border-radius: 12px !important;
+}
+
+page-exam-list-cat .storeCardHeader {
+  font-size: 15rem;
+  color: #6d7f9b;
+  background-color: #c7dbf7;
+  text-align: center;
+}
+
+page-exam-list-cat ion-card div.card-header {
+  background-color: #6d7f9b;
+  color: #f4f4f4;
+  font-size: 1em !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+page-exam-list-cat ion-item-sliding .item {
+  color: #222;
+}
+
+page-exam-list-cat ion-item-sliding {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #f4f4f4;
+}
+
+page-exam-list-cat ion-item .item p {
+  color: #6d7f9b;
+}
+
+page-exam-list-cat ion-list .item {
+  border-bottom: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px !important;
+  border-bottom-color: #6d7f9b !important;
+  background-color: #f4f4f4 !important;
+  color: #222;
+}
+
+page-exam-list-cat ion-list .item p {
+  color: #6d7f9b;
+}
+
+page-exam-list-cat ion-list .item .item-inner {
+  border-bottom-width: 0px;
+  border-bottom-style: solid;
+  border-bottom-color: #f4f4f4;
+}
+
+page-exam-list-cat img {
+  margin-bottom: 18px;
+}
+
+page-exams div.scroll-content {
+  font-weight: light;
+  background-image: url("../assets/img/background.jpg");
+  background-size: cover;
+}
+
+page-exams ion-card {
+  border-radius: 12px !important;
+}
+
+page-exams .storeCardHeader {
+  font-size: 15rem;
+  color: #6d7f9b;
+  background-color: #c7dbf7;
+  text-align: center;
+}
+
+page-exams ion-card div.card-header {
+  background-color: #6d7f9b;
+  color: #f4f4f4;
+  font-size: 1em !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+page-exams ion-item-sliding .item {
+  color: #222;
+}
+
+page-exams ion-item-sliding {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #f4f4f4;
+}
+
+page-exams ion-item .item p {
+  color: #6d7f9b;
+}
+
+page-exams ion-list .item {
+  border-bottom: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px !important;
+  border-bottom-color: #6d7f9b !important;
+  background-color: #f4f4f4 !important;
+  color: #222;
+}
+
+page-exams ion-list .item p {
+  color: #6d7f9b;
+}
+
+page-exams ion-list .item .item-inner {
+  border-bottom-width: 0px;
+  border-bottom-style: solid;
+  border-bottom-color: #f4f4f4;
+}
+
+page-exams img {
+  margin-bottom: 18px;
+}
+
 page-list-review ion-card div.card-header {
   background-color: #6d7f9b;
   color: #f4f4f4;

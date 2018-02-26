@@ -27,6 +27,8 @@ import { AdMob } from '@ionic-native/admob';
 import { MasInfoPage } from '../pages/mas-info/mas-info';
 import { ListReviewPage } from '../pages/list-review/list-review';
 import { DetailReviewPage } from '../pages/detail-review/detail-review';
+import { ExamsPage } from '../pages/exams/exams';
+import { ExamListCatPage } from '../pages/exam-list-cat/exam-list-cat';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { DetailReviewPage } from '../pages/detail-review/detail-review';
     PINDetailPage,
     MasInfoPage,
     ListReviewPage,
-    DetailReviewPage
+    DetailReviewPage,
+    ExamsPage,
+    ExamListCatPage
 
   ],
   imports: [
@@ -69,7 +73,9 @@ import { DetailReviewPage } from '../pages/detail-review/detail-review';
     PINDetailPage,
     MasInfoPage,
     ListReviewPage,
-    DetailReviewPage
+    DetailReviewPage,
+    ExamsPage,
+    ExamListCatPage
   ],
   providers: [
     StatusBar, SplashScreen, GoogleAnalytics, Device, AdMob, SQLite, DbService, StoreService, 

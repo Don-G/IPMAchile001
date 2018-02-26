@@ -1,0 +1,45 @@
+<!--
+  Generated template for the ExamsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Exámenes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="exam-list">
+  <ion-card>
+      <ion-card-header class="storeCardHeader">
+        <ion-icon name="school"></ion-icon>
+      </ion-card-header>
+
+      <div class="card-header">
+        <ion-row >
+          <ion-col width-100>
+            <span>Exámenes Disponibles</span>
+          </ion-col>
+        </ion-row>
+      </div>
+    <ion-list>
+      <!--on-changes-->
+        <ion-item-sliding>
+            <button ion-item (click)="goToExamListPage()">
+                <h2>SIMPLES</h2>
+                <p>Preguntas de toda la norma de forma aleatoria</p>
+            </button>
+            <button ion-item (click)="goToExamListCatPage()">
+              <h2>CATEGORIZADOS</h2>
+              <p>Preguntas por Categoría de Competencia</p>
+          </button>
+        </ion-item-sliding>
+      <!--/on-changes-->
+    </ion-list>
+  </ion-card>
+</ion-content>
+

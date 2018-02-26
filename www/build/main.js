@@ -616,8 +616,31 @@ var DbService = (function () {
             if (data.res.rows.length > 0) {
                 for (var i = 0; i < data.res.rows.length; i++) {
                     //console.log(data.res.rows.item(i));
-                    EXAMS.push(data.res.rows.item(i));
+                    if (data.res.rows.item(i).is_nested == false) {
+                        EXAMS.push(data.res.rows.item(i));
+                    }
                 }
+                console.log(EXAMS);
+                //console.log("EXAMS -> " + JSON.stringify(EXAMS));
+                return EXAMS;
+            }
+        }, function (error) {
+            console.log("ERROR -> " + JSON.stringify(error.err));
+        })); });
+    };
+    // carga todos los examenes anidados o categorizados
+    DbService.prototype.findAllEnabledExamsNested = function () {
+        var _this = this;
+        var EXAMS = [];
+        return new Promise(function (resolve, reject) { return resolve(_this.query(_this.db, "SELECT * FROM ExamType WHERE Enabled=1").then(function (data) {
+            if (data.res.rows.length > 0) {
+                for (var i = 0; i < data.res.rows.length; i++) {
+                    //console.log(data.res.rows.item(i));
+                    if (data.res.rows.item(i).is_nested == true) {
+                        EXAMS.push(data.res.rows.item(i));
+                    }
+                }
+                console.log(EXAMS);
                 //console.log("EXAMS -> " + JSON.stringify(EXAMS));
                 return EXAMS;
             }
@@ -791,15 +814,23 @@ DbService = __decorate([
 var map = {
 	"../pages/detail-review/detail-review.module": [
 		288,
-		3
+		12
+	],
+	"../pages/exam-list-cat/exam-list-cat.module": [
+		295,
+		1
+	],
+	"../pages/exams/exams.module": [
+		293,
+		11
 	],
 	"../pages/list-review/list-review.module": [
 		289,
-		2
+		3
 	],
 	"../pages/mas-info/mas-info.module": [
 		290,
-		1
+		2
 	],
 	"../pages/tutorial/tutorial.module": [
 		291,
@@ -979,7 +1010,7 @@ var ExamListPage = (function () {
 }());
 ExamListPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'exam-list',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-list\exam-list.html"*/'<ion-header>\n  <ion-navbar color="stable">\n    <button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Exámenes</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="exam-list">\n  <ion-card>\n      <ion-card-header class="storeCardHeader">\n        <ion-icon name="school"></ion-icon>\n      </ion-card-header>\n\n      <div class="card-header">\n        <ion-row >\n          <ion-col width-100>\n            <span>Exámenes Disponibles</span>\n          </ion-col>\n        </ion-row>\n      </div>\n    <ion-list>\n      <!--on-changes-->\n        <ion-item-sliding *ngFor="let exam of exams" >\n            <button ion-item (click)="itemTapped($event, exam)">\n                <ion-icon item-left name="{{exam.Icon}}" >\n                </ion-icon>\n                <h2>{{exam.ExamTitle}}</h2>\n                <p>Preguntas: {{exam.Qty}}, Tiempo: {{exam.Duration}}s</p>\n                <p>Puntaje Min.: {{exam.MinScore}}%</p>\n            </button>\n        </ion-item-sliding>\n      <!--/on-changes-->\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-list\exam-list.html"*/
+        selector: 'exam-list',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-list\exam-list.html"*/'<ion-header>\n  <ion-navbar color="stable">\n    <button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Exámenes Simples</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="exam-list">\n  <ion-card>\n      <ion-card-header class="storeCardHeader">\n        <ion-icon name="school"></ion-icon>\n      </ion-card-header>\n\n      <div class="card-header">\n        <ion-row >\n          <ion-col width-100>\n            <span>Exámenes Disponibles</span>\n          </ion-col>\n        </ion-row>\n      </div>\n    <ion-list>\n      <!--on-changes-->\n        <ion-item-sliding *ngFor="let exam of exams" >\n            <button ion-item (click)="itemTapped($event, exam)">\n                <ion-icon item-left name="{{exam.Icon}}" >\n                </ion-icon>\n                <h2>{{exam.ExamTitle}}</h2>\n                <p>Preguntas: {{exam.Qty}}, Tiempo: {{exam.Duration}}s</p>\n                <p>Puntaje Min.: {{exam.MinScore}}%</p>\n            </button>\n        </ion-item-sliding>\n      <!--/on-changes-->\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-list\exam-list.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_db_service__["a" /* DbService */]])
 ], ExamListPage);
@@ -2056,12 +2087,16 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_detail_review_detail_review__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_exams_exams__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_exam_list_cat_exam_list_cat__ = __webpack_require__(296);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -2113,7 +2148,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_15__pages_pin_detail_pin_detail__["a" /* PINDetailPage */],
             __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__["a" /* MasInfoPage */],
             __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__["a" /* ListReviewPage */],
-            __WEBPACK_IMPORTED_MODULE_28__pages_detail_review_detail_review__["a" /* DetailReviewPage */]
+            __WEBPACK_IMPORTED_MODULE_28__pages_detail_review_detail_review__["a" /* DetailReviewPage */],
+            __WEBPACK_IMPORTED_MODULE_29__pages_exams_exams__["a" /* ExamsPage */],
+            __WEBPACK_IMPORTED_MODULE_30__pages_exam_list_cat_exam_list_cat__["a" /* ExamListCatPage */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["a" /* BrowserModule */],
@@ -2124,7 +2161,9 @@ AppModule = __decorate([
                     { loadChildren: '../pages/detail-review/detail-review.module#DetailReviewPageModule', name: 'DetailReviewPage', segment: 'detail-review', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/list-review/list-review.module#ListReviewPageModule', name: 'ListReviewPage', segment: 'list-review', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/mas-info/mas-info.module#MasInfoPageModule', name: 'MasInfoPage', segment: 'mas-info', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/exams/exams.module#ExamsPageModule', name: 'ExamsPage', segment: 'exams', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/exam-list-cat/exam-list-cat.module#ExamListCatPageModule', name: 'ExamListCatPage', segment: 'exam-list-cat', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -2144,7 +2183,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_15__pages_pin_detail_pin_detail__["a" /* PINDetailPage */],
             __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__["a" /* MasInfoPage */],
             __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__["a" /* ListReviewPage */],
-            __WEBPACK_IMPORTED_MODULE_28__pages_detail_review_detail_review__["a" /* DetailReviewPage */]
+            __WEBPACK_IMPORTED_MODULE_28__pages_detail_review_detail_review__["a" /* DetailReviewPage */],
+            __WEBPACK_IMPORTED_MODULE_29__pages_exams_exams__["a" /* ExamsPage */],
+            __WEBPACK_IMPORTED_MODULE_30__pages_exam_list_cat_exam_list_cat__["a" /* ExamListCatPage */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_22__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_23__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_24__ionic_native_google_analytics__["a" /* GoogleAnalytics */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_device__["a" /* Device */], __WEBPACK_IMPORTED_MODULE_25__ionic_native_admob__["a" /* AdMob */], __WEBPACK_IMPORTED_MODULE_19__ionic_native_sqlite__["a" /* SQLite */], __WEBPACK_IMPORTED_MODULE_18__providers_db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_20__providers_store_service__["a" /* StoreService */],
@@ -2172,14 +2213,14 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_store_service__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_db_service__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_exam_list_exam_list__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_developer_developer__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tracker_list_tracker_list__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_google_analytics__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_admob__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_mas_info_mas_info__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_developer_developer__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_tracker_list_tracker_list__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_google_analytics__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_admob__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_mas_info_mas_info__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_exams_exams__ = __webpack_require__(294);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2221,9 +2262,10 @@ var MyApp = (function () {
         //set app's pages. paid = 0, option always present in menu, paid = 1, only displayed in full version
         this.pages = [
             { title: 'Bienvenido', component: __WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__["a" /* WelcomePage */], icon: 'bookmark', paid: 0 },
-            { title: 'Exámenes', component: __WEBPACK_IMPORTED_MODULE_7__pages_exam_list_exam_list__["a" /* ExamListPage */], icon: 'cube', paid: 0 },
-            { title: 'Resultados', component: __WEBPACK_IMPORTED_MODULE_9__pages_tracker_list_tracker_list__["a" /* TrackerListPage */], icon: "arrow-graph-up-right", paid: 1 },
-            { title: 'Más Info', component: __WEBPACK_IMPORTED_MODULE_14__pages_mas_info_mas_info__["a" /* MasInfoPage */], icon: "arrow-graph-up-right", paid: 0 },
+            // {title: 'Exámenes', component: ExamListPage, icon: 'cube', paid: 0},
+            { title: 'Exámenes', component: __WEBPACK_IMPORTED_MODULE_14__pages_exams_exams__["a" /* ExamsPage */], icon: 'cube', paid: 0 },
+            { title: 'Resultados', component: __WEBPACK_IMPORTED_MODULE_8__pages_tracker_list_tracker_list__["a" /* TrackerListPage */], icon: "arrow-graph-up-right", paid: 1 },
+            { title: 'Más Info', component: __WEBPACK_IMPORTED_MODULE_13__pages_mas_info_mas_info__["a" /* MasInfoPage */], icon: "arrow-graph-up-right", paid: 0 },
         ];
         this.storage = storage;
         this.dbService = dbService;
@@ -2347,7 +2389,7 @@ var MyApp = (function () {
         }
     };
     MyApp.prototype.openDeveloperPage = function () {
-        this.nav.push(__WEBPACK_IMPORTED_MODULE_8__pages_developer_developer__["a" /* DeveloperPage */]);
+        this.nav.push(__WEBPACK_IMPORTED_MODULE_7__pages_developer_developer__["a" /* DeveloperPage */]);
     };
     MyApp.prototype.openPage = function (page) {
         var user = "StudioMob";
@@ -2387,10 +2429,10 @@ MyApp = __decorate([
         __WEBPACK_IMPORTED_MODULE_5__providers_db_service__["a" /* DbService */],
         __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
         __WEBPACK_IMPORTED_MODULE_4__providers_store_service__["a" /* StoreService */],
-        __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__["a" /* StatusBar */],
-        __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__["a" /* SplashScreen */],
-        __WEBPACK_IMPORTED_MODULE_12__ionic_native_google_analytics__["a" /* GoogleAnalytics */],
-        __WEBPACK_IMPORTED_MODULE_13__ionic_native_admob__["a" /* AdMob */]])
+        __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__["a" /* StatusBar */],
+        __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__["a" /* SplashScreen */],
+        __WEBPACK_IMPORTED_MODULE_11__ionic_native_google_analytics__["a" /* GoogleAnalytics */],
+        __WEBPACK_IMPORTED_MODULE_12__ionic_native_admob__["a" /* AdMob */]])
 ], MyApp);
 
 //# sourceMappingURL=app.component.js.map
@@ -2638,6 +2680,132 @@ StoreListPage = __decorate([
 ], StoreListPage);
 
 //# sourceMappingURL=store-list.js.map
+
+/***/ }),
+
+/***/ 294:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExamsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exam_list_exam_list__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exam_list_cat_exam_list_cat__ = __webpack_require__(296);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the ExamsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ExamsPage = (function () {
+    function ExamsPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    ExamsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ExamsPage');
+    };
+    ExamsPage.prototype.goToExamListPage = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__exam_list_exam_list__["a" /* ExamListPage */]);
+    };
+    ExamsPage.prototype.goToExamListCatPage = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__exam_list_cat_exam_list_cat__["a" /* ExamListCatPage */]);
+    };
+    return ExamsPage;
+}());
+ExamsPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPage */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-exams',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exams\exams.html"*/'<!--\n  Generated template for the ExamsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Exámenes</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="exam-list">\n  <ion-card>\n      <ion-card-header class="storeCardHeader">\n        <ion-icon name="school"></ion-icon>\n      </ion-card-header>\n\n      <div class="card-header">\n        <ion-row >\n          <ion-col width-100>\n            <span>Exámenes Disponibles</span>\n          </ion-col>\n        </ion-row>\n      </div>\n    <ion-list>\n      <!--on-changes-->\n        <ion-item-sliding>\n            <button ion-item (click)="goToExamListPage()">\n                <h2>SIMPLES</h2>\n                <p>Preguntas de toda la norma de forma aleatoria</p>\n            </button>\n            <button ion-item (click)="goToExamListCatPage()">\n              <h2>CATEGORIZADOS</h2>\n              <p>Preguntas por Categoría de Competencia</p>\n          </button>\n        </ion-item-sliding>\n      <!--/on-changes-->\n    </ion-list>\n  </ion-card>\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exams\exams.html"*/,
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]) === "function" && _b || Object])
+], ExamsPage);
+
+var _a, _b;
+//# sourceMappingURL=exams.js.map
+
+/***/ }),
+
+/***/ 296:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExamListCatPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exam_details_exam_details__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_db_service__ = __webpack_require__(16);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the ExamListCatPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ExamListCatPage = (function () {
+    function ExamListCatPage(nav, navParams, dbService) {
+        this.nav = nav;
+        this.navParams = navParams;
+        this.dbService = dbService;
+        this.nav = nav;
+        //this.dbService = DbService;
+        this.source = navParams.get('readySource');
+        this.user = navParams.get('user');
+        this.adId = navParams.get('adId');
+        //console.log(source);
+    }
+    ExamListCatPage.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        this.dbService.findAllEnabledExamsNested().then(function (data) {
+            _this.exams = data;
+        });
+    };
+    ExamListCatPage.prototype.itemTapped = function (event, exam) {
+        this.nav.push(__WEBPACK_IMPORTED_MODULE_2__exam_details_exam_details__["a" /* ExamDetailsPage */], {
+            exam: exam,
+            source: this.source,
+            user: this.user,
+            adId: this.adId,
+        });
+    };
+    return ExamListCatPage;
+}());
+ExamListCatPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPage */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-exam-list-cat',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-list-cat\exam-list-cat.html"*/'<!--\n  Generated template for the ExamListCatPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Exámenes por Categoría</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="exam-list">\n  <ion-card>\n      <ion-card-header class="storeCardHeader">\n        <ion-icon name="school"></ion-icon>\n      </ion-card-header>\n\n      <div class="card-header">\n        <ion-row >\n          <ion-col width-100>\n            <span>Exámenes Disponibles</span>\n          </ion-col>\n        </ion-row>\n      </div>\n    <ion-list>\n      <!--on-changes-->\n        <ion-item-sliding *ngFor="let exam of exams" >\n            <button ion-item (click)="itemTapped($event, exam)">\n                <ion-icon item-left name="{{exam.Icon}}" >\n                </ion-icon>\n                <h2>{{exam.ExamTitle}}</h2>\n                <p>Preguntas: {{exam.Qty}}, Tiempo: {{exam.Duration}}s</p>\n                <p>Puntaje Min.: {{exam.MinScore}}%</p>\n            </button>\n        </ion-item-sliding>\n      <!--/on-changes-->\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-list-cat\exam-list-cat.html"*/,
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_db_service__["a" /* DbService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_db_service__["a" /* DbService */]) === "function" && _c || Object])
+], ExamListCatPage);
+
+var _a, _b, _c;
+//# sourceMappingURL=exam-list-cat.js.map
 
 /***/ }),
 

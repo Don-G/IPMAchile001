@@ -19,6 +19,7 @@ import { AdMob } from '@ionic-native/admob';
 import { MasInfoPage } from '../pages/mas-info/mas-info';
 import { ListReviewPage } from '../pages/list-review/list-review';
 import { TutorialPage } from '../pages/tutorial/tutorial';
+import { ExamsPage } from '../pages/exams/exams';
 
 
 
@@ -63,7 +64,8 @@ export class MyApp {
       //set app's pages. paid = 0, option always present in menu, paid = 1, only displayed in full version
       this.pages = [
           {title: 'Bienvenido', component: WelcomePage, icon: 'bookmark', paid: 0},
-          {title: 'Exámenes', component: ExamListPage, icon: 'cube', paid: 0},
+          // {title: 'Exámenes', component: ExamListPage, icon: 'cube', paid: 0},
+          {title: 'Exámenes', component: ExamsPage, icon: 'cube', paid: 0},
           {title: 'Resultados', component: TrackerListPage, icon: "arrow-graph-up-right", paid: 1},
           {title: 'Más Info', component: MasInfoPage, icon: "arrow-graph-up-right", paid: 0},
           // {title: 'Tienda', component: StoreListPage, icon: "card", paid: 0},

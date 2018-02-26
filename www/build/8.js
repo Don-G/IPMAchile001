@@ -1,14 +1,14 @@
-webpackJsonp([1],{
+webpackJsonp([8],{
 
-/***/ 295:
+/***/ 290:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExamListCatPageModule", function() { return ExamListCatPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MasInfoPageModule", function() { return MasInfoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exam_list_cat__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mas_info__ = __webpack_require__(110);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,25 +18,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ExamListCatPageModule = (function () {
-    function ExamListCatPageModule() {
+var MasInfoPageModule = (function () {
+    function MasInfoPageModule() {
     }
-    return ExamListCatPageModule;
+    return MasInfoPageModule;
 }());
-ExamListCatPageModule = __decorate([
+MasInfoPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__exam_list_cat__["a" /* ExamListCatPage */],
+            __WEBPACK_IMPORTED_MODULE_2__mas_info__["a" /* MasInfoPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__exam_list_cat__["a" /* ExamListCatPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__mas_info__["a" /* MasInfoPage */]),
         ],
     })
-], ExamListCatPageModule);
+], MasInfoPageModule);
 
-//# sourceMappingURL=exam-list-cat.module.js.map
+//# sourceMappingURL=mas-info.module.js.map
 
 /***/ })
 
 });
-//# sourceMappingURL=1.js.map
+//# sourceMappingURL=8.js.map

@@ -253,15 +253,41 @@ export class DbService {
         if(data.res.rows.length > 0) {
             for(var i = 0; i < data.res.rows.length; i++) {
                 //console.log(data.res.rows.item(i));
-                EXAMS.push(data.res.rows.item(i));
+                if(data.res.rows.item(i).is_nested == false){
+                    EXAMS.push(data.res.rows.item(i));
+                }                
             }
+            console.log(EXAMS);
             //console.log("EXAMS -> " + JSON.stringify(EXAMS));
-            return EXAMS;
+            return EXAMS;            
         }
+        
     }, (error) => {
         console.log("ERROR -> " + JSON.stringify(error.err));
     })));
   }
+
+  // carga todos los examenes anidados o categorizados
+  findAllEnabledExamsNested() {
+    let EXAMS = [];
+    return new Promise ((resolve,reject) => resolve(this.query(this.db,"SELECT * FROM ExamType WHERE Enabled=1").then((data) => {
+        if(data.res.rows.length > 0) {
+            for(var i = 0; i < data.res.rows.length; i++) {
+                //console.log(data.res.rows.item(i));
+                if(data.res.rows.item(i).is_nested == true){
+                    EXAMS.push(data.res.rows.item(i));
+                }                
+            }
+            console.log(EXAMS);
+            //console.log("EXAMS -> " + JSON.stringify(EXAMS));
+            return EXAMS;            
+        }
+        
+    }, (error) => {
+        console.log("ERROR -> " + JSON.stringify(error.err));
+    })));
+  }
+
 
   //----------------------------------------------------------
 

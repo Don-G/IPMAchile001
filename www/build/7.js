@@ -1,14 +1,14 @@
-webpackJsonp([1],{
+webpackJsonp([7],{
 
-/***/ 295:
+/***/ 293:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExamListCatPageModule", function() { return ExamListCatPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExamsPageModule", function() { return ExamsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exam_list_cat__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exams__ = __webpack_require__(294);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,25 +18,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ExamListCatPageModule = (function () {
-    function ExamListCatPageModule() {
+var ExamsPageModule = (function () {
+    function ExamsPageModule() {
     }
-    return ExamListCatPageModule;
+    return ExamsPageModule;
 }());
-ExamListCatPageModule = __decorate([
+ExamsPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__exam_list_cat__["a" /* ExamListCatPage */],
+            __WEBPACK_IMPORTED_MODULE_2__exams__["a" /* ExamsPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__exam_list_cat__["a" /* ExamListCatPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__exams__["a" /* ExamsPage */]),
         ],
     })
-], ExamListCatPageModule);
+], ExamsPageModule);
 
-//# sourceMappingURL=exam-list-cat.module.js.map
+//# sourceMappingURL=exams.module.js.map
 
 /***/ })
 
 });
-//# sourceMappingURL=1.js.map
+//# sourceMappingURL=7.js.map
