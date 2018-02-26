@@ -18,6 +18,7 @@ import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { AdMob } from '@ionic-native/admob';
 import { MasInfoPage } from '../pages/mas-info/mas-info';
 import { ListReviewPage } from '../pages/list-review/list-review';
+import { TutorialPage } from '../pages/tutorial/tutorial';
 
 
 
