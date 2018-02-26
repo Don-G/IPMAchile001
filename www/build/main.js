@@ -1,4 +1,4 @@
-webpackJsonp([3],{
+webpackJsonp([4],{
 
 /***/ 104:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -791,19 +791,19 @@ DbService = __decorate([
 var map = {
 	"../pages/detail-review/detail-review.module": [
 		288,
-		8
+		3
 	],
 	"../pages/list-review/list-review.module": [
 		289,
-		7
+		2
 	],
 	"../pages/mas-info/mas-info.module": [
 		290,
-		6
+		1
 	],
 	"../pages/tutorial/tutorial.module": [
 		291,
-		5
+		0
 	]
 };
 function webpackAsyncContext(req) {
@@ -2375,17 +2375,24 @@ var MyApp = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */]),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */]) === "function" && _a || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */])
 ], MyApp.prototype, "nav", void 0);
 MyApp = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'app',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\app\app.html"*/'<ion-menu #menu [content]="content" side="left" id="menu">\n\n<ion-header id="header">\n\n    <ion-toolbar id="toolbarT">\n\n      <ion-title *ngIf="_Paid==0">Free version</ion-title>\n\n      <!-- <ion-title *ngIf="_Paid==1">Full version</ion-title> -->\n\n      <ion-title *ngIf="_Paid==1">CCDP IPMA Chile</ion-title>\n\n    </ion-toolbar>\n\n      <div class="ava">\n\n      <ion-item class="item-avatar" item-left *ngIf="user!=\'\'">\n\n        <ion-avatar item-left>\n\n            <img spinner-on-load src="{{picture}}">\n\n        </ion-avatar>\n\n        <h2>Hola {{user}}</h2>\n\n        <p>{{email}}</p>\n\n    </ion-item>\n\n  </div>\n\n</ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list *ngFor="let p of pages" >\n\n        <button menuClose ion-item *ngIf="p.paid<=_Paid"(click)="openPage(p)">\n\n          {{p.title}}\n\n        </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n  <!-- <ion-footer class="ftitle">\n\n           <button menuClose ion-button icon-only (click)="openDeveloperPage()">\n\n            <ion-icon name="build"></ion-icon>\n\n          </button> -->\n\n          <!-- <ion-title>IPMA chile 001</ion-title>\n\n  </ion-footer> -->\n\n</ion-menu>\n\n\n\n<ion-view>\n\n  <ion-nav id="nav" [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>\n\n</ion-view>\n\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\app\app.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_5__providers_db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_4__providers_store_service__["a" /* StoreService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__providers_db_service__["a" /* DbService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__providers_db_service__["a" /* DbService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__providers_store_service__["a" /* StoreService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_store_service__["a" /* StoreService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_12__ionic_native_google_analytics__["a" /* GoogleAnalytics */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_12__ionic_native_google_analytics__["a" /* GoogleAnalytics */]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_13__ionic_native_admob__["a" /* AdMob */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_13__ionic_native_admob__["a" /* AdMob */]) === "function" && _k || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Platform */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */],
+        __WEBPACK_IMPORTED_MODULE_5__providers_db_service__["a" /* DbService */],
+        __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
+        __WEBPACK_IMPORTED_MODULE_4__providers_store_service__["a" /* StoreService */],
+        __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__["a" /* StatusBar */],
+        __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__["a" /* SplashScreen */],
+        __WEBPACK_IMPORTED_MODULE_12__ionic_native_google_analytics__["a" /* GoogleAnalytics */],
+        __WEBPACK_IMPORTED_MODULE_13__ionic_native_admob__["a" /* AdMob */]])
 ], MyApp);
 
-var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
