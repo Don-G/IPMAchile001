@@ -32482,9 +32482,6 @@ tracker-list ion-item-sliding {
 }
 
 tracker-list ion-list .item {
-  border-bottom: none;
-  border-bottom-style: solid;
-  border-bottom-width: 1px !important;
   border-bottom-color: #6d7f9b !important;
   background-color: #f4f4f4 !important;
   color: #222;
@@ -32500,18 +32497,59 @@ tracker-list ion-list .item .item-inner {
   border-bottom-color: #f4f4f4;
 }
 
-.item {
+tracker-list .item {
   -webkit-box-align: baseline;
   -webkit-align-items: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
 }
 
-.button-container {
+tracker-list .button-container {
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
   text-align: right;
+}
+
+page-tutorial .tutorial-page {
+  background-color: #fff !important;
+}
+
+page-tutorial .toolbar-background {
+  background: #e0e5f8;
+  border-color: transparent;
+}
+
+page-tutorial .slide-zoom {
+  height: 100%;
+}
+
+page-tutorial .slide-title {
+  margin-top: 2.8rem;
+}
+
+page-tutorial .slide-image {
+  max-height: 230px;
+  margin: 18px 0;
+}
+
+page-tutorial .slide {
+  background-color: #f4f4f4 !important;
+}
+
+page-tutorial b {
+  font-weight: 500;
+}
+
+page-tutorial p {
+  padding: 0 40px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1f1e1e;
+}
+
+page-tutorial p b {
+  color: #000000;
 }
 
 welcome div.scroll-content {

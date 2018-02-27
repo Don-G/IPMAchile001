@@ -3,7 +3,7 @@
     <button menuToggle>
         <ion-icon name="progress"></ion-icon>
     </button>
-    <ion-title>Resultado de Exámenes</ion-title>
+    <ion-title>Seguimiento de Exámenes</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -16,18 +16,27 @@
       <div class="card-header">
         <ion-row >
           <ion-col width-100>
-            <span>Progresos Disponibles </span>
+            <span>Progresos Disponibles</span>
           </ion-col>
         </ion-row>
       </div>
 
-      <ion-list>
+      <!-- <ion-list>
         <ion-item-sliding *ngFor="let pList of progressList">
           <button ion-item (click)="itemTapped(pList)">
             <h2>{{pList.ExamTitle}}</h2>
           </button>
         </ion-item-sliding>
+      </ion-list> -->
+
+      <ion-list>
+        <ion-item *ngFor="let pList of progressList">
+          <button ion-item (click)="itemTapped(pList)">
+            <h2>{{pList.ExamTitle}}</h2>
+          </button>
+        </ion-item>
       </ion-list>
+
   </ion-card>
 
 </ion-content>

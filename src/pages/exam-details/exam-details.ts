@@ -239,7 +239,7 @@ export class ExamDetailsPage {
           subTitle: subTit,
           buttons: [
             {
-              text: 'OK',
+              text: 'Ver resumen',
               handler: () => {
                 _examOver = true;
                 let alertTransition = alert.dismiss();

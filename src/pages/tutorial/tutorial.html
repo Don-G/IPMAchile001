@@ -7,12 +7,34 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>tutorial</ion-title>
+    <ion-title>Tutorial</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="tutorial-page" >
 
+  <ion-slides pager class="slide">
+    <ion-slide *ngFor="let slide of slides">
+      <ion-toolbar  color="light">
+        <ion-buttons end>
+          <button ion-button color="primary" (click)="goToMainPage()">Saltar</button>
+        </ion-buttons>
+      </ion-toolbar>
+      <img [src]="slide.image" class="slide-image"/>
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p>
+    </ion-slide>
+    <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="assets/img/checkmark.png" class="slide-image"/>
+      <h2 class="slide-title">¡Listo!</h2>
+      <button ion-button large clear icon-end color="dark" (click)="goToMainPage()">
+        Continuar
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

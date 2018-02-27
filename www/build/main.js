@@ -1,14 +1,14 @@
-webpackJsonp([4],{
+webpackJsonp([6],{
 
-/***/ 104:
+/***/ 107:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_fb_provider__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__welcome_welcome__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_fb_provider__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__welcome_welcome__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -140,15 +140,15 @@ LoginPage = __decorate([
 
 /***/ }),
 
-/***/ 105:
+/***/ 108:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WelcomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_db_service__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_db_service__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -205,7 +205,7 @@ WelcomePage = __decorate([
 
 /***/ }),
 
-/***/ 108:
+/***/ 109:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -252,14 +252,14 @@ DetailReviewPage = __decorate([
 
 /***/ }),
 
-/***/ 109:
+/***/ 110:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListReviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__detail_review_detail_review__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__detail_review_detail_review__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -305,7 +305,7 @@ ListReviewPage = __decorate([
 
 /***/ }),
 
-/***/ 110:
+/***/ 111:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -351,7 +351,222 @@ MasInfoPage = __decorate([
 
 /***/ }),
 
-/***/ 118:
+/***/ 112:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TutorialPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__welcome_welcome__ = __webpack_require__(108);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+// import { MyApp } from '../../app/app.component';
+/**
+ * Generated class for the TutorialPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var TutorialPage = (function () {
+    function TutorialPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.slides = [
+            {
+                title: "¡Bienvenido a IPMA Chile!",
+                description: "La app <b>IPMA Chile</b> contiene 2 tipos de simuladores de exámenes con los conocimientos relevantes para obtener la certificación IPMA Level D y C.",
+                image: "assets/img/titulo_ipma.png",
+            },
+            {
+                title: "¿Qué es la Certificación IPMA?",
+                description: "Sistema internacional de Certificación de Competencias de un individuo en cuanto a la <b>Gestión de Proyectos</b> que cuenta con 4 niveles: <b>Nivel A</b> (Director de Cartera o Programas de Proyectos), <b>Nivel B</b> (Director de Proyecto), <b>Nive C</b> (Profesional de la Dirección y Gestión de Proyectos) y <b>Nivel D</b> (Gestor en Dirección de Proyectos)",
+                image: "assets/img/logo.jpg",
+            },
+            {
+                title: "Exámenes Simples",
+                description: "Los Exámenes Simples corresponden a: un <b>Exámen Full</b> que consta de 20 preguntas aleatorias y un tiempo máximo para responder de 8 minutos, y un <b>Exámen Express</b> que consta de 10 preguntas aleatorias y un tiempo máximo para responder de 2 minutos",
+                image: "assets/img/examenes_simples.png",
+            },
+            {
+                title: "Exámenes Categorizados",
+                description: "La Norma ICB es el estándar internacional del IPMA, y éste actualmente en su versión 3 cuenta con 3 categorias de competencias (Comportamiento, Contextuales y Técnicas) de las cuales se desprenden 3 exámenes especializados en el estudio de dichas categorías",
+                image: "assets/img/examenes_categorizados.png",
+            },
+            {
+                title: "Resalto de Respuesta Correcta",
+                description: "Cuando respondas correctamente, se resaltará tu respuesta con color verde, asímismo cuando respondas incorrectamente, se resaltará también tu respuesta incorrecta con color rojo",
+                image: "assets/img/resalto_correcta.png",
+            },
+            {
+                title: "Resumen de Respuestas Correctas e Incorrectas",
+                description: "Luego de responder el exámen podrás visualizar el resumen de tus respuestas y tocar cada pregunta resaltada podrás visualizar la respuesta correcta y el argumento en el que se basa",
+                image: "assets/img/resumen_respuestas.png",
+            },
+            {
+                title: "Seguimiento de Resultados",
+                description: "Siempre tendrás un registro de tu progreso por cada exámen que realices",
+                image: "assets/img/progreso.png",
+            }
+        ];
+    }
+    TutorialPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad TutorialPage');
+    };
+    TutorialPage.prototype.goToMainPage = function () {
+        // this.navCtrl.push(MyApp);
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__welcome_welcome__["a" /* WelcomePage */]);
+    };
+    return TutorialPage;
+}());
+TutorialPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPage */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-tutorial',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\tutorial\tutorial.html"*/'<!--\n  Generated template for the TutorialPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Tutorial</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="tutorial-page" >\n\n  <ion-slides pager class="slide">\n    <ion-slide *ngFor="let slide of slides">\n      <ion-toolbar  color="light">\n        <ion-buttons end>\n          <button ion-button color="primary" (click)="goToMainPage()">Saltar</button>\n        </ion-buttons>\n      </ion-toolbar>\n      <img [src]="slide.image" class="slide-image"/>\n      <h2 class="slide-title" [innerHTML]="slide.title"></h2>\n      <p [innerHTML]="slide.description"></p>\n    </ion-slide>\n    <ion-slide>\n      <ion-toolbar>\n      </ion-toolbar>\n      <img src="assets/img/checkmark.png" class="slide-image"/>\n      <h2 class="slide-title">¡Listo!</h2>\n      <button ion-button large clear icon-end color="dark" (click)="goToMainPage()">\n        Continuar\n        <ion-icon name="arrow-forward"></ion-icon>\n      </button>\n    </ion-slide>\n  </ion-slides>\n</ion-content>'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\tutorial\tutorial.html"*/,
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]) === "function" && _b || Object])
+], TutorialPage);
+
+var _a, _b;
+//# sourceMappingURL=tutorial.js.map
+
+/***/ }),
+
+/***/ 113:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExamListCatPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exam_details_exam_details__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_db_service__ = __webpack_require__(13);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the ExamListCatPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ExamListCatPage = (function () {
+    function ExamListCatPage(nav, navParams, dbService) {
+        this.nav = nav;
+        this.navParams = navParams;
+        this.dbService = dbService;
+        this.nav = nav;
+        //this.dbService = DbService;
+        this.source = navParams.get('readySource');
+        this.user = navParams.get('user');
+        this.adId = navParams.get('adId');
+        //console.log(source);
+    }
+    ExamListCatPage.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        this.dbService.findAllEnabledExamsNested().then(function (data) {
+            _this.exams = data;
+        });
+    };
+    ExamListCatPage.prototype.itemTapped = function (event, exam) {
+        this.nav.push(__WEBPACK_IMPORTED_MODULE_2__exam_details_exam_details__["a" /* ExamDetailsPage */], {
+            exam: exam,
+            source: this.source,
+            user: this.user,
+            adId: this.adId,
+        });
+    };
+    return ExamListCatPage;
+}());
+ExamListCatPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPage */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-exam-list-cat',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-list-cat\exam-list-cat.html"*/'<!--\n\n  Generated template for the ExamListCatPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Exámenes por Categoría</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="exam-list">\n\n  <ion-card>\n\n      <ion-card-header class="storeCardHeader">\n\n        <ion-icon name="school"></ion-icon>\n\n      </ion-card-header>\n\n\n\n      <div class="card-header">\n\n        <ion-row >\n\n          <ion-col width-100>\n\n            <span>Exámenes Disponibles</span>\n\n          </ion-col>\n\n        </ion-row>\n\n      </div>\n\n    <ion-list>\n\n      <!--on-changes-->\n\n        <ion-item-sliding *ngFor="let exam of exams" >\n\n            <button ion-item (click)="itemTapped($event, exam)">\n\n                <ion-icon item-left name="{{exam.Icon}}" >\n\n                </ion-icon>\n\n                <h2>{{exam.ExamTitle}}</h2>\n\n                <p>Preguntas: {{exam.Qty}}, Tiempo: {{exam.Duration}}s</p>\n\n                <p>Puntaje Min.: {{exam.MinScore}}%</p>\n\n            </button>\n\n        </ion-item-sliding>\n\n      <!--/on-changes-->\n\n    </ion-list>\n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-list-cat\exam-list-cat.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_db_service__["a" /* DbService */]])
+], ExamListCatPage);
+
+//# sourceMappingURL=exam-list-cat.js.map
+
+/***/ }),
+
+/***/ 114:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExamsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exam_list_exam_list__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exam_list_cat_exam_list_cat__ = __webpack_require__(113);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the ExamsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ExamsPage = (function () {
+    function ExamsPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    ExamsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ExamsPage');
+    };
+    ExamsPage.prototype.goToExamListPage = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__exam_list_exam_list__["a" /* ExamListPage */]);
+    };
+    ExamsPage.prototype.goToExamListCatPage = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__exam_list_cat_exam_list_cat__["a" /* ExamListCatPage */]);
+    };
+    return ExamsPage;
+}());
+ExamsPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPage */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-exams',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exams\exams.html"*/'<!--\n\n  Generated template for the ExamsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Exámenes</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="exam-list">\n\n  <ion-card>\n\n      <ion-card-header class="storeCardHeader">\n\n        <ion-icon name="school"></ion-icon>\n\n      </ion-card-header>\n\n\n\n      <div class="card-header">\n\n        <ion-row >\n\n          <ion-col width-100>\n\n            <span>Exámenes Disponibles</span>\n\n          </ion-col>\n\n        </ion-row>\n\n      </div>\n\n    <ion-list>\n\n      <!--on-changes-->\n\n        <ion-item-sliding>\n\n            <button ion-item (click)="goToExamListPage()">\n\n                <h2>SIMPLES</h2>\n\n                <p>Preguntas de toda la norma de forma aleatoria</p>\n\n            </button>\n\n            <button ion-item (click)="goToExamListCatPage()">\n\n              <h2>CATEGORIZADOS</h2>\n\n              <p>Preguntas por Categoría de Competencia</p>\n\n          </button>\n\n        </ion-item-sliding>\n\n      <!--/on-changes-->\n\n    </ion-list>\n\n  </ion-card>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exams\exams.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]])
+], ExamsPage);
+
+//# sourceMappingURL=exams.js.map
+
+/***/ }),
+
+/***/ 122:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -364,11 +579,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 118;
+webpackEmptyAsyncContext.id = 122;
 
 /***/ }),
 
-/***/ 16:
+/***/ 13:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -808,32 +1023,32 @@ DbService = __decorate([
 
 /***/ }),
 
-/***/ 160:
+/***/ 164:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/detail-review/detail-review.module": [
-		288,
-		12
+		291,
+		5
 	],
 	"../pages/exam-list-cat/exam-list-cat.module": [
 		295,
-		1
+		4
 	],
 	"../pages/exams/exams.module": [
-		293,
-		11
-	],
-	"../pages/list-review/list-review.module": [
-		289,
+		296,
 		3
 	],
-	"../pages/mas-info/mas-info.module": [
-		290,
+	"../pages/list-review/list-review.module": [
+		292,
 		2
 	],
+	"../pages/mas-info/mas-info.module": [
+		293,
+		1
+	],
 	"../pages/tutorial/tutorial.module": [
-		291,
+		294,
 		0
 	]
 };
@@ -848,12 +1063,73 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 160;
+webpackAsyncContext.id = 164;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 201:
+/***/ 166:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExamListPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exam_details_exam_details__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_db_service__ = __webpack_require__(13);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ExamListPage = (function () {
+    function ExamListPage(nav, navParams, dbService) {
+        this.nav = nav;
+        this.navParams = navParams;
+        this.dbService = dbService;
+        this.nav = nav;
+        //this.dbService = DbService;
+        this.source = navParams.get('readySource');
+        this.user = navParams.get('user');
+        this.adId = navParams.get('adId');
+        //console.log(source);
+    }
+    ExamListPage.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        this.dbService.findAllEnabledExams().then(function (data) {
+            _this.exams = data;
+        });
+    };
+    ExamListPage.prototype.itemTapped = function (event, exam) {
+        this.nav.push(__WEBPACK_IMPORTED_MODULE_2__exam_details_exam_details__["a" /* ExamDetailsPage */], {
+            exam: exam,
+            source: this.source,
+            user: this.user,
+            adId: this.adId,
+        });
+    };
+    return ExamListPage;
+}());
+ExamListPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'exam-list',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-list\exam-list.html"*/'<ion-header>\n\n  <ion-navbar color="stable">\n\n    <button menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Exámenes Simples</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="exam-list">\n\n  <ion-card>\n\n      <ion-card-header class="storeCardHeader">\n\n        <ion-icon name="school"></ion-icon>\n\n      </ion-card-header>\n\n\n\n      <div class="card-header">\n\n        <ion-row >\n\n          <ion-col width-100>\n\n            <span>Exámenes Disponibles</span>\n\n          </ion-col>\n\n        </ion-row>\n\n      </div>\n\n    <ion-list>\n\n      <!--on-changes-->\n\n        <ion-item-sliding *ngFor="let exam of exams" >\n\n            <button ion-item (click)="itemTapped($event, exam)">\n\n                <ion-icon item-left name="{{exam.Icon}}" >\n\n                </ion-icon>\n\n                <h2>{{exam.ExamTitle}}</h2>\n\n                <p>Preguntas: {{exam.Qty}}, Tiempo: {{exam.Duration}}s</p>\n\n                <p>Puntaje Min.: {{exam.MinScore}}%</p>\n\n            </button>\n\n        </ion-item-sliding>\n\n      <!--/on-changes-->\n\n    </ion-list>\n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-list\exam-list.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_db_service__["a" /* DbService */]])
+], ExamListPage);
+
+//# sourceMappingURL=exam-list.js.map
+
+/***/ }),
+
+/***/ 206:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -958,15 +1234,15 @@ FbProvider = __decorate([
 
 /***/ }),
 
-/***/ 202:
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExamListPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeveloperPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exam_details_exam_details__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_db_service__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_db_service__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -980,57 +1256,1365 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ExamListPage = (function () {
-    function ExamListPage(nav, navParams, dbService) {
-        this.nav = nav;
-        this.navParams = navParams;
-        this.dbService = dbService;
-        this.nav = nav;
-        //this.dbService = DbService;
-        this.source = navParams.get('readySource');
-        this.user = navParams.get('user');
-        this.adId = navParams.get('adId');
-        //console.log(source);
-    }
-    ExamListPage.prototype.ionViewWillEnter = function () {
+var DeveloperPage = (function () {
+    function DeveloperPage(nav, events, navParams, storage, dbService) {
         var _this = this;
-        this.dbService.findAllEnabledExams().then(function (data) {
-            _this.exams = data;
-        });
+        this.nav = nav;
+        this.events = events;
+        this.navParams = navParams;
+        this.storage = storage;
+        this.dbService = dbService;
+        this.dbService.getProperty('highlight').then(function (data) { return _this._hlra = data; });
+        this.dbService.getProperty('admob').then(function (data) { return _this._admob = data; });
+        this.dbService.getProperty('login').then(function (data) { return _this._login = data; });
+        this.dbService.getProperty('fullversion').then(function (data) { return _this._fullv = data; });
+        this.dbService.getProperty('explanation').then(function (data) { return _this._expla = data; });
+        this.dbService.getProperty('explanationq').then(function (data) { return _this._quantity = data; });
+        this.dbService.getProperty('qId').then(function (data) { return _this._qId = data; });
+        this.dbService.getProperty('cId').then(function (data) { return _this._cId = data; });
+        this.dbService.getProperty('eId').then(function (data) { return _this._eId = data; });
+    }
+    DeveloperPage.prototype.logEvent = function (e, pname) {
+        console.log(e, pname);
+        if (pname == 'fullversion') {
+            if (e.checked) {
+                this.dbService.setFullVersion();
+            }
+            else {
+                this.dbService.setFreeVersion();
+            }
+        }
+        if (e.checked) {
+            this.dbService.setProperty(pname, 'true');
+        }
+        else {
+            this.dbService.setProperty(pname, 'false');
+        }
     };
-    ExamListPage.prototype.itemTapped = function (event, exam) {
-        this.nav.push(__WEBPACK_IMPORTED_MODULE_2__exam_details_exam_details__["a" /* ExamDetailsPage */], {
-            exam: exam,
-            source: this.source,
-            user: this.user,
-            adId: this.adId,
-        });
+    DeveloperPage.prototype.update = function (value, key) {
+        if (value != '') {
+            this.dbService.setProperty(key, value);
+        }
     };
-    return ExamListPage;
+    return DeveloperPage;
 }());
-ExamListPage = __decorate([
+DeveloperPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'exam-list',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-list\exam-list.html"*/'<ion-header>\n  <ion-navbar color="stable">\n    <button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Exámenes Simples</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="exam-list">\n  <ion-card>\n      <ion-card-header class="storeCardHeader">\n        <ion-icon name="school"></ion-icon>\n      </ion-card-header>\n\n      <div class="card-header">\n        <ion-row >\n          <ion-col width-100>\n            <span>Exámenes Disponibles</span>\n          </ion-col>\n        </ion-row>\n      </div>\n    <ion-list>\n      <!--on-changes-->\n        <ion-item-sliding *ngFor="let exam of exams" >\n            <button ion-item (click)="itemTapped($event, exam)">\n                <ion-icon item-left name="{{exam.Icon}}" >\n                </ion-icon>\n                <h2>{{exam.ExamTitle}}</h2>\n                <p>Preguntas: {{exam.Qty}}, Tiempo: {{exam.Duration}}s</p>\n                <p>Puntaje Min.: {{exam.MinScore}}%</p>\n            </button>\n        </ion-item-sliding>\n      <!--/on-changes-->\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-list\exam-list.html"*/
+        selector: 'developer',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\developer\developer.html"*/'<ion-header>\n  <ion-navbar color="stable">\n    <button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Developer Assistant</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="developer">\n  <ion-card>\n      <ion-card-header class="storeCardHeader">\n        <ion-icon name="build"></ion-icon>\n      </ion-card-header>\n\n      <div class="card-header">\n        <ion-row >\n          <ion-col width-100>\n            <span>Available Config</span>\n          </ion-col>\n        </ion-row>\n      </div>\n    <ion-list>\n      <!--on-changes-->\n        <ion-item>\n          <ion-label>Questions lock > </ion-label>\n          <ion-input type="number" [(ngModel)]="_qId" (input)="update($event.target.value, \'qId\')"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label>Categories lock > </ion-label>\n          <ion-input type="number" [(ngModel)]="_cId" (input)="update($event.target.value, \'cId\')"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label>Exams lock > </ion-label>\n          <ion-input type="number" [(ngModel)]="_eId" (input)="update($event.target.value, \'eId\')"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label>Login Page?</ion-label>\n          <ion-checkbox primary [(ngModel)]="_login" (ionChange)="logEvent($event,\'login\')"></ion-checkbox>\n        </ion-item>\n        <ion-item>\n          <ion-label>Admob Visible?</ion-label>\n          <ion-checkbox primary [(ngModel)]="_admob" (ionChange)="logEvent($event,\'admob\')"></ion-checkbox>\n        </ion-item>\n        <ion-item>\n          <ion-checkbox primary [(ngModel)]="_expla" (ionChange)="logEvent($event,\'explanation\')"></ion-checkbox>\n          <ion-label>Allow Explanations?</ion-label>\n        </ion-item>\n        <ion-item *ngIf="_expla">\n          <ion-label >Set Explanations: </ion-label>\n          <ion-input type="number" [(ngModel)]="_quantity" (input)="update($event.target.value, \'explanationq\')"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-checkbox primary [(ngModel)]="_fullv" (ionChange)="logEvent($event,\'fullversion\')"></ion-checkbox>\n          <ion-label>Full Version</ion-label>\n        </ion-item>\n        <ion-item>\n          <ion-checkbox primary [(ngModel)]="_hlra" (ionChange)="logEvent($event,\'highlight\')"></ion-checkbox>\n          <ion-label>Highlight Right Answer?</ion-label>\n        </ion-item>\n      <!--/on-changes-->\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\developer\developer.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_db_service__["a" /* DbService */]])
-], ExamListPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_2__providers_db_service__["a" /* DbService */]])
+], DeveloperPage);
 
-//# sourceMappingURL=exam-list.js.map
+//# sourceMappingURL=developer.js.map
 
 /***/ }),
 
-/***/ 203:
+/***/ 208:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrackerListPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tracker_details_tracker_details__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_db_service__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(20);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var TrackerListPage = (function () {
+    function TrackerListPage(nav, storage, navParams, dbService) {
+        this.nav = nav;
+        this.storage = storage;
+        this.navParams = navParams;
+        this.dbService = dbService;
+        this.nav = nav;
+        //let selectedItem = navParams.get('item');
+        //this.user = navParams.get('user');
+        this.source = navParams.get('readySource');
+    }
+    TrackerListPage.prototype.ngOnInit = function () {
+        var _this = this;
+        // if login feature is activated then user is set with user's name
+        this.dbService.getProperty('login').then(function (data) {
+            if (data == 'true') {
+                _this.storage.get('userName').then(function (data) {
+                    if (typeof data == "undefined" || data == null) {
+                        _this.user = "StudioMob";
+                        _this.loadData(_this.user);
+                    }
+                    else {
+                        _this.user = data;
+                        _this.loadData(_this.user);
+                    }
+                });
+            }
+            else {
+                _this.user = "StudioMob";
+                _this.loadData(_this.user);
+            }
+        });
+    };
+    TrackerListPage.prototype.loadData = function (user) {
+        var _this = this;
+        this.dbService.getProgressByUserId(user).then(function (data) {
+            _this.progressList = data;
+        });
+        if (this.source == 'cordova') {
+            analytics.trackView('Tracker-List');
+        }
+    };
+    TrackerListPage.prototype.itemTapped = function (progressExam) {
+        this.nav.push(__WEBPACK_IMPORTED_MODULE_2__tracker_details_tracker_details__["a" /* TrackerExamDetailPage */], {
+            progressExam: progressExam,
+            user: this.user,
+        });
+    };
+    return TrackerListPage;
+}());
+TrackerListPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'tracker-list',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\tracker-list\tracker-list.html"*/'<ion-header>\n\n  <ion-navbar color="stable">\n\n    <button menuToggle>\n\n        <ion-icon name="progress"></ion-icon>\n\n    </button>\n\n    <ion-title>Seguimiento de Exámenes</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="tracker-list">\n\n  <ion-card>\n\n      <ion-card-header class="storeCardHeader">\n\n        <ion-icon name="stats"></ion-icon>\n\n      </ion-card-header>\n\n\n\n      <div class="card-header">\n\n        <ion-row >\n\n          <ion-col width-100>\n\n            <span>Progresos Disponibles</span>\n\n          </ion-col>\n\n        </ion-row>\n\n      </div>\n\n\n\n      <!-- <ion-list>\n\n        <ion-item-sliding *ngFor="let pList of progressList">\n\n          <button ion-item (click)="itemTapped(pList)">\n\n            <h2>{{pList.ExamTitle}}</h2>\n\n          </button>\n\n        </ion-item-sliding>\n\n      </ion-list> -->\n\n\n\n      <ion-list>\n\n        <ion-item *ngFor="let pList of progressList">\n\n          <button ion-item (click)="itemTapped(pList)">\n\n            <h2>{{pList.ExamTitle}}</h2>\n\n          </button>\n\n        </ion-item>\n\n      </ion-list>\n\n\n\n  </ion-card>\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\tracker-list\tracker-list.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_db_service__["a" /* DbService */]])
+], TrackerListPage);
+
+//# sourceMappingURL=tracker-list.js.map
+
+/***/ }),
+
+/***/ 209:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrackerExamDetailPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_db_service__ = __webpack_require__(13);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var TrackerExamDetailPage = (function () {
+    function TrackerExamDetailPage(nav, navParams, dbService) {
+        this.nav = nav;
+        this.navParams = navParams;
+        this.dbService = dbService;
+        this.ChartData = [
+            {
+                data: [],
+                label: '',
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(54, 112, 135, 0.2)',
+                    'rgba(255, 106, 186, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(54, 112, 135, 1)',
+                    'rgba(255, 106, 186, 1)',
+                ],
+                borderWidth: 1
+            }
+        ];
+        this.ChartLabels = [];
+        this.ChartOptions = {
+            animation: {
+                duration: 1000,
+                easing: 'easeInQuad'
+            },
+            responsive: true,
+            scales: {
+                yAxes: [{
+                        ticks: {
+                            max: 100,
+                            min: 0,
+                            stepSize: 20
+                        }
+                    }]
+            }
+        };
+        this.ChartColours = [
+            {
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(54, 112, 135, 0.2)',
+                    'rgba(255, 106, 186, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(54, 112, 135, 1)',
+                    'rgba(255, 106, 186, 1)',
+                ],
+                borderWidth: 1
+            }
+        ];
+        this.ChartLegend = true;
+        this.ChartType = 'bar';
+        this.nav = nav;
+        var progressExam = navParams.get('progressExam');
+        this.title = progressExam.ExamTitle;
+        this.examid = progressExam.ExamId;
+        this.user = navParams.get('user');
+    }
+    TrackerExamDetailPage.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        //let progressData: any = [];
+        this.dbService.loadProgress(this.user, 8, this.examid).then(function (data) {
+            _this.progressData = data;
+            // we invert array to represent values based on time
+            _this.progressData.reverse();
+            for (var i = 0; i < _this.progressData.length; i++) {
+                _this.ChartData[0].data.push(_this.progressData[i].Scored);
+                _this.ChartLabels.push('#' + (i + 1));
+                _this.progressData[i].index = i + 1;
+            }
+            _this.ChartData[0].label = _this.title;
+            //Chart.defaults.global.defaultFontColor = 'white';
+            // we reinvert the array to present most recent score first in
+            _this.progressData.reverse();
+            _this.showChart();
+        });
+    };
+    TrackerExamDetailPage.prototype.showChart = function () {
+        var ctx, myChart;
+        ctx = document.getElementById("myChart");
+        myChart = new Chart(ctx, {
+            type: this.ChartType,
+            options: this.ChartOptions,
+            data: {
+                labels: this.ChartLabels,
+                datasets: this.ChartData,
+            }
+        });
+    };
+    return TrackerExamDetailPage;
+}());
+TrackerExamDetailPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'tracker-details',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\tracker-details\tracker-details.html"*/'<ion-header>\n  <ion-navbar color="stable">\n    <button menuToggle>\n        <ion-icon name="trackerDetail"></ion-icon>\n    </button>\n    <ion-title>Tu progreso</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="tracker">\n  <div class="chart-container" >\n  <div class="row">\n      <div class="col-sm-6">\n        <canvas id="myChart" style="position: relative; height:40vh; width:100vw"></canvas>\n        <base-chart class="chart"\n                    [datasets]="ChartData"\n                    [labels]="ChartLabels"\n                    [options]="ChartOptions"\n                    [colors]="ChartColours"\n                    [legend]="ChartLegend"\n                    [chartType]="ChartType"\n                    ></base-chart>\n      </div>\n\n      <ion-list class="tracker-detail-list">\n        <ion-item *ngFor="let p of progressData">\n                <h2 item-left padding >#{{p.index}}</h2>\n          <ion-icon *ngIf="p.Passed==\'YES\'" item-right color="secondary" name="checkmark-circle"></ion-icon>\n          <ion-icon *ngIf="p.Passed==\'NO\'" item-right color="danger" name="close-circle"></ion-icon>\n                <h2>Puntaje: {{p.Scored}}%</h2>\n                <p>Fecha & Hora: {{p.dt_time}}</p>\n        </ion-item>\n      </ion-list>\n  </div>\n</div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\tracker-details\tracker-details.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_db_service__["a" /* DbService */]])
+], TrackerExamDetailPage);
+
+//# sourceMappingURL=tracker-details.js.map
+
+/***/ }),
+
+/***/ 213:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoreDetailPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_store_service__ = __webpack_require__(52);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+//import {OnInit} from '@angular/core';
+
+
+var StoreDetailPage = (function () {
+    function StoreDetailPage(nav, navParams, storeService) {
+        this.nav = nav;
+        this.navParams = navParams;
+        this.storeService = storeService;
+        this.nav = nav;
+        this.storeService = storeService;
+        this.product = navParams.get('product');
+        this.condition = navParams.get('condition');
+    }
+    StoreDetailPage.prototype.restoreTapped = function () {
+        this.storeService.restorePurchases().subscribe(function (data) { return console.log('Restored purchases: ' + data); });
+    };
+    StoreDetailPage.prototype.purchaseTapped = function (product) {
+        var _this = this;
+        console.log('Purchase button clicked on: ' + product.productId);
+        this.storeService.purchaseProduct(product, function (success) {
+            setTimeout(function () { return _this.nav.pop(); }, 1000);
+        }, function (error) {
+            console.log('Purchase not completed');
+        });
+    };
+    return StoreDetailPage;
+}());
+StoreDetailPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'store-details',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\store-details\store-details.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Store {{condition}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="productDetail">\n    <div>\n        <ion-card *ngIf="condition==\'purchase\'">\n            <ion-card-content>\n                <!--<img src="{{product.picture}}"/>-->\n                <h2>Do you want to purchase ?</h2>\n                <h1>{{product.title}}</h1>\n                <p>Price: {{product.price}}</p>\n                <p>{{product.description}}</p>\n            </ion-card-content>\n\n        <div class="card-footer">\n              <button full (click)="purchaseTapped(product)">\n                  Click here to buy it\n              </button>\n        </div>\n        </ion-card>\n        <ion-card *ngIf="condition==\'restore\'">\n            <ion-card-content>\n                <!--<img src="{{product.picture}}"/>-->\n                <h2>Do you want to restore</h2>\n                <h1>purchased products?</h1>\n                <p>non-consumable only</p>\n            </ion-card-content>\n\n        <div class="card-footer">\n              <button full (click)="restoreTapped(product)">\n                  Click here to restore\n              </button>\n        </div>\n        </ion-card>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\store-details\store-details.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_store_service__["a" /* StoreService */]])
+], StoreDetailPage);
+
+//# sourceMappingURL=store-details.js.map
+
+/***/ }),
+
+/***/ 214:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PINDetailPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_db_service__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_device__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(20);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var PINDetailPage = (function () {
+    function PINDetailPage(platform, alertCtrl, http, viewCtrl, dbService, device, storage, navCtrl, navParams) {
+        var _this = this;
+        this.platform = platform;
+        this.alertCtrl = alertCtrl;
+        this.http = http;
+        this.viewCtrl = viewCtrl;
+        this.dbService = dbService;
+        this.device = device;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.platform.ready().then(function (readySource) { _this.source = readySource; });
+    }
+    PINDetailPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PinDetail');
+    };
+    PINDetailPage.prototype.dismiss = function (email, telephone) {
+        var _this = this;
+        if (email != null && email != "" && telephone != null && telephone != "") {
+            //define the message
+            var headers = new __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Headers */]();
+            headers.append('Content-Type', 'application/json');
+            var requestMsg = {
+                username: "Quizionic2",
+                telephone: telephone,
+                email: email,
+                uuid: "0DF0B0CE-BBF6-4A9B-B14D-67485B5F3D18"
+            };
+            if (this.source != "dom") {
+                requestMsg.uuid = this.device.uuid;
+            }
+            this.http.post('http://www.studiomob.ca/pin/requestPin.php', JSON.stringify(requestMsg), { headers: headers })
+                .map(function (res) { return res.json(); })
+                .subscribe(function (data) {
+                console.log(data);
+                var alert = _this.alertCtrl.create({
+                    title: 'PIN Requested',
+                    subTitle: 'A SMS with your PIN will be provided shorthly.',
+                });
+                alert.present();
+            });
+            //this.viewCtrl.dismiss();
+        }
+    };
+    return PINDetailPage;
+}());
+PINDetailPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-pin-detail',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\pin-detail\pin-detail.html"*/'<ion-header>\n  <ion-navbar color="stable">\n    <ion-title>PIN Request Form</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <div>\n        <ion-card>\n            <ion-card-content>\n                <h2>Enter your information</h2>\n                <ion-item>\n                  <ion-label floating>Email:</ion-label>\n                  <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>\n                </ion-item>\n                <ion-item>\n                  <ion-label floating>Telephone:</ion-label>\n                  <ion-input type="tel" [(ngModel)]="telephone" name="telephone" required></ion-input>\n                </ion-item>\n            </ion-card-content>\n\n        <div class="card-footer">\n              <button full (click)="dismiss(email, telephone)">\n                  Submit PIN Request\n              </button>\n        </div>\n        </ion-card>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\pin-detail\pin-detail.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__providers_db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_device__["a" /* Device */], __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]])
+], PINDetailPage);
+
+//# sourceMappingURL=pin-detail.js.map
+
+/***/ }),
+
+/***/ 215:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(234);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 234:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_device__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_welcome_welcome__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_developer_developer__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_exam_list_exam_list__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_exam_details_exam_details__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_tracker_list_tracker_list__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_store_details_store_details__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_login_login__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_pin_pin__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_pin_detail_pin_detail__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_tracker_details_tracker_details__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_store_list_store_list__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_db_service__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_sqlite__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_store_service__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_fb_provider__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ionic_native_status_bar__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ionic_native_splash_screen__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__ionic_native_google_analytics__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ionic_native_admob__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_detail_review_detail_review__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_exams_exams__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_exam_list_cat_exam_list_cat__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_tutorial_tutorial__ = __webpack_require__(112);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = (function () {
+    function AppModule() {
+    }
+    return AppModule;
+}());
+AppModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_7__pages_welcome_welcome__["a" /* WelcomePage */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_developer_developer__["a" /* DeveloperPage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_exam_list_exam_list__["a" /* ExamListPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_exam_details_exam_details__["a" /* ExamDetailsPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_store_details_store_details__["a" /* StoreDetailPage */],
+            __WEBPACK_IMPORTED_MODULE_16__pages_tracker_details_tracker_details__["a" /* TrackerExamDetailPage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_tracker_list_tracker_list__["a" /* TrackerListPage */],
+            __WEBPACK_IMPORTED_MODULE_17__pages_store_list_store_list__["a" /* StoreListPage */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_login_login__["a" /* LoginPage */],
+            __WEBPACK_IMPORTED_MODULE_14__pages_pin_pin__["a" /* Pin */],
+            __WEBPACK_IMPORTED_MODULE_15__pages_pin_detail_pin_detail__["a" /* PINDetailPage */],
+            __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__["a" /* MasInfoPage */],
+            __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__["a" /* ListReviewPage */],
+            __WEBPACK_IMPORTED_MODULE_28__pages_detail_review_detail_review__["a" /* DetailReviewPage */],
+            __WEBPACK_IMPORTED_MODULE_29__pages_exams_exams__["a" /* ExamsPage */],
+            __WEBPACK_IMPORTED_MODULE_31__pages_tutorial_tutorial__["a" /* TutorialPage */],
+            __WEBPACK_IMPORTED_MODULE_30__pages_exam_list_cat_exam_list_cat__["a" /* ExamListCatPage */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["a" /* BrowserModule */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_http__["c" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
+                links: [
+                    { loadChildren: '../pages/detail-review/detail-review.module#DetailReviewPageModule', name: 'DetailReviewPage', segment: 'detail-review', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/list-review/list-review.module#ListReviewPageModule', name: 'ListReviewPage', segment: 'list-review', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mas-info/mas-info.module#MasInfoPageModule', name: 'MasInfoPage', segment: 'mas-info', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/exam-list-cat/exam-list-cat.module#ExamListCatPageModule', name: 'ExamListCatPage', segment: 'exam-list-cat', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/exams/exams.module#ExamsPageModule', name: 'ExamsPage', segment: 'exams', priority: 'low', defaultHistory: [] }
+                ]
+            })
+        ],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicApp */]],
+        entryComponents: [
+            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_7__pages_welcome_welcome__["a" /* WelcomePage */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_developer_developer__["a" /* DeveloperPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_exam_details_exam_details__["a" /* ExamDetailsPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_store_details_store_details__["a" /* StoreDetailPage */],
+            __WEBPACK_IMPORTED_MODULE_16__pages_tracker_details_tracker_details__["a" /* TrackerExamDetailPage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_exam_list_exam_list__["a" /* ExamListPage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_tracker_list_tracker_list__["a" /* TrackerListPage */],
+            __WEBPACK_IMPORTED_MODULE_17__pages_store_list_store_list__["a" /* StoreListPage */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_login_login__["a" /* LoginPage */],
+            __WEBPACK_IMPORTED_MODULE_14__pages_pin_pin__["a" /* Pin */],
+            __WEBPACK_IMPORTED_MODULE_15__pages_pin_detail_pin_detail__["a" /* PINDetailPage */],
+            __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__["a" /* MasInfoPage */],
+            __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__["a" /* ListReviewPage */],
+            __WEBPACK_IMPORTED_MODULE_28__pages_detail_review_detail_review__["a" /* DetailReviewPage */],
+            __WEBPACK_IMPORTED_MODULE_29__pages_exams_exams__["a" /* ExamsPage */],
+            __WEBPACK_IMPORTED_MODULE_31__pages_tutorial_tutorial__["a" /* TutorialPage */],
+            __WEBPACK_IMPORTED_MODULE_30__pages_exam_list_cat_exam_list_cat__["a" /* ExamListCatPage */]
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_22__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_23__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_24__ionic_native_google_analytics__["a" /* GoogleAnalytics */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_device__["a" /* Device */], __WEBPACK_IMPORTED_MODULE_25__ionic_native_admob__["a" /* AdMob */], __WEBPACK_IMPORTED_MODULE_19__ionic_native_sqlite__["a" /* SQLite */], __WEBPACK_IMPORTED_MODULE_18__providers_db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_20__providers_store_service__["a" /* StoreService */],
+            //Storage,
+            __WEBPACK_IMPORTED_MODULE_21__providers_fb_provider__["a" /* FbProvider */],
+            { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicErrorHandler */] }
+        ],
+        schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+    })
+], AppModule);
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 285:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_store_service__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_db_service__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_developer_developer__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_tracker_list_tracker_list__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_google_analytics__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_admob__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_mas_info_mas_info__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_tutorial_tutorial__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_exams_exams__ = __webpack_require__(114);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* enableProdMode */])();
+var MyApp = (function () {
+    function MyApp(platform, events, dbService, storage, storeService, statusBar, splashScreen, analytics, admob) {
+        this.platform = platform;
+        this.events = events;
+        this.statusBar = statusBar;
+        this.splashScreen = splashScreen;
+        this.analytics = analytics;
+        this.admob = admob;
+        // rootPage: any = WelcomePage;
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_14__pages_tutorial_tutorial__["a" /* TutorialPage */];
+        this.user = '';
+        this.email = '';
+        //set app's pages. paid = 0, option always present in menu, paid = 1, only displayed in full version
+        this.pages = [
+            { title: 'Bienvenido', component: __WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__["a" /* WelcomePage */], icon: 'bookmark', paid: 0 },
+            // {title: 'Exámenes', component: ExamListPage, icon: 'cube', paid: 0},
+            { title: 'Tutorial', component: __WEBPACK_IMPORTED_MODULE_14__pages_tutorial_tutorial__["a" /* TutorialPage */], icon: 'cube', paid: 0 },
+            { title: 'Exámenes', component: __WEBPACK_IMPORTED_MODULE_15__pages_exams_exams__["a" /* ExamsPage */], icon: 'cube', paid: 0 },
+            { title: 'Resultados', component: __WEBPACK_IMPORTED_MODULE_8__pages_tracker_list_tracker_list__["a" /* TrackerListPage */], icon: "arrow-graph-up-right", paid: 0 },
+            { title: 'Más Info', component: __WEBPACK_IMPORTED_MODULE_13__pages_mas_info_mas_info__["a" /* MasInfoPage */], icon: "arrow-graph-up-right", paid: 0 },
+        ];
+        this.storage = storage;
+        this.dbService = dbService;
+        this.storeService = storeService;
+        this.statusBar.styleDefault();
+        this.initializeApp();
+        //this.loadProfile(1);
+    }
+    MyApp.prototype.initializeApp = function () {
+        var _this = this;
+        this.platform.ready().then(function (readySource) {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            console.log('Platform ready from', readySource);
+            _this.readySource = readySource;
+            if (readySource == 'cordova') {
+                _this.statusBar.styleDefault();
+                if (_this.platform.is('ios')) {
+                    // Copy data.db from Application folder into Document Database folder
+                    window.plugins.sqlDB.copy("Q2data.db", 0, function (success) {
+                        // Initialize database service (DbService)
+                        _this.dbService.init();
+                    }, function (error) {
+                        console.log("Error Code = " + JSON.stringify(error));
+                    });
+                }
+                else {
+                    // Copy data.db - Android destination
+                    window.plugins.sqlDB.copy("Q2data.db", 0, function (success) {
+                        // Initialize database service (DbService)
+                        _this.dbService.init();
+                    }, function (error) {
+                        console.log("Error Code = " + JSON.stringify(error));
+                    });
+                }
+                // Google AdMob setup
+                _this.admobid = {};
+                if (/(android)/i.test(navigator.userAgent)) {
+                    _this.admobid = {
+                        banner: 'ca-app-pub-3709095601931870/3837206546',
+                        interstitial: 'ca-app-pub-3709095601931870/8267406146' // change this value with your Android AdMob Interstitial ID
+                    };
+                }
+                else if (/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+                    _this.admobid = {
+                        banner: 'ca-app-pub-3709095601931870/7754515340',
+                        interstitial: 'ca-app-pub-3709095601931870/9231248541' // change this value with your iOS AdMob Interstitial ID
+                    };
+                }
+                // Init AdMob
+                if (!_this.admob) {
+                    alert('admob plugin not ready');
+                    return;
+                }
+                else {
+                    // customize banner appearance
+                    _this.admob.createBanner({
+                        adId: _this.admobid.banner,
+                        isTesting: false,
+                        overlap: false,
+                        autoShow: false,
+                        position: _this.admob.AD_POSITION.BOTTOM_CENTER
+                    });
+                    // customize interstitial
+                    _this.admob.prepareInterstitial({
+                        adId: _this.admobid.interstitial,
+                        autoShow: false
+                    });
+                    _this.ad = _this.admobid.interstitial;
+                }
+                // Initialize Google Analytics plugin
+                if (_this.analytics) {
+                    // Change these values with yours IDs
+                    var tracking_ID = _this.platform.is('ios') ? "UA-63761768-4" : "UA-63761768-5";
+                    //window.analytics.debugMode();
+                    _this.analytics.startTrackerWithId(tracking_ID);
+                    _this.analytics.setUserId('Quizionic2');
+                    _this.analytics.trackView('Quizionic2 Home');
+                    console.log("GA activated");
+                }
+                // Initialize database service (DbService)
+                _this.dbService.init();
+                // Initialize storeService (IAP)
+                _this.storeService.init();
+            }
+            else {
+                _this.ad = 0;
+                // Initialize database service (DbService)
+                _this.dbService.init();
+                _this.storeService.init();
+            }
+            // this.dbService.isFullVersion().then(data => this._Paid = data);
+            // To force Full Version as default uncomment the 3 lines below
+            _this.dbService.setProperty('fullversion', 'true');
+            _this.dbService.setFullVersion();
+            _this.dbService.setProperty('admob', 'false');
+            _this.splashScreen.hide();
+            _this.dbService.getProperty('login').then(function (data) {
+                if (data == 'true') {
+                    _this.loadProfile(1);
+                }
+            });
+        });
+        this.events.subscribe('paid:full', function () { return _this._Paid = 1; });
+        this.events.subscribe('paid:free', function () { return _this._Paid = 0; });
+        this.events.subscribe('loggedIn', function (val) { return _this.loadProfile(val); });
+    };
+    MyApp.prototype.loadProfile = function (val) {
+        var _this = this;
+        if (val == 1) {
+            this.storage.get('userName').then(function (name) { return _this.user = name; });
+            this.storage.get('email').then(function (email) { return _this.email = email; });
+            this.storage.get('picture').then(function (picture) { return _this.picture = picture; });
+            if (this.pages[this.pages.length - 1].title != 'Cerrar Sesión') {
+                this.pages.push({ title: 'Cerrar Sesión', component: __WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */], icon: "key", paid: 0 });
+            }
+        }
+        else {
+            this.user = '';
+            this.pages.pop();
+        }
+    };
+    MyApp.prototype.openDeveloperPage = function () {
+        this.nav.push(__WEBPACK_IMPORTED_MODULE_7__pages_developer_developer__["a" /* DeveloperPage */]);
+    };
+    MyApp.prototype.openPage = function (page) {
+        var user = "StudioMob";
+        // Reset the content nav to have just this page
+        // we wouldn't want the back button to show in this scenario
+        if (page.component == __WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__["a" /* WelcomePage */]) {
+            this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__["a" /* WelcomePage */]);
+        }
+        else {
+            if (page.component == __WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]) {
+                this.nav.push(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */], {
+                    logout: true
+                });
+            }
+            else {
+                this.nav.push(page.component, {
+                    readySource: this.readySource,
+                    user: user,
+                    adId: this.ad
+                });
+            }
+        }
+    };
+    return MyApp;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */]),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */]) === "function" && _a || Object)
+], MyApp.prototype, "nav", void 0);
+MyApp = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'app',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\app\app.html"*/'<ion-menu #menu [content]="content" side="left" id="menu">\n\n<ion-header id="header">\n\n    <ion-toolbar id="toolbarT">\n\n      <ion-title *ngIf="_Paid==0">Free version</ion-title>\n\n      <!-- <ion-title *ngIf="_Paid==1">Full version</ion-title> -->\n\n      <ion-title *ngIf="_Paid==1">CCDP IPMA Chile</ion-title>\n\n    </ion-toolbar>\n\n      <div class="ava">\n\n      <ion-item class="item-avatar" item-left *ngIf="user!=\'\'">\n\n        <ion-avatar item-left>\n\n            <img spinner-on-load src="{{picture}}">\n\n        </ion-avatar>\n\n        <h2>Hola {{user}}</h2>\n\n        <p>{{email}}</p>\n\n    </ion-item>\n\n  </div>\n\n</ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list *ngFor="let p of pages" >\n\n        <button menuClose ion-item *ngIf="p.paid<=_Paid"(click)="openPage(p)">\n\n          {{p.title}}\n\n        </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n  <!-- <ion-footer class="ftitle">\n\n           <button menuClose ion-button icon-only (click)="openDeveloperPage()">\n\n            <ion-icon name="build"></ion-icon>\n\n          </button> -->\n\n          <!-- <ion-title>IPMA chile 001</ion-title>\n\n  </ion-footer> -->\n\n</ion-menu>\n\n\n\n<ion-view>\n\n  <ion-nav id="nav" [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>\n\n</ion-view>\n\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\app\app.html"*/,
+        providers: [__WEBPACK_IMPORTED_MODULE_5__providers_db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_4__providers_store_service__["a" /* StoreService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__providers_db_service__["a" /* DbService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__providers_db_service__["a" /* DbService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__providers_store_service__["a" /* StoreService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_store_service__["a" /* StoreService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_11__ionic_native_google_analytics__["a" /* GoogleAnalytics */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_11__ionic_native_google_analytics__["a" /* GoogleAnalytics */]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_12__ionic_native_admob__["a" /* AdMob */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_12__ionic_native_admob__["a" /* AdMob */]) === "function" && _k || Object])
+], MyApp);
+
+var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 286:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PRODUCTS; });
+var PRODUCTS = [
+    {
+        "productId": "quiz2_no_ads",
+        "title": "No Advertising",
+        "price": "$0.99",
+        "description": "Non-Consumable: No Advertising",
+        "type": "non_consumable"
+    },
+    {
+        "productId": "quiz2_exams_x1",
+        "title": "Unlock 1 Exam",
+        "price": "$2.99",
+        "description": "Non-Consumable: 1 Exam to Unlock",
+        "type": "non_consumable"
+    },
+    {
+        "productId": "quiz2_exams_x3",
+        "title": "Unlock 3 Exams",
+        "price": "$6.99",
+        "description": "Non-Consumable: 3 Exams to Unlock",
+        "type": "non_consumable"
+    },
+    {
+        "productId": "quiz2_expla_x5",
+        "title": "Explanations x5",
+        "price": "$1.99",
+        "description": "Consumable: Adds 5 explanations view",
+        "type": "consumable"
+    },
+    {
+        "productId": "quiz2_expla_x10",
+        "title": "Explanations x10",
+        "price": "$2.99",
+        "description": "Consumable: Adds 10 explanations view",
+        "type": "consumable"
+    },
+    {
+        "productId": "quiz2_expla_x50",
+        "title": "Explanations x50",
+        "price": "$4.99",
+        "description": "Consumable: Adds 50 explanations view",
+        "type": "consumable"
+    },
+    {
+        "productId": "quiz2_f_version",
+        "title": "Full Version Unlock",
+        "price": "$9.99",
+        "description": "Non-Consumable: All Explanations & No Ads",
+        "type": "consumable"
+    }
+];
+//# sourceMappingURL=mock-store.js.map
+
+/***/ }),
+
+/***/ 287:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Pin; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pin_detail_pin_detail__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_db_service__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_device__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_storage__ = __webpack_require__(20);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var Pin = (function () {
+    function Pin(device, platform, navCtrl, dbService, modalCtrl, events, storage, alertCtrl, navParams) {
+        var _this = this;
+        this.device = device;
+        this.platform = platform;
+        this.navCtrl = navCtrl;
+        this.dbService = dbService;
+        this.modalCtrl = modalCtrl;
+        this.events = events;
+        this.alertCtrl = alertCtrl;
+        this.navParams = navParams;
+        this.new_pin = "";
+        this.platform.ready().then(function (readySource) { _this.source = readySource; console.log('Source: ', _this.source); });
+    }
+    Pin.prototype.showAlert = function (title, message) {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: title,
+            subTitle: message,
+            buttons: [{
+                    text: 'Close',
+                    handler: function () {
+                        setTimeout(function () { return _this.navCtrl.pop(); }, 1000);
+                    }
+                }]
+        });
+        alert.present();
+    };
+    Pin.prototype.requestPIN = function () {
+        var modal;
+        modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__pin_detail_pin_detail__["a" /* PINDetailPage */], {});
+        modal.onDidDismiss(function (data) {
+            console.log("modal closed");
+            //this.reload()
+        });
+        modal.present();
+    };
+    // Handle the PIN verification
+    Pin.prototype.enterPIN = function (pin) {
+        var secureCode = null;
+        var str = null;
+        var val = null;
+        var arr = [];
+        if (this.source != "cordova") {
+            arr = "0DF0B0CE-BBF6-4A9B-B14D-67485B5F3D18".split('-'); // just for browser
+        }
+        else {
+            arr = this.device.uuid.split('-');
+        }
+        if (arr[1] == null) {
+            // Android
+            str = arr[0].slice(2, 10);
+            secureCode = parseInt(str, 16);
+        }
+        else {
+            // iOS
+            val = arr[3] + arr[1];
+            secureCode = parseInt(arr[0], 16) + parseInt(val, 16);
+        }
+        if (pin == secureCode) {
+            console.log("purchaseProduct");
+            this.dbService.setProperty('fullversion', 'true');
+            this.dbService.setFullVersion();
+            this.dbService.setProperty('admob', 'false');
+            this.showAlert('Full Version Unlocked', 'Thanks for purchasing Quizionic full version!');
+        }
+        else {
+            this.showAlert('PIN not valid', 'Please provide a valid one.');
+            console.log("PIN not valid");
+        }
+        ;
+    };
+    ;
+    Pin.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Pin');
+    };
+    return Pin;
+}());
+Pin = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-pin',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\pin\pin.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>PIN Management</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="productDetail">\n    <div>\n        <ion-card>\n            <ion-card-content>\n                <h2>Unlock Full Version ?</h2>\n                <h1></h1>\n                <p>Track your progress</p>\n                <p>Block Ads</p>\n            </ion-card-content>\n\n        <div class="card-footer">\n              <button full (click)="requestPIN()">\n                  Request a PIN\n              </button>\n        </div>\n        </ion-card>\n        <ion-card>\n            <ion-card-content>\n                <h2>Insert PIN (if you\'ve one)</h2>\n                <ion-item>\n                  <ion-label floating>PIN:</ion-label>\n                  <ion-input type="number" inputmode="numeric" pattern="[0-9]*" [(ngModel)]="new_pin" name="new_pin" required></ion-input>\n                </ion-item>\n            </ion-card-content>\n\n        <div class="card-footer">\n              <button full (click)="enterPIN(new_pin)">\n                  Validate PIN\n              </button>\n        </div>\n        </ion-card>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\pin\pin.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_native_device__["a" /* Device */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */], __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]])
+], Pin);
+
+//# sourceMappingURL=pin.js.map
+
+/***/ }),
+
+/***/ 289:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoreListPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__store_details_store_details__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_store_service__ = __webpack_require__(52);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+//import {OnInit} from '@angular/core';
+
+
+
+
+var StoreListPage = (function () {
+    function StoreListPage(nav, navParams, storeService) {
+        this.nav = nav;
+        this.navParams = navParams;
+        this.storeService = storeService;
+        this.nav = nav;
+        this.storeready = true;
+        this.storeService = storeService;
+        //let selectedItem = navParams.get('item');
+    }
+    StoreListPage.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        this.storeService.getConsumableQuantity('explanationq').then(function (value) { return _this.explanationQ = value; });
+        this.storeService.findAll().subscribe(function (data) {
+            console.log(JSON.stringify(data));
+            _this.products = data;
+        });
+        /*if(analytics) {
+          analytics.trackView('Store-List');
+        }*/
+    };
+    StoreListPage.prototype.itemTapped = function (product) {
+        this.nav.push(__WEBPACK_IMPORTED_MODULE_2__store_details_store_details__["a" /* StoreDetailPage */], {
+            product: product,
+            condition: 'purchase'
+        });
+    };
+    StoreListPage.prototype.restoreTapped = function () {
+        this.nav.push(__WEBPACK_IMPORTED_MODULE_2__store_details_store_details__["a" /* StoreDetailPage */], {
+            product: '',
+            condition: 'restore'
+        });
+    };
+    return StoreListPage;
+}());
+StoreListPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\store-list\store-list.html"*/'<ion-header>\n  <ion-navbar color="stable">\n    <button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Store Products</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="storelist">\n\n        <ion-card>\n            <ion-card-header class="storeCardHeader">\n              <ion-icon name="cart"></ion-icon>\n            </ion-card-header>\n            <div class="card-header">\n              <ion-row >\n                <ion-col width-100>\n                  <span>Available Explanations/Tips: {{explanationQ}}</span>\n                </ion-col>\n              </ion-row>\n            </div>\n\n\n            <ion-card-content *ngIf="storeready" (click)="restoreTapped()">\n                <h2>Restore</h2>\n                <h3>Restore all purchases</h3>\n            </ion-card-content>\n            <div class="card-header">\n              <ion-row >\n                <ion-col width-100>\n                  <span>Available Products for Purchase</span>\n                </ion-col>\n              </ion-row>\n            </div>\n            <ion-list>\n              <button ion-item *ngFor="let product of products" (click)="itemTapped(product)">\n                  <h2>{{product.title}}</h2>\n                  <h3>Price: {{product.price}}</h3>\n                  <p>{{product.description}}</p>\n              </button>\n            </ion-list>\n\n        </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\store-list\store-list.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_store_service__["a" /* StoreService */]])
+], StoreListPage);
+
+//# sourceMappingURL=store-list.js.map
+
+/***/ }),
+
+/***/ 52:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoreService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mock_store__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__db_service__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(6);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var androidApplicationLicenseKey;
+var productIds;
+var existing_purchases;
+var product_info;
+var productType;
+var StoreService = (function () {
+    function StoreService(dbservice, platform) {
+        var _this = this;
+        this.dbservice = dbservice;
+        this.platform = platform;
+        this.dbservice = dbservice;
+        this.platform.ready().then(function (readySource) { _this.source = readySource; });
+        // Set androidApplicationLicenseKey for In App Purchase, please change this value with yours.
+        androidApplicationLicenseKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAko8kYFsrb66OCiGz4K7OvRBlngHS0fvGuHED1xqsmdngpyUUruvK/bfd1RcINevfnilc972OtR+i/mnOO3UIMYsANyOmH0l5ZTxWyiNQ1EGKOM6VxAuTosdLrwCHYbhU6gFaHdCoC26hIGv2xFcWLuyr9mg3mTt5kt/kcMlM5f7qOgZsttgbc98BU/BGaNurOO2mcWzFkfqcpsaBQylPvjY1RGDvsEoOKDwMjR+vrlTlwJ3LDMwWWcmFQd/OgaFwEfIvqeJUnePQYQGAvPD24E8cHqwZZk0xPkBdB9KLxqCyqzPvo4wkPWUD2ZEfVK4E65xjX2BB0l7NWgAoZpilUwIDAQAB";
+        // Set productIds with exactly same names as in your store (Google/Itunes)!
+        productIds = ["quiz2_exam_x3", "quiz2_exam_x1", "quiz2_expla_x5", "quiz2_expla_x10", "quiz2_expla_x50", "quiz2_f_version", "quiz2_no_ads"];
+        // For each listed product in productIds array, corresponds a productType below, either as consumable or non_consumable.
+        productType = ["non_consumable", "non_consumable", "consumable", "consumable", "consumable", "non_consumable", "non_consumable"];
+        // Some variables reserved for product management
+        existing_purchases = [];
+        product_info = [];
+    }
+    StoreService.prototype.init = function () {
+        // Initialize InAppPurchase (IAP) plugin
+        // if we are on device, we use IAP plugin, otherwise we simulate it in browser
+        try {
+            if (typeof iap != 'undefined') {
+                // Set up de AndroidBillingKey for IAP Plugin
+                iap.setUp(androidApplicationLicenseKey);
+                // Request product list
+                iap.requestStoreListing(productIds, function (result) {
+                    for (var i = 0; i < result.length; ++i) {
+                        var p = result[i];
+                        product_info[i] = { productId: p.productId, title: p.title, price: p.price, description: p.description, type: productType[productIds.indexOf(p.productId)] };
+                    }
+                }, function (error) {
+                    // error to use store
+                    alert("Store not available at this time: " + error);
+                });
+            }
+        }
+        catch (err) {
+            console.log('No IAP Plugin, using PRODUCTS mock');
+        }
+    };
+    StoreService.prototype.findAll = function () {
+        // retrieve all available products
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].create(function (observer) {
+            // We check if we are on device and IAP plugin is available
+            try {
+                if (iap) {
+                    observer.next(product_info);
+                }
+            }
+            catch (err) {
+                // if we are in browser, then we get product list from PRODUCTS "JSON" file
+                console.log('FOR BROWSER ONLY');
+                observer.next(__WEBPACK_IMPORTED_MODULE_1__mock_store__["a" /* PRODUCTS */]);
+            }
+            observer.complete();
+        });
+    };
+    StoreService.prototype.purchaseProduct = function (product, resultCallback, errorCallback) {
+        var _this = this;
+        // Proceed with product purchase
+        if (typeof iap != 'undefined') {
+            iap.purchaseProduct(product.productId, function (result) {
+                //alert("Product purchased: "+product.productId);
+                // Check if product is consumable and therefore call consumeProduct
+                if (product.type === 'consumable') {
+                    _this.consumeProduct(product);
+                }
+                else {
+                    if (product.productId == "quiz2_f_version") {
+                        //We call all the actions to be taken when purchasing the full Version
+                        //This may be different in your case depending your needs.
+                        _this.dbservice.setProperty('fullversion', 'true');
+                        _this.dbservice.setFullVersion();
+                        _this.dbservice.setProperty('admob', 'false');
+                    }
+                    if (product.productId == "quiz2_no_ads") {
+                        //This is the action that we call when purchasing this product No Ads.
+                        _this.dbservice.setProperty('admob', 'false');
+                    }
+                    if (product.productId == "quiz2_exam_x1") {
+                        //This is the action that we call when purchasing this product Exam x1.
+                        _this.dbservice.unlockExamById(4); //Exam Id shall be passed as parameter
+                    }
+                    if (product.productId == "quiz2_exam_x3") {
+                        //This is the action that we call when purchasing this product Exam x3.
+                        _this.dbservice.unlockExamById(4); //Exam Id shall be passed as parameter
+                        _this.dbservice.unlockExamById(5); //Exam Id shall be passed as parameter
+                        _this.dbservice.unlockExamById(6); //Exam Id shall be passed as parameter
+                    }
+                }
+                return resultCallback("PurchasedDone");
+            }, function (error) {
+                console.log("error: " + error);
+                return errorCallback("noProductIdPurchased");
+            });
+        }
+        else {
+            alert("Product purchased (Simulated): " + product.productId);
+            if (product.type === 'consumable') {
+                this.consumeProduct(product);
+            }
+            else {
+                if (product.productId == "quiz2_f_version") {
+                    alert('full version purchased');
+                    this.dbservice.setProperty('fullversion', 'true');
+                    this.dbservice.setFullVersion();
+                    this.dbservice.setProperty('admob', 'false');
+                }
+                if (product.productId == "quiz2_no_ads") {
+                    alert('no ads purchased');
+                    this.dbservice.setProperty('admob', 'false');
+                }
+                if (product.productId == "quiz2_exam_x1") {
+                    alert('Exam ID: 4 Unlocked');
+                    this.dbservice.unlockExamById(4);
+                } //Exam Id shall be passed as parameter
+                if (product.productId == "quiz2_exam_x3") {
+                    //This is the action that we call when purchasing this product Exam x3.
+                    alert('Exams ID: 4/5/6 Unlocked');
+                    this.dbservice.unlockExamById(4); //Exam Id shall be passed as parameter
+                    this.dbservice.unlockExamById(5); //Exam Id shall be passed as parameter
+                    this.dbservice.unlockExamById(6); //Exam Id shall be passed as parameter
+                }
+            }
+            console.log("Simulating Purchasing of product: " + product.productId);
+            return resultCallback("PurchasedDone");
+        }
+    };
+    StoreService.prototype.consumeProduct = function (product) {
+        var _this = this;
+        // Consume purchased product when consumable type is detected
+        if (typeof iap != 'undefined') {
+            iap.consumeProduct(product.productId, function (result) {
+                //alert("Consumed Product: "+product.productId);
+                _this.updateConsumable(product);
+            }, function (error) {
+                console.log("error: " + error);
+            });
+        }
+        else {
+            this.updateConsumable(product);
+            console.log("Simulating consume product: " + product.productId);
+        }
+    };
+    StoreService.prototype.restorePurchases = function () {
+        var _this = this;
+        // Restore all purchases
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].create(function (observer) {
+            if (_this.source == 'cordova') {
+                if (typeof iap != 'undefined') {
+                    iap.restorePurchases(function (result) {
+                        console.log('Restore log: ' + JSON.stringify(result));
+                        for (var i = 0; i < result.length; ++i) {
+                            var p = result[i];
+                            if (result[i].productId == "quiz2_f_version") {
+                                alert('full version restored');
+                                _this.dbservice.setProperty('fullversion', 'true');
+                                _this.dbservice.setFullVersion();
+                                _this.dbservice.setProperty('admob', 'false');
+                            }
+                            if (result[i].productId == "quiz2_no_ads") {
+                                alert('no ads restored');
+                                _this.dbservice.setProperty('admob', 'false');
+                            }
+                            if (result[i].productId == "quiz2_exam_x1") {
+                                //This is the action that we call when purchasing this product Exam x1.
+                                _this.dbservice.unlockExamById(4); //Exam Id shall be passed as parameter
+                                alert('Exam Id 4: Restored');
+                            }
+                            if (result[i].productId == "quiz2_exam_x3") {
+                                //This is the action that we call when purchasing this product Exam x3.
+                                _this.dbservice.unlockExamById(4); //Exam Id shall be passed as parameter
+                                _this.dbservice.unlockExamById(5); //Exam Id shall be passed as parameter
+                                _this.dbservice.unlockExamById(6); //Exam Id shall be passed as parameter
+                                alert('Exam Id 4/5/6: Restored');
+                            }
+                            if (existing_purchases.indexOf(p['productId']) === -1)
+                                existing_purchases.push(p['productId']);
+                        }
+                        observer.next(existing_purchases);
+                    }, function (error) {
+                        alert("Error when attempting to restore purchases: " + error);
+                    });
+                }
+            }
+            else {
+                // Simulate store restore when in browser execution
+                for (var i = 0; i < __WEBPACK_IMPORTED_MODULE_1__mock_store__["a" /* PRODUCTS */].length; ++i) {
+                    var p = __WEBPACK_IMPORTED_MODULE_1__mock_store__["a" /* PRODUCTS */][i];
+                    if (existing_purchases.indexOf(p['productId']) === -1)
+                        existing_purchases.push(p['productId']);
+                    console.log("productId: " + p['productId']);
+                }
+                observer.next(existing_purchases);
+            }
+        });
+    };
+    StoreService.prototype.getConsumableQuantity = function (name) {
+        return this.dbservice.getProperty(name);
+    };
+    StoreService.prototype.updateConsumable = function (product) {
+        var _this = this;
+        var value, consumable;
+        var addQuantity = 0;
+        // determine the consumable
+        switch (product.productId) {
+            case 'quiz2_expla_x5':
+                addQuantity = 5; // this has to corresponds with the product id configured in productIds array
+                consumable = 'explanationq';
+                break;
+            case 'quiz2_expla_x10':
+                addQuantity = 10;
+                consumable = 'explanationq';
+                break;
+            case 'quiz2_expla_x50':
+                addQuantity = 50;
+                consumable = 'explanationq';
+                break;
+        }
+        // obtain consumbable remaining amount
+        this.dbservice.getProperty(consumable).then(function (data) {
+            // increase consumbable quantity based on purchased item
+            value = Number(data) + addQuantity;
+            // update database accordingly
+            return _this.dbservice.setProperty(consumable, value.toString()).then(function (result) {
+                alert('You have added: ' + addQuantity + " explanations. Qty left: " + value.toString());
+            });
+        });
+    };
+    StoreService.prototype.findById = function (id) {
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].create(function (observer) {
+            observer.next(__WEBPACK_IMPORTED_MODULE_1__mock_store__["a" /* PRODUCTS */][id - 1]);
+            observer.complete();
+        });
+    };
+    return StoreService;
+}());
+StoreService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["o" /* Platform */]])
+], StoreService);
+
+//# sourceMappingURL=store-service.js.map
+
+/***/ }),
+
+/***/ 81:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExamDetailsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_db_service__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_analytics__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_admob__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_db_service__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_analytics__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_admob__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_storage__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__list_review_list_review__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__list_review_list_review__ = __webpack_require__(110);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1236,7 +2820,7 @@ var ExamDetailsPage = (function () {
             subTitle: subTit,
             buttons: [
                 {
-                    text: 'OK',
+                    text: 'Ver resumen',
                     handler: function () {
                         _examOver = true;
                         var alertTransition = alert.dismiss();
@@ -1578,1512 +3162,19 @@ var ExamDetailsPage = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]) === "function" && _a || Object)
 ], ExamDetailsPage.prototype, "content", void 0);
 ExamDetailsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'exam-details',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-details\exam-details.html"*/'<ion-header>\n  <ion-navbar color="stable">\n    <button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{title}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="exam">\n\n      <ion-item *ngIf="timed" id="myTimer" [ngClass]="{timer: isNormal, timerout: isOut}">\n          <ion-icon subtle name="stopwatch"></ion-icon>\n          {{time}}\n      </ion-item>\n      <ion-item id="validate" *ngIf="multiAnswer">\n        <button id="valButton" full (click)="validateAnswer()"> Validar Respuesta</button>\n      </ion-item>\n\n  <div *ngIf="question" class="selection" style="position: relative">\n\n      <ion-card class="adv-map">\n        <div class="card-header">\n          <ion-row >\n            <ion-col width-35>\n              <span small >Pregunta: {{indexQ}}/{{qty}}</span>\n            </ion-col>\n            <ion-col width-25>\n              <span>QId: #{{question.Id}}</span>\n            </ion-col>\n            <ion-col width-45>\n              <!-- <span>Explanations left: {{expQty}}</span> -->\n            </ion-col>\n          </ion-row>\n        </div>\n\n        <div *ngIf="question.Image">\n          <p [innerHTML]="question.Image"></p>\n        </div>\n\n        <ion-card-content secondary>\n            <h2 [innerHTML]="question.Question"></h2>\n        </ion-card-content>\n\n        <!-- <div class="card-footer">\n          <button *ngIf="ExplaAvailable" full (click)="explanation(question.Id)"> Click here for Explanation/Tip\n          </button>\n        </div> -->\n\n      <ion-list id="options" class="options">\n          <ion-item text-wrap class="item-text-wrap" [ngClass]="{normal: question._f[\'A\']==0, correct: question._f[\'A\']==1, selected: question._f[\'A\']==2, invalid: question._f[\'A\']<0}" id="A" *ngIf="question.A !==\'\'"(click)="clickedRow(\'A\')">\n              <h2>A</h2>\n              <p [innerHTML]="question.A"></p>\n              <ion-icon *ngIf="question._f[\'A\']==1" name="checkmark" item-right color=dark></ion-icon>\n              <ion-icon *ngIf="question._f[\'A\']<0" name="close" item-right color=dark></ion-icon>\n          </ion-item>\n          <ion-item text-wrap class="item-text-wrap" [ngClass]="{normal: question._f[\'B\']==0, correct: question._f[\'B\']==1, selected: question._f[\'B\']==2, invalid: question._f[\'B\']<0}" id="B" *ngIf="question.B !==\'\'"(click)="clickedRow(\'B\')">\n              <h2>B</h2>\n              <p [innerHTML]="question.B"></p>\n              <ion-icon *ngIf="question._f[\'B\']==1" name="checkmark" item-right color=dark></ion-icon>\n              <ion-icon *ngIf="question._f[\'B\']<0" name="close" item-right color=dark></ion-icon>\n          </ion-item>\n          <ion-item text-wrap class="item-text-wrap" [ngClass]="{normal: question._f[\'C\']==0, correct: question._f[\'C\']==1, selected: question._f[\'C\']==2, invalid: question._f[\'C\']<0}" id="C" *ngIf="question.C !==\'\'" (click)="clickedRow(\'C\')">\n              <h2>C</h2>\n              <p [innerHTML]="question.C"></p>\n              <ion-icon *ngIf="question._f[\'C\']==1" name="checkmark" item-right color=dark></ion-icon>\n              <ion-icon *ngIf="question._f[\'C\']<0" name="close" item-right color=dark></ion-icon>\n          </ion-item>\n          <ion-item text-wrap class="item-text-wrap" [ngClass]="{normal: question._f[\'D\']==0, correct: question._f[\'D\']==1, selected: question._f[\'D\']==2, invalid: question._f[\'D\']<0}" id="D" *ngIf="question.D !==\'\'" (click)="clickedRow(\'D\')">\n              <h2>D</h2>\n              <p [innerHTML]="question.D"></p>\n              <ion-icon *ngIf="question._f[\'D\']==1" name="checkmark" item-right color=dark></ion-icon>\n              <ion-icon *ngIf="question._f[\'D\']<0" name="close" item-right color=dark></ion-icon>\n          </ion-item>\n          <!-- <ion-item text-wrap class="item-text-wrap" [ngClass]="{normal: question._f[\'E\']==0, correct: question._f[\'E\']==1, selected: question._f[\'E\']==2, invalid: question._f[\'E\']<0}" id="E" *ngIf="question.E !==\'\'" (click)="clickedRow(\'E\')">\n              <h2>E</h2>\n              <p [innerHTML]="question.E"></p>\n              <ion-icon *ngIf="question._f[\'E\']==1" name="checkmark" item-right color=dark></ion-icon>\n              <ion-icon *ngIf="question._f[\'E\']<0" name="close" item-right color=dark></ion-icon>\n          </ion-item> -->\n      </ion-list>\n    </ion-card>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-details\exam-details.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_native_google_analytics__["a" /* GoogleAnalytics */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_admob__["a" /* AdMob */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_2__providers_db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */]])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_analytics__["a" /* GoogleAnalytics */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_google_analytics__["a" /* GoogleAnalytics */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_admob__["a" /* AdMob */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_admob__["a" /* AdMob */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _e || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_2__providers_db_service__["a" /* DbService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_db_service__["a" /* DbService */]) === "function" && _k || Object, typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */]) === "function" && _l || Object])
 ], ExamDetailsPage);
 
+var _a, _b, _c, _d, _e, _g, _h, _j, _k, _l;
 //# sourceMappingURL=exam-details.js.map
-
-/***/ }),
-
-/***/ 204:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeveloperPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_db_service__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(20);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var DeveloperPage = (function () {
-    function DeveloperPage(nav, events, navParams, storage, dbService) {
-        var _this = this;
-        this.nav = nav;
-        this.events = events;
-        this.navParams = navParams;
-        this.storage = storage;
-        this.dbService = dbService;
-        this.dbService.getProperty('highlight').then(function (data) { return _this._hlra = data; });
-        this.dbService.getProperty('admob').then(function (data) { return _this._admob = data; });
-        this.dbService.getProperty('login').then(function (data) { return _this._login = data; });
-        this.dbService.getProperty('fullversion').then(function (data) { return _this._fullv = data; });
-        this.dbService.getProperty('explanation').then(function (data) { return _this._expla = data; });
-        this.dbService.getProperty('explanationq').then(function (data) { return _this._quantity = data; });
-        this.dbService.getProperty('qId').then(function (data) { return _this._qId = data; });
-        this.dbService.getProperty('cId').then(function (data) { return _this._cId = data; });
-        this.dbService.getProperty('eId').then(function (data) { return _this._eId = data; });
-    }
-    DeveloperPage.prototype.logEvent = function (e, pname) {
-        console.log(e, pname);
-        if (pname == 'fullversion') {
-            if (e.checked) {
-                this.dbService.setFullVersion();
-            }
-            else {
-                this.dbService.setFreeVersion();
-            }
-        }
-        if (e.checked) {
-            this.dbService.setProperty(pname, 'true');
-        }
-        else {
-            this.dbService.setProperty(pname, 'false');
-        }
-    };
-    DeveloperPage.prototype.update = function (value, key) {
-        if (value != '') {
-            this.dbService.setProperty(key, value);
-        }
-    };
-    return DeveloperPage;
-}());
-DeveloperPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'developer',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\developer\developer.html"*/'<ion-header>\n  <ion-navbar color="stable">\n    <button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Developer Assistant</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="developer">\n  <ion-card>\n      <ion-card-header class="storeCardHeader">\n        <ion-icon name="build"></ion-icon>\n      </ion-card-header>\n\n      <div class="card-header">\n        <ion-row >\n          <ion-col width-100>\n            <span>Available Config</span>\n          </ion-col>\n        </ion-row>\n      </div>\n    <ion-list>\n      <!--on-changes-->\n        <ion-item>\n          <ion-label>Questions lock > </ion-label>\n          <ion-input type="number" [(ngModel)]="_qId" (input)="update($event.target.value, \'qId\')"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label>Categories lock > </ion-label>\n          <ion-input type="number" [(ngModel)]="_cId" (input)="update($event.target.value, \'cId\')"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label>Exams lock > </ion-label>\n          <ion-input type="number" [(ngModel)]="_eId" (input)="update($event.target.value, \'eId\')"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label>Login Page?</ion-label>\n          <ion-checkbox primary [(ngModel)]="_login" (ionChange)="logEvent($event,\'login\')"></ion-checkbox>\n        </ion-item>\n        <ion-item>\n          <ion-label>Admob Visible?</ion-label>\n          <ion-checkbox primary [(ngModel)]="_admob" (ionChange)="logEvent($event,\'admob\')"></ion-checkbox>\n        </ion-item>\n        <ion-item>\n          <ion-checkbox primary [(ngModel)]="_expla" (ionChange)="logEvent($event,\'explanation\')"></ion-checkbox>\n          <ion-label>Allow Explanations?</ion-label>\n        </ion-item>\n        <ion-item *ngIf="_expla">\n          <ion-label >Set Explanations: </ion-label>\n          <ion-input type="number" [(ngModel)]="_quantity" (input)="update($event.target.value, \'explanationq\')"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-checkbox primary [(ngModel)]="_fullv" (ionChange)="logEvent($event,\'fullversion\')"></ion-checkbox>\n          <ion-label>Full Version</ion-label>\n        </ion-item>\n        <ion-item>\n          <ion-checkbox primary [(ngModel)]="_hlra" (ionChange)="logEvent($event,\'highlight\')"></ion-checkbox>\n          <ion-label>Highlight Right Answer?</ion-label>\n        </ion-item>\n      <!--/on-changes-->\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\developer\developer.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_2__providers_db_service__["a" /* DbService */]])
-], DeveloperPage);
-
-//# sourceMappingURL=developer.js.map
-
-/***/ }),
-
-/***/ 205:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrackerListPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tracker_details_tracker_details__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_db_service__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(20);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var TrackerListPage = (function () {
-    function TrackerListPage(nav, storage, navParams, dbService) {
-        this.nav = nav;
-        this.storage = storage;
-        this.navParams = navParams;
-        this.dbService = dbService;
-        this.nav = nav;
-        //let selectedItem = navParams.get('item');
-        //this.user = navParams.get('user');
-        this.source = navParams.get('readySource');
-    }
-    TrackerListPage.prototype.ngOnInit = function () {
-        var _this = this;
-        // if login feature is activated then user is set with user's name
-        this.dbService.getProperty('login').then(function (data) {
-            if (data == 'true') {
-                _this.storage.get('userName').then(function (data) {
-                    if (typeof data == "undefined" || data == null) {
-                        _this.user = "StudioMob";
-                        _this.loadData(_this.user);
-                    }
-                    else {
-                        _this.user = data;
-                        _this.loadData(_this.user);
-                    }
-                });
-            }
-            else {
-                _this.user = "StudioMob";
-                _this.loadData(_this.user);
-            }
-        });
-    };
-    TrackerListPage.prototype.loadData = function (user) {
-        var _this = this;
-        this.dbService.getProgressByUserId(user).then(function (data) {
-            _this.progressList = data;
-        });
-        if (this.source == 'cordova') {
-            analytics.trackView('Tracker-List');
-        }
-    };
-    TrackerListPage.prototype.itemTapped = function (progressExam) {
-        this.nav.push(__WEBPACK_IMPORTED_MODULE_2__tracker_details_tracker_details__["a" /* TrackerExamDetailPage */], {
-            progressExam: progressExam,
-            user: this.user,
-        });
-    };
-    return TrackerListPage;
-}());
-TrackerListPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'tracker-list',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\tracker-list\tracker-list.html"*/'<ion-header>\n\n  <ion-navbar color="stable">\n\n    <button menuToggle>\n\n        <ion-icon name="progress"></ion-icon>\n\n    </button>\n\n    <ion-title>Resultado de Exámenes</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="tracker-list">\n\n  <ion-card>\n\n      <ion-card-header class="storeCardHeader">\n\n        <ion-icon name="stats"></ion-icon>\n\n      </ion-card-header>\n\n\n\n      <div class="card-header">\n\n        <ion-row >\n\n          <ion-col width-100>\n\n            <span>Progresos Disponibles </span>\n\n          </ion-col>\n\n        </ion-row>\n\n      </div>\n\n\n\n      <ion-list>\n\n        <ion-item-sliding *ngFor="let pList of progressList">\n\n          <button ion-item (click)="itemTapped(pList)">\n\n            <h2>{{pList.ExamTitle}}</h2>\n\n          </button>\n\n        </ion-item-sliding>\n\n      </ion-list>\n\n  </ion-card>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\tracker-list\tracker-list.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_db_service__["a" /* DbService */]])
-], TrackerListPage);
-
-//# sourceMappingURL=tracker-list.js.map
-
-/***/ }),
-
-/***/ 206:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrackerExamDetailPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_db_service__ = __webpack_require__(16);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var TrackerExamDetailPage = (function () {
-    function TrackerExamDetailPage(nav, navParams, dbService) {
-        this.nav = nav;
-        this.navParams = navParams;
-        this.dbService = dbService;
-        this.ChartData = [
-            {
-                data: [],
-                label: '',
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(54, 112, 135, 0.2)',
-                    'rgba(255, 106, 186, 0.2)',
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)',
-                    'rgba(54, 112, 135, 1)',
-                    'rgba(255, 106, 186, 1)',
-                ],
-                borderWidth: 1
-            }
-        ];
-        this.ChartLabels = [];
-        this.ChartOptions = {
-            animation: {
-                duration: 1000,
-                easing: 'easeInQuad'
-            },
-            responsive: true,
-            scales: {
-                yAxes: [{
-                        ticks: {
-                            max: 100,
-                            min: 0,
-                            stepSize: 20
-                        }
-                    }]
-            }
-        };
-        this.ChartColours = [
-            {
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(54, 112, 135, 0.2)',
-                    'rgba(255, 106, 186, 0.2)',
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)',
-                    'rgba(54, 112, 135, 1)',
-                    'rgba(255, 106, 186, 1)',
-                ],
-                borderWidth: 1
-            }
-        ];
-        this.ChartLegend = true;
-        this.ChartType = 'bar';
-        this.nav = nav;
-        var progressExam = navParams.get('progressExam');
-        this.title = progressExam.ExamTitle;
-        this.examid = progressExam.ExamId;
-        this.user = navParams.get('user');
-    }
-    TrackerExamDetailPage.prototype.ionViewWillEnter = function () {
-        var _this = this;
-        //let progressData: any = [];
-        this.dbService.loadProgress(this.user, 8, this.examid).then(function (data) {
-            _this.progressData = data;
-            // we invert array to represent values based on time
-            _this.progressData.reverse();
-            for (var i = 0; i < _this.progressData.length; i++) {
-                _this.ChartData[0].data.push(_this.progressData[i].Scored);
-                _this.ChartLabels.push('#' + (i + 1));
-                _this.progressData[i].index = i + 1;
-            }
-            _this.ChartData[0].label = _this.title;
-            //Chart.defaults.global.defaultFontColor = 'white';
-            // we reinvert the array to present most recent score first in
-            _this.progressData.reverse();
-            _this.showChart();
-        });
-    };
-    TrackerExamDetailPage.prototype.showChart = function () {
-        var ctx, myChart;
-        ctx = document.getElementById("myChart");
-        myChart = new Chart(ctx, {
-            type: this.ChartType,
-            options: this.ChartOptions,
-            data: {
-                labels: this.ChartLabels,
-                datasets: this.ChartData,
-            }
-        });
-    };
-    return TrackerExamDetailPage;
-}());
-TrackerExamDetailPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'tracker-details',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\tracker-details\tracker-details.html"*/'<ion-header>\n  <ion-navbar color="stable">\n    <button menuToggle>\n        <ion-icon name="trackerDetail"></ion-icon>\n    </button>\n    <ion-title>Tu progreso</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="tracker">\n  <div class="chart-container" >\n  <div class="row">\n      <div class="col-sm-6">\n        <canvas id="myChart" style="position: relative; height:40vh; width:100vw"></canvas>\n        <base-chart class="chart"\n                    [datasets]="ChartData"\n                    [labels]="ChartLabels"\n                    [options]="ChartOptions"\n                    [colors]="ChartColours"\n                    [legend]="ChartLegend"\n                    [chartType]="ChartType"\n                    ></base-chart>\n      </div>\n\n      <ion-list class="tracker-detail-list">\n        <ion-item *ngFor="let p of progressData">\n                <h2 item-left padding >#{{p.index}}</h2>\n          <ion-icon *ngIf="p.Passed==\'YES\'" item-right color="secondary" name="checkmark-circle"></ion-icon>\n          <ion-icon *ngIf="p.Passed==\'NO\'" item-right color="danger" name="close-circle"></ion-icon>\n                <h2>Puntaje: {{p.Scored}}%</h2>\n                <p>Fecha & Hora: {{p.dt_time}}</p>\n        </ion-item>\n      </ion-list>\n  </div>\n</div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\tracker-details\tracker-details.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_db_service__["a" /* DbService */]])
-], TrackerExamDetailPage);
-
-//# sourceMappingURL=tracker-details.js.map
-
-/***/ }),
-
-/***/ 210:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoreDetailPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_store_service__ = __webpack_require__(52);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-//import {OnInit} from '@angular/core';
-
-
-var StoreDetailPage = (function () {
-    function StoreDetailPage(nav, navParams, storeService) {
-        this.nav = nav;
-        this.navParams = navParams;
-        this.storeService = storeService;
-        this.nav = nav;
-        this.storeService = storeService;
-        this.product = navParams.get('product');
-        this.condition = navParams.get('condition');
-    }
-    StoreDetailPage.prototype.restoreTapped = function () {
-        this.storeService.restorePurchases().subscribe(function (data) { return console.log('Restored purchases: ' + data); });
-    };
-    StoreDetailPage.prototype.purchaseTapped = function (product) {
-        var _this = this;
-        console.log('Purchase button clicked on: ' + product.productId);
-        this.storeService.purchaseProduct(product, function (success) {
-            setTimeout(function () { return _this.nav.pop(); }, 1000);
-        }, function (error) {
-            console.log('Purchase not completed');
-        });
-    };
-    return StoreDetailPage;
-}());
-StoreDetailPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'store-details',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\store-details\store-details.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Store {{condition}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="productDetail">\n    <div>\n        <ion-card *ngIf="condition==\'purchase\'">\n            <ion-card-content>\n                <!--<img src="{{product.picture}}"/>-->\n                <h2>Do you want to purchase ?</h2>\n                <h1>{{product.title}}</h1>\n                <p>Price: {{product.price}}</p>\n                <p>{{product.description}}</p>\n            </ion-card-content>\n\n        <div class="card-footer">\n              <button full (click)="purchaseTapped(product)">\n                  Click here to buy it\n              </button>\n        </div>\n        </ion-card>\n        <ion-card *ngIf="condition==\'restore\'">\n            <ion-card-content>\n                <!--<img src="{{product.picture}}"/>-->\n                <h2>Do you want to restore</h2>\n                <h1>purchased products?</h1>\n                <p>non-consumable only</p>\n            </ion-card-content>\n\n        <div class="card-footer">\n              <button full (click)="restoreTapped(product)">\n                  Click here to restore\n              </button>\n        </div>\n        </ion-card>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\store-details\store-details.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_store_service__["a" /* StoreService */]])
-], StoreDetailPage);
-
-//# sourceMappingURL=store-details.js.map
-
-/***/ }),
-
-/***/ 211:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PINDetailPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_db_service__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_device__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__(285);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(20);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-var PINDetailPage = (function () {
-    function PINDetailPage(platform, alertCtrl, http, viewCtrl, dbService, device, storage, navCtrl, navParams) {
-        var _this = this;
-        this.platform = platform;
-        this.alertCtrl = alertCtrl;
-        this.http = http;
-        this.viewCtrl = viewCtrl;
-        this.dbService = dbService;
-        this.device = device;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.platform.ready().then(function (readySource) { _this.source = readySource; });
-    }
-    PINDetailPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad PinDetail');
-    };
-    PINDetailPage.prototype.dismiss = function (email, telephone) {
-        var _this = this;
-        if (email != null && email != "" && telephone != null && telephone != "") {
-            //define the message
-            var headers = new __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Headers */]();
-            headers.append('Content-Type', 'application/json');
-            var requestMsg = {
-                username: "Quizionic2",
-                telephone: telephone,
-                email: email,
-                uuid: "0DF0B0CE-BBF6-4A9B-B14D-67485B5F3D18"
-            };
-            if (this.source != "dom") {
-                requestMsg.uuid = this.device.uuid;
-            }
-            this.http.post('http://www.studiomob.ca/pin/requestPin.php', JSON.stringify(requestMsg), { headers: headers })
-                .map(function (res) { return res.json(); })
-                .subscribe(function (data) {
-                console.log(data);
-                var alert = _this.alertCtrl.create({
-                    title: 'PIN Requested',
-                    subTitle: 'A SMS with your PIN will be provided shorthly.',
-                });
-                alert.present();
-            });
-            //this.viewCtrl.dismiss();
-        }
-    };
-    return PINDetailPage;
-}());
-PINDetailPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-pin-detail',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\pin-detail\pin-detail.html"*/'<ion-header>\n  <ion-navbar color="stable">\n    <ion-title>PIN Request Form</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <div>\n        <ion-card>\n            <ion-card-content>\n                <h2>Enter your information</h2>\n                <ion-item>\n                  <ion-label floating>Email:</ion-label>\n                  <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>\n                </ion-item>\n                <ion-item>\n                  <ion-label floating>Telephone:</ion-label>\n                  <ion-input type="tel" [(ngModel)]="telephone" name="telephone" required></ion-input>\n                </ion-item>\n            </ion-card-content>\n\n        <div class="card-footer">\n              <button full (click)="dismiss(email, telephone)">\n                  Submit PIN Request\n              </button>\n        </div>\n        </ion-card>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\pin-detail\pin-detail.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__providers_db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_device__["a" /* Device */], __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]])
-], PINDetailPage);
-
-//# sourceMappingURL=pin-detail.js.map
-
-/***/ }),
-
-/***/ 212:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(231);
-
-
-Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
-//# sourceMappingURL=main.js.map
-
-/***/ }),
-
-/***/ 231:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_device__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(279);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_welcome_welcome__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_developer_developer__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_exam_list_exam_list__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_exam_details_exam_details__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_tracker_list_tracker_list__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_store_details_store_details__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_login_login__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_pin_pin__ = __webpack_require__(284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_pin_detail_pin_detail__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_tracker_details_tracker_details__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_store_list_store_list__ = __webpack_require__(286);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_db_service__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_sqlite__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_store_service__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_fb_provider__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ionic_native_status_bar__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ionic_native_splash_screen__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__ionic_native_google_analytics__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ionic_native_admob__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_detail_review_detail_review__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_exams_exams__ = __webpack_require__(294);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_exam_list_cat_exam_list_cat__ = __webpack_require__(296);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var AppModule = (function () {
-    function AppModule() {
-    }
-    return AppModule;
-}());
-AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_welcome_welcome__["a" /* WelcomePage */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_developer_developer__["a" /* DeveloperPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_exam_list_exam_list__["a" /* ExamListPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_exam_details_exam_details__["a" /* ExamDetailsPage */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_store_details_store_details__["a" /* StoreDetailPage */],
-            __WEBPACK_IMPORTED_MODULE_16__pages_tracker_details_tracker_details__["a" /* TrackerExamDetailPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_tracker_list_tracker_list__["a" /* TrackerListPage */],
-            __WEBPACK_IMPORTED_MODULE_17__pages_store_list_store_list__["a" /* StoreListPage */],
-            __WEBPACK_IMPORTED_MODULE_13__pages_login_login__["a" /* LoginPage */],
-            __WEBPACK_IMPORTED_MODULE_14__pages_pin_pin__["a" /* Pin */],
-            __WEBPACK_IMPORTED_MODULE_15__pages_pin_detail_pin_detail__["a" /* PINDetailPage */],
-            __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__["a" /* MasInfoPage */],
-            __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__["a" /* ListReviewPage */],
-            __WEBPACK_IMPORTED_MODULE_28__pages_detail_review_detail_review__["a" /* DetailReviewPage */],
-            __WEBPACK_IMPORTED_MODULE_29__pages_exams_exams__["a" /* ExamsPage */],
-            __WEBPACK_IMPORTED_MODULE_30__pages_exam_list_cat_exam_list_cat__["a" /* ExamListCatPage */]
-        ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_http__["c" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
-                links: [
-                    { loadChildren: '../pages/detail-review/detail-review.module#DetailReviewPageModule', name: 'DetailReviewPage', segment: 'detail-review', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/list-review/list-review.module#ListReviewPageModule', name: 'ListReviewPage', segment: 'list-review', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/mas-info/mas-info.module#MasInfoPageModule', name: 'MasInfoPage', segment: 'mas-info', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/exams/exams.module#ExamsPageModule', name: 'ExamsPage', segment: 'exams', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/exam-list-cat/exam-list-cat.module#ExamListCatPageModule', name: 'ExamListCatPage', segment: 'exam-list-cat', priority: 'low', defaultHistory: [] }
-                ]
-            })
-        ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicApp */]],
-        entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_welcome_welcome__["a" /* WelcomePage */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_developer_developer__["a" /* DeveloperPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_exam_details_exam_details__["a" /* ExamDetailsPage */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_store_details_store_details__["a" /* StoreDetailPage */],
-            __WEBPACK_IMPORTED_MODULE_16__pages_tracker_details_tracker_details__["a" /* TrackerExamDetailPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_exam_list_exam_list__["a" /* ExamListPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_tracker_list_tracker_list__["a" /* TrackerListPage */],
-            __WEBPACK_IMPORTED_MODULE_17__pages_store_list_store_list__["a" /* StoreListPage */],
-            __WEBPACK_IMPORTED_MODULE_13__pages_login_login__["a" /* LoginPage */],
-            __WEBPACK_IMPORTED_MODULE_14__pages_pin_pin__["a" /* Pin */],
-            __WEBPACK_IMPORTED_MODULE_15__pages_pin_detail_pin_detail__["a" /* PINDetailPage */],
-            __WEBPACK_IMPORTED_MODULE_26__pages_mas_info_mas_info__["a" /* MasInfoPage */],
-            __WEBPACK_IMPORTED_MODULE_27__pages_list_review_list_review__["a" /* ListReviewPage */],
-            __WEBPACK_IMPORTED_MODULE_28__pages_detail_review_detail_review__["a" /* DetailReviewPage */],
-            __WEBPACK_IMPORTED_MODULE_29__pages_exams_exams__["a" /* ExamsPage */],
-            __WEBPACK_IMPORTED_MODULE_30__pages_exam_list_cat_exam_list_cat__["a" /* ExamListCatPage */]
-        ],
-        providers: [
-            __WEBPACK_IMPORTED_MODULE_22__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_23__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_24__ionic_native_google_analytics__["a" /* GoogleAnalytics */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_device__["a" /* Device */], __WEBPACK_IMPORTED_MODULE_25__ionic_native_admob__["a" /* AdMob */], __WEBPACK_IMPORTED_MODULE_19__ionic_native_sqlite__["a" /* SQLite */], __WEBPACK_IMPORTED_MODULE_18__providers_db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_20__providers_store_service__["a" /* StoreService */],
-            //Storage,
-            __WEBPACK_IMPORTED_MODULE_21__providers_fb_provider__["a" /* FbProvider */],
-            { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicErrorHandler */] }
-        ],
-        schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
-    })
-], AppModule);
-
-//# sourceMappingURL=app.module.js.map
-
-/***/ }),
-
-/***/ 279:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_store_service__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_db_service__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_developer_developer__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_tracker_list_tracker_list__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_google_analytics__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_admob__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_mas_info_mas_info__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_exams_exams__ = __webpack_require__(294);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* enableProdMode */])();
-var MyApp = (function () {
-    function MyApp(platform, events, dbService, storage, storeService, statusBar, splashScreen, analytics, admob) {
-        this.platform = platform;
-        this.events = events;
-        this.statusBar = statusBar;
-        this.splashScreen = splashScreen;
-        this.analytics = analytics;
-        this.admob = admob;
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__["a" /* WelcomePage */];
-        this.user = '';
-        this.email = '';
-        //set app's pages. paid = 0, option always present in menu, paid = 1, only displayed in full version
-        this.pages = [
-            { title: 'Bienvenido', component: __WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__["a" /* WelcomePage */], icon: 'bookmark', paid: 0 },
-            // {title: 'Exámenes', component: ExamListPage, icon: 'cube', paid: 0},
-            { title: 'Exámenes', component: __WEBPACK_IMPORTED_MODULE_14__pages_exams_exams__["a" /* ExamsPage */], icon: 'cube', paid: 0 },
-            { title: 'Resultados', component: __WEBPACK_IMPORTED_MODULE_8__pages_tracker_list_tracker_list__["a" /* TrackerListPage */], icon: "arrow-graph-up-right", paid: 1 },
-            { title: 'Más Info', component: __WEBPACK_IMPORTED_MODULE_13__pages_mas_info_mas_info__["a" /* MasInfoPage */], icon: "arrow-graph-up-right", paid: 0 },
-        ];
-        this.storage = storage;
-        this.dbService = dbService;
-        this.storeService = storeService;
-        this.statusBar.styleDefault();
-        this.initializeApp();
-        //this.loadProfile(1);
-    }
-    MyApp.prototype.initializeApp = function () {
-        var _this = this;
-        this.platform.ready().then(function (readySource) {
-            // Okay, so the platform is ready and our plugins are available.
-            // Here you can do any higher level native things you might need.
-            console.log('Platform ready from', readySource);
-            _this.readySource = readySource;
-            if (readySource == 'cordova') {
-                _this.statusBar.styleDefault();
-                if (_this.platform.is('ios')) {
-                    // Copy data.db from Application folder into Document Database folder
-                    window.plugins.sqlDB.copy("Q2data.db", 0, function (success) {
-                        // Initialize database service (DbService)
-                        _this.dbService.init();
-                    }, function (error) {
-                        console.log("Error Code = " + JSON.stringify(error));
-                    });
-                }
-                else {
-                    // Copy data.db - Android destination
-                    window.plugins.sqlDB.copy("Q2data.db", 0, function (success) {
-                        // Initialize database service (DbService)
-                        _this.dbService.init();
-                    }, function (error) {
-                        console.log("Error Code = " + JSON.stringify(error));
-                    });
-                }
-                // Google AdMob setup
-                _this.admobid = {};
-                if (/(android)/i.test(navigator.userAgent)) {
-                    _this.admobid = {
-                        banner: 'ca-app-pub-3709095601931870/3837206546',
-                        interstitial: 'ca-app-pub-3709095601931870/8267406146' // change this value with your Android AdMob Interstitial ID
-                    };
-                }
-                else if (/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
-                    _this.admobid = {
-                        banner: 'ca-app-pub-3709095601931870/7754515340',
-                        interstitial: 'ca-app-pub-3709095601931870/9231248541' // change this value with your iOS AdMob Interstitial ID
-                    };
-                }
-                // Init AdMob
-                if (!_this.admob) {
-                    alert('admob plugin not ready');
-                    return;
-                }
-                else {
-                    // customize banner appearance
-                    _this.admob.createBanner({
-                        adId: _this.admobid.banner,
-                        isTesting: false,
-                        overlap: false,
-                        autoShow: false,
-                        position: _this.admob.AD_POSITION.BOTTOM_CENTER
-                    });
-                    // customize interstitial
-                    _this.admob.prepareInterstitial({
-                        adId: _this.admobid.interstitial,
-                        autoShow: false
-                    });
-                    _this.ad = _this.admobid.interstitial;
-                }
-                // Initialize Google Analytics plugin
-                if (_this.analytics) {
-                    // Change these values with yours IDs
-                    var tracking_ID = _this.platform.is('ios') ? "UA-63761768-4" : "UA-63761768-5";
-                    //window.analytics.debugMode();
-                    _this.analytics.startTrackerWithId(tracking_ID);
-                    _this.analytics.setUserId('Quizionic2');
-                    _this.analytics.trackView('Quizionic2 Home');
-                    console.log("GA activated");
-                }
-                // Initialize database service (DbService)
-                _this.dbService.init();
-                // Initialize storeService (IAP)
-                _this.storeService.init();
-            }
-            else {
-                _this.ad = 0;
-                // Initialize database service (DbService)
-                _this.dbService.init();
-                _this.storeService.init();
-            }
-            // this.dbService.isFullVersion().then(data => this._Paid = data);
-            // To force Full Version as default uncomment the 3 lines below
-            _this.dbService.setProperty('fullversion', 'true');
-            _this.dbService.setFullVersion();
-            _this.dbService.setProperty('admob', 'false');
-            _this.splashScreen.hide();
-            _this.dbService.getProperty('login').then(function (data) {
-                if (data == 'true') {
-                    _this.loadProfile(1);
-                }
-            });
-        });
-        this.events.subscribe('paid:full', function () { return _this._Paid = 1; });
-        this.events.subscribe('paid:free', function () { return _this._Paid = 0; });
-        this.events.subscribe('loggedIn', function (val) { return _this.loadProfile(val); });
-    };
-    MyApp.prototype.loadProfile = function (val) {
-        var _this = this;
-        if (val == 1) {
-            this.storage.get('userName').then(function (name) { return _this.user = name; });
-            this.storage.get('email').then(function (email) { return _this.email = email; });
-            this.storage.get('picture').then(function (picture) { return _this.picture = picture; });
-            if (this.pages[this.pages.length - 1].title != 'Cerrar Sesión') {
-                this.pages.push({ title: 'Cerrar Sesión', component: __WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */], icon: "key", paid: 0 });
-            }
-        }
-        else {
-            this.user = '';
-            this.pages.pop();
-        }
-    };
-    MyApp.prototype.openDeveloperPage = function () {
-        this.nav.push(__WEBPACK_IMPORTED_MODULE_7__pages_developer_developer__["a" /* DeveloperPage */]);
-    };
-    MyApp.prototype.openPage = function (page) {
-        var user = "StudioMob";
-        // Reset the content nav to have just this page
-        // we wouldn't want the back button to show in this scenario
-        if (page.component == __WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__["a" /* WelcomePage */]) {
-            this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__["a" /* WelcomePage */]);
-        }
-        else {
-            if (page.component == __WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]) {
-                this.nav.push(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */], {
-                    logout: true
-                });
-            }
-            else {
-                this.nav.push(page.component, {
-                    readySource: this.readySource,
-                    user: user,
-                    adId: this.ad
-                });
-            }
-        }
-    };
-    return MyApp;
-}());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */])
-], MyApp.prototype, "nav", void 0);
-MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'app',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\app\app.html"*/'<ion-menu #menu [content]="content" side="left" id="menu">\n\n<ion-header id="header">\n\n    <ion-toolbar id="toolbarT">\n\n      <ion-title *ngIf="_Paid==0">Free version</ion-title>\n\n      <!-- <ion-title *ngIf="_Paid==1">Full version</ion-title> -->\n\n      <ion-title *ngIf="_Paid==1">CCDP IPMA Chile</ion-title>\n\n    </ion-toolbar>\n\n      <div class="ava">\n\n      <ion-item class="item-avatar" item-left *ngIf="user!=\'\'">\n\n        <ion-avatar item-left>\n\n            <img spinner-on-load src="{{picture}}">\n\n        </ion-avatar>\n\n        <h2>Hola {{user}}</h2>\n\n        <p>{{email}}</p>\n\n    </ion-item>\n\n  </div>\n\n</ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list *ngFor="let p of pages" >\n\n        <button menuClose ion-item *ngIf="p.paid<=_Paid"(click)="openPage(p)">\n\n          {{p.title}}\n\n        </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n  <!-- <ion-footer class="ftitle">\n\n           <button menuClose ion-button icon-only (click)="openDeveloperPage()">\n\n            <ion-icon name="build"></ion-icon>\n\n          </button> -->\n\n          <!-- <ion-title>IPMA chile 001</ion-title>\n\n  </ion-footer> -->\n\n</ion-menu>\n\n\n\n<ion-view>\n\n  <ion-nav id="nav" [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>\n\n</ion-view>\n\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\app\app.html"*/,
-        providers: [__WEBPACK_IMPORTED_MODULE_5__providers_db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_4__providers_store_service__["a" /* StoreService */]]
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Platform */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */],
-        __WEBPACK_IMPORTED_MODULE_5__providers_db_service__["a" /* DbService */],
-        __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
-        __WEBPACK_IMPORTED_MODULE_4__providers_store_service__["a" /* StoreService */],
-        __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__["a" /* StatusBar */],
-        __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__["a" /* SplashScreen */],
-        __WEBPACK_IMPORTED_MODULE_11__ionic_native_google_analytics__["a" /* GoogleAnalytics */],
-        __WEBPACK_IMPORTED_MODULE_12__ionic_native_admob__["a" /* AdMob */]])
-], MyApp);
-
-//# sourceMappingURL=app.component.js.map
-
-/***/ }),
-
-/***/ 283:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PRODUCTS; });
-var PRODUCTS = [
-    {
-        "productId": "quiz2_no_ads",
-        "title": "No Advertising",
-        "price": "$0.99",
-        "description": "Non-Consumable: No Advertising",
-        "type": "non_consumable"
-    },
-    {
-        "productId": "quiz2_exams_x1",
-        "title": "Unlock 1 Exam",
-        "price": "$2.99",
-        "description": "Non-Consumable: 1 Exam to Unlock",
-        "type": "non_consumable"
-    },
-    {
-        "productId": "quiz2_exams_x3",
-        "title": "Unlock 3 Exams",
-        "price": "$6.99",
-        "description": "Non-Consumable: 3 Exams to Unlock",
-        "type": "non_consumable"
-    },
-    {
-        "productId": "quiz2_expla_x5",
-        "title": "Explanations x5",
-        "price": "$1.99",
-        "description": "Consumable: Adds 5 explanations view",
-        "type": "consumable"
-    },
-    {
-        "productId": "quiz2_expla_x10",
-        "title": "Explanations x10",
-        "price": "$2.99",
-        "description": "Consumable: Adds 10 explanations view",
-        "type": "consumable"
-    },
-    {
-        "productId": "quiz2_expla_x50",
-        "title": "Explanations x50",
-        "price": "$4.99",
-        "description": "Consumable: Adds 50 explanations view",
-        "type": "consumable"
-    },
-    {
-        "productId": "quiz2_f_version",
-        "title": "Full Version Unlock",
-        "price": "$9.99",
-        "description": "Non-Consumable: All Explanations & No Ads",
-        "type": "consumable"
-    }
-];
-//# sourceMappingURL=mock-store.js.map
-
-/***/ }),
-
-/***/ 284:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Pin; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pin_detail_pin_detail__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_db_service__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_device__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_storage__ = __webpack_require__(20);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-var Pin = (function () {
-    function Pin(device, platform, navCtrl, dbService, modalCtrl, events, storage, alertCtrl, navParams) {
-        var _this = this;
-        this.device = device;
-        this.platform = platform;
-        this.navCtrl = navCtrl;
-        this.dbService = dbService;
-        this.modalCtrl = modalCtrl;
-        this.events = events;
-        this.alertCtrl = alertCtrl;
-        this.navParams = navParams;
-        this.new_pin = "";
-        this.platform.ready().then(function (readySource) { _this.source = readySource; console.log('Source: ', _this.source); });
-    }
-    Pin.prototype.showAlert = function (title, message) {
-        var _this = this;
-        var alert = this.alertCtrl.create({
-            title: title,
-            subTitle: message,
-            buttons: [{
-                    text: 'Close',
-                    handler: function () {
-                        setTimeout(function () { return _this.navCtrl.pop(); }, 1000);
-                    }
-                }]
-        });
-        alert.present();
-    };
-    Pin.prototype.requestPIN = function () {
-        var modal;
-        modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__pin_detail_pin_detail__["a" /* PINDetailPage */], {});
-        modal.onDidDismiss(function (data) {
-            console.log("modal closed");
-            //this.reload()
-        });
-        modal.present();
-    };
-    // Handle the PIN verification
-    Pin.prototype.enterPIN = function (pin) {
-        var secureCode = null;
-        var str = null;
-        var val = null;
-        var arr = [];
-        if (this.source != "cordova") {
-            arr = "0DF0B0CE-BBF6-4A9B-B14D-67485B5F3D18".split('-'); // just for browser
-        }
-        else {
-            arr = this.device.uuid.split('-');
-        }
-        if (arr[1] == null) {
-            // Android
-            str = arr[0].slice(2, 10);
-            secureCode = parseInt(str, 16);
-        }
-        else {
-            // iOS
-            val = arr[3] + arr[1];
-            secureCode = parseInt(arr[0], 16) + parseInt(val, 16);
-        }
-        if (pin == secureCode) {
-            console.log("purchaseProduct");
-            this.dbService.setProperty('fullversion', 'true');
-            this.dbService.setFullVersion();
-            this.dbService.setProperty('admob', 'false');
-            this.showAlert('Full Version Unlocked', 'Thanks for purchasing Quizionic full version!');
-        }
-        else {
-            this.showAlert('PIN not valid', 'Please provide a valid one.');
-            console.log("PIN not valid");
-        }
-        ;
-    };
-    ;
-    Pin.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad Pin');
-    };
-    return Pin;
-}());
-Pin = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-pin',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\pin\pin.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>PIN Management</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="productDetail">\n    <div>\n        <ion-card>\n            <ion-card-content>\n                <h2>Unlock Full Version ?</h2>\n                <h1></h1>\n                <p>Track your progress</p>\n                <p>Block Ads</p>\n            </ion-card-content>\n\n        <div class="card-footer">\n              <button full (click)="requestPIN()">\n                  Request a PIN\n              </button>\n        </div>\n        </ion-card>\n        <ion-card>\n            <ion-card-content>\n                <h2>Insert PIN (if you\'ve one)</h2>\n                <ion-item>\n                  <ion-label floating>PIN:</ion-label>\n                  <ion-input type="number" inputmode="numeric" pattern="[0-9]*" [(ngModel)]="new_pin" name="new_pin" required></ion-input>\n                </ion-item>\n            </ion-card-content>\n\n        <div class="card-footer">\n              <button full (click)="enterPIN(new_pin)">\n                  Validate PIN\n              </button>\n        </div>\n        </ion-card>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\pin\pin.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_native_device__["a" /* Device */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */], __WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]])
-], Pin);
-
-//# sourceMappingURL=pin.js.map
-
-/***/ }),
-
-/***/ 286:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoreListPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__store_details_store_details__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_store_service__ = __webpack_require__(52);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-//import {OnInit} from '@angular/core';
-
-
-
-
-var StoreListPage = (function () {
-    function StoreListPage(nav, navParams, storeService) {
-        this.nav = nav;
-        this.navParams = navParams;
-        this.storeService = storeService;
-        this.nav = nav;
-        this.storeready = true;
-        this.storeService = storeService;
-        //let selectedItem = navParams.get('item');
-    }
-    StoreListPage.prototype.ionViewWillEnter = function () {
-        var _this = this;
-        this.storeService.getConsumableQuantity('explanationq').then(function (value) { return _this.explanationQ = value; });
-        this.storeService.findAll().subscribe(function (data) {
-            console.log(JSON.stringify(data));
-            _this.products = data;
-        });
-        /*if(analytics) {
-          analytics.trackView('Store-List');
-        }*/
-    };
-    StoreListPage.prototype.itemTapped = function (product) {
-        this.nav.push(__WEBPACK_IMPORTED_MODULE_2__store_details_store_details__["a" /* StoreDetailPage */], {
-            product: product,
-            condition: 'purchase'
-        });
-    };
-    StoreListPage.prototype.restoreTapped = function () {
-        this.nav.push(__WEBPACK_IMPORTED_MODULE_2__store_details_store_details__["a" /* StoreDetailPage */], {
-            product: '',
-            condition: 'restore'
-        });
-    };
-    return StoreListPage;
-}());
-StoreListPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\store-list\store-list.html"*/'<ion-header>\n  <ion-navbar color="stable">\n    <button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Store Products</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="storelist">\n\n        <ion-card>\n            <ion-card-header class="storeCardHeader">\n              <ion-icon name="cart"></ion-icon>\n            </ion-card-header>\n            <div class="card-header">\n              <ion-row >\n                <ion-col width-100>\n                  <span>Available Explanations/Tips: {{explanationQ}}</span>\n                </ion-col>\n              </ion-row>\n            </div>\n\n\n            <ion-card-content *ngIf="storeready" (click)="restoreTapped()">\n                <h2>Restore</h2>\n                <h3>Restore all purchases</h3>\n            </ion-card-content>\n            <div class="card-header">\n              <ion-row >\n                <ion-col width-100>\n                  <span>Available Products for Purchase</span>\n                </ion-col>\n              </ion-row>\n            </div>\n            <ion-list>\n              <button ion-item *ngFor="let product of products" (click)="itemTapped(product)">\n                  <h2>{{product.title}}</h2>\n                  <h3>Price: {{product.price}}</h3>\n                  <p>{{product.description}}</p>\n              </button>\n            </ion-list>\n\n        </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\store-list\store-list.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_store_service__["a" /* StoreService */]])
-], StoreListPage);
-
-//# sourceMappingURL=store-list.js.map
-
-/***/ }),
-
-/***/ 294:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExamsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exam_list_exam_list__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__exam_list_cat_exam_list_cat__ = __webpack_require__(296);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the ExamsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var ExamsPage = (function () {
-    function ExamsPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    ExamsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ExamsPage');
-    };
-    ExamsPage.prototype.goToExamListPage = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__exam_list_exam_list__["a" /* ExamListPage */]);
-    };
-    ExamsPage.prototype.goToExamListCatPage = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__exam_list_cat_exam_list_cat__["a" /* ExamListCatPage */]);
-    };
-    return ExamsPage;
-}());
-ExamsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPage */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-exams',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exams\exams.html"*/'<!--\n  Generated template for the ExamsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Exámenes</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="exam-list">\n  <ion-card>\n      <ion-card-header class="storeCardHeader">\n        <ion-icon name="school"></ion-icon>\n      </ion-card-header>\n\n      <div class="card-header">\n        <ion-row >\n          <ion-col width-100>\n            <span>Exámenes Disponibles</span>\n          </ion-col>\n        </ion-row>\n      </div>\n    <ion-list>\n      <!--on-changes-->\n        <ion-item-sliding>\n            <button ion-item (click)="goToExamListPage()">\n                <h2>SIMPLES</h2>\n                <p>Preguntas de toda la norma de forma aleatoria</p>\n            </button>\n            <button ion-item (click)="goToExamListCatPage()">\n              <h2>CATEGORIZADOS</h2>\n              <p>Preguntas por Categoría de Competencia</p>\n          </button>\n        </ion-item-sliding>\n      <!--/on-changes-->\n    </ion-list>\n  </ion-card>\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exams\exams.html"*/,
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]) === "function" && _b || Object])
-], ExamsPage);
-
-var _a, _b;
-//# sourceMappingURL=exams.js.map
-
-/***/ }),
-
-/***/ 296:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExamListCatPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exam_details_exam_details__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_db_service__ = __webpack_require__(16);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the ExamListCatPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var ExamListCatPage = (function () {
-    function ExamListCatPage(nav, navParams, dbService) {
-        this.nav = nav;
-        this.navParams = navParams;
-        this.dbService = dbService;
-        this.nav = nav;
-        //this.dbService = DbService;
-        this.source = navParams.get('readySource');
-        this.user = navParams.get('user');
-        this.adId = navParams.get('adId');
-        //console.log(source);
-    }
-    ExamListCatPage.prototype.ionViewWillEnter = function () {
-        var _this = this;
-        this.dbService.findAllEnabledExamsNested().then(function (data) {
-            _this.exams = data;
-        });
-    };
-    ExamListCatPage.prototype.itemTapped = function (event, exam) {
-        this.nav.push(__WEBPACK_IMPORTED_MODULE_2__exam_details_exam_details__["a" /* ExamDetailsPage */], {
-            exam: exam,
-            source: this.source,
-            user: this.user,
-            adId: this.adId,
-        });
-    };
-    return ExamListCatPage;
-}());
-ExamListCatPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPage */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-exam-list-cat',template:/*ion-inline-start:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-list-cat\exam-list-cat.html"*/'<!--\n  Generated template for the ExamListCatPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Exámenes por Categoría</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="exam-list">\n  <ion-card>\n      <ion-card-header class="storeCardHeader">\n        <ion-icon name="school"></ion-icon>\n      </ion-card-header>\n\n      <div class="card-header">\n        <ion-row >\n          <ion-col width-100>\n            <span>Exámenes Disponibles</span>\n          </ion-col>\n        </ion-row>\n      </div>\n    <ion-list>\n      <!--on-changes-->\n        <ion-item-sliding *ngFor="let exam of exams" >\n            <button ion-item (click)="itemTapped($event, exam)">\n                <ion-icon item-left name="{{exam.Icon}}" >\n                </ion-icon>\n                <h2>{{exam.ExamTitle}}</h2>\n                <p>Preguntas: {{exam.Qty}}, Tiempo: {{exam.Duration}}s</p>\n                <p>Puntaje Min.: {{exam.MinScore}}%</p>\n            </button>\n        </ion-item-sliding>\n      <!--/on-changes-->\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Jair Acevedo\IONIC_PROJECTS\Quizionic2Evanto\Quiz_IPMA_001\src\pages\exam-list-cat\exam-list-cat.html"*/,
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_db_service__["a" /* DbService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_db_service__["a" /* DbService */]) === "function" && _c || Object])
-], ExamListCatPage);
-
-var _a, _b, _c;
-//# sourceMappingURL=exam-list-cat.js.map
-
-/***/ }),
-
-/***/ 52:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoreService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mock_store__ = __webpack_require__(283);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__db_service__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(6);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var androidApplicationLicenseKey;
-var productIds;
-var existing_purchases;
-var product_info;
-var productType;
-var StoreService = (function () {
-    function StoreService(dbservice, platform) {
-        var _this = this;
-        this.dbservice = dbservice;
-        this.platform = platform;
-        this.dbservice = dbservice;
-        this.platform.ready().then(function (readySource) { _this.source = readySource; });
-        // Set androidApplicationLicenseKey for In App Purchase, please change this value with yours.
-        androidApplicationLicenseKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAko8kYFsrb66OCiGz4K7OvRBlngHS0fvGuHED1xqsmdngpyUUruvK/bfd1RcINevfnilc972OtR+i/mnOO3UIMYsANyOmH0l5ZTxWyiNQ1EGKOM6VxAuTosdLrwCHYbhU6gFaHdCoC26hIGv2xFcWLuyr9mg3mTt5kt/kcMlM5f7qOgZsttgbc98BU/BGaNurOO2mcWzFkfqcpsaBQylPvjY1RGDvsEoOKDwMjR+vrlTlwJ3LDMwWWcmFQd/OgaFwEfIvqeJUnePQYQGAvPD24E8cHqwZZk0xPkBdB9KLxqCyqzPvo4wkPWUD2ZEfVK4E65xjX2BB0l7NWgAoZpilUwIDAQAB";
-        // Set productIds with exactly same names as in your store (Google/Itunes)!
-        productIds = ["quiz2_exam_x3", "quiz2_exam_x1", "quiz2_expla_x5", "quiz2_expla_x10", "quiz2_expla_x50", "quiz2_f_version", "quiz2_no_ads"];
-        // For each listed product in productIds array, corresponds a productType below, either as consumable or non_consumable.
-        productType = ["non_consumable", "non_consumable", "consumable", "consumable", "consumable", "non_consumable", "non_consumable"];
-        // Some variables reserved for product management
-        existing_purchases = [];
-        product_info = [];
-    }
-    StoreService.prototype.init = function () {
-        // Initialize InAppPurchase (IAP) plugin
-        // if we are on device, we use IAP plugin, otherwise we simulate it in browser
-        try {
-            if (typeof iap != 'undefined') {
-                // Set up de AndroidBillingKey for IAP Plugin
-                iap.setUp(androidApplicationLicenseKey);
-                // Request product list
-                iap.requestStoreListing(productIds, function (result) {
-                    for (var i = 0; i < result.length; ++i) {
-                        var p = result[i];
-                        product_info[i] = { productId: p.productId, title: p.title, price: p.price, description: p.description, type: productType[productIds.indexOf(p.productId)] };
-                    }
-                }, function (error) {
-                    // error to use store
-                    alert("Store not available at this time: " + error);
-                });
-            }
-        }
-        catch (err) {
-            console.log('No IAP Plugin, using PRODUCTS mock');
-        }
-    };
-    StoreService.prototype.findAll = function () {
-        // retrieve all available products
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].create(function (observer) {
-            // We check if we are on device and IAP plugin is available
-            try {
-                if (iap) {
-                    observer.next(product_info);
-                }
-            }
-            catch (err) {
-                // if we are in browser, then we get product list from PRODUCTS "JSON" file
-                console.log('FOR BROWSER ONLY');
-                observer.next(__WEBPACK_IMPORTED_MODULE_1__mock_store__["a" /* PRODUCTS */]);
-            }
-            observer.complete();
-        });
-    };
-    StoreService.prototype.purchaseProduct = function (product, resultCallback, errorCallback) {
-        var _this = this;
-        // Proceed with product purchase
-        if (typeof iap != 'undefined') {
-            iap.purchaseProduct(product.productId, function (result) {
-                //alert("Product purchased: "+product.productId);
-                // Check if product is consumable and therefore call consumeProduct
-                if (product.type === 'consumable') {
-                    _this.consumeProduct(product);
-                }
-                else {
-                    if (product.productId == "quiz2_f_version") {
-                        //We call all the actions to be taken when purchasing the full Version
-                        //This may be different in your case depending your needs.
-                        _this.dbservice.setProperty('fullversion', 'true');
-                        _this.dbservice.setFullVersion();
-                        _this.dbservice.setProperty('admob', 'false');
-                    }
-                    if (product.productId == "quiz2_no_ads") {
-                        //This is the action that we call when purchasing this product No Ads.
-                        _this.dbservice.setProperty('admob', 'false');
-                    }
-                    if (product.productId == "quiz2_exam_x1") {
-                        //This is the action that we call when purchasing this product Exam x1.
-                        _this.dbservice.unlockExamById(4); //Exam Id shall be passed as parameter
-                    }
-                    if (product.productId == "quiz2_exam_x3") {
-                        //This is the action that we call when purchasing this product Exam x3.
-                        _this.dbservice.unlockExamById(4); //Exam Id shall be passed as parameter
-                        _this.dbservice.unlockExamById(5); //Exam Id shall be passed as parameter
-                        _this.dbservice.unlockExamById(6); //Exam Id shall be passed as parameter
-                    }
-                }
-                return resultCallback("PurchasedDone");
-            }, function (error) {
-                console.log("error: " + error);
-                return errorCallback("noProductIdPurchased");
-            });
-        }
-        else {
-            alert("Product purchased (Simulated): " + product.productId);
-            if (product.type === 'consumable') {
-                this.consumeProduct(product);
-            }
-            else {
-                if (product.productId == "quiz2_f_version") {
-                    alert('full version purchased');
-                    this.dbservice.setProperty('fullversion', 'true');
-                    this.dbservice.setFullVersion();
-                    this.dbservice.setProperty('admob', 'false');
-                }
-                if (product.productId == "quiz2_no_ads") {
-                    alert('no ads purchased');
-                    this.dbservice.setProperty('admob', 'false');
-                }
-                if (product.productId == "quiz2_exam_x1") {
-                    alert('Exam ID: 4 Unlocked');
-                    this.dbservice.unlockExamById(4);
-                } //Exam Id shall be passed as parameter
-                if (product.productId == "quiz2_exam_x3") {
-                    //This is the action that we call when purchasing this product Exam x3.
-                    alert('Exams ID: 4/5/6 Unlocked');
-                    this.dbservice.unlockExamById(4); //Exam Id shall be passed as parameter
-                    this.dbservice.unlockExamById(5); //Exam Id shall be passed as parameter
-                    this.dbservice.unlockExamById(6); //Exam Id shall be passed as parameter
-                }
-            }
-            console.log("Simulating Purchasing of product: " + product.productId);
-            return resultCallback("PurchasedDone");
-        }
-    };
-    StoreService.prototype.consumeProduct = function (product) {
-        var _this = this;
-        // Consume purchased product when consumable type is detected
-        if (typeof iap != 'undefined') {
-            iap.consumeProduct(product.productId, function (result) {
-                //alert("Consumed Product: "+product.productId);
-                _this.updateConsumable(product);
-            }, function (error) {
-                console.log("error: " + error);
-            });
-        }
-        else {
-            this.updateConsumable(product);
-            console.log("Simulating consume product: " + product.productId);
-        }
-    };
-    StoreService.prototype.restorePurchases = function () {
-        var _this = this;
-        // Restore all purchases
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].create(function (observer) {
-            if (_this.source == 'cordova') {
-                if (typeof iap != 'undefined') {
-                    iap.restorePurchases(function (result) {
-                        console.log('Restore log: ' + JSON.stringify(result));
-                        for (var i = 0; i < result.length; ++i) {
-                            var p = result[i];
-                            if (result[i].productId == "quiz2_f_version") {
-                                alert('full version restored');
-                                _this.dbservice.setProperty('fullversion', 'true');
-                                _this.dbservice.setFullVersion();
-                                _this.dbservice.setProperty('admob', 'false');
-                            }
-                            if (result[i].productId == "quiz2_no_ads") {
-                                alert('no ads restored');
-                                _this.dbservice.setProperty('admob', 'false');
-                            }
-                            if (result[i].productId == "quiz2_exam_x1") {
-                                //This is the action that we call when purchasing this product Exam x1.
-                                _this.dbservice.unlockExamById(4); //Exam Id shall be passed as parameter
-                                alert('Exam Id 4: Restored');
-                            }
-                            if (result[i].productId == "quiz2_exam_x3") {
-                                //This is the action that we call when purchasing this product Exam x3.
-                                _this.dbservice.unlockExamById(4); //Exam Id shall be passed as parameter
-                                _this.dbservice.unlockExamById(5); //Exam Id shall be passed as parameter
-                                _this.dbservice.unlockExamById(6); //Exam Id shall be passed as parameter
-                                alert('Exam Id 4/5/6: Restored');
-                            }
-                            if (existing_purchases.indexOf(p['productId']) === -1)
-                                existing_purchases.push(p['productId']);
-                        }
-                        observer.next(existing_purchases);
-                    }, function (error) {
-                        alert("Error when attempting to restore purchases: " + error);
-                    });
-                }
-            }
-            else {
-                // Simulate store restore when in browser execution
-                for (var i = 0; i < __WEBPACK_IMPORTED_MODULE_1__mock_store__["a" /* PRODUCTS */].length; ++i) {
-                    var p = __WEBPACK_IMPORTED_MODULE_1__mock_store__["a" /* PRODUCTS */][i];
-                    if (existing_purchases.indexOf(p['productId']) === -1)
-                        existing_purchases.push(p['productId']);
-                    console.log("productId: " + p['productId']);
-                }
-                observer.next(existing_purchases);
-            }
-        });
-    };
-    StoreService.prototype.getConsumableQuantity = function (name) {
-        return this.dbservice.getProperty(name);
-    };
-    StoreService.prototype.updateConsumable = function (product) {
-        var _this = this;
-        var value, consumable;
-        var addQuantity = 0;
-        // determine the consumable
-        switch (product.productId) {
-            case 'quiz2_expla_x5':
-                addQuantity = 5; // this has to corresponds with the product id configured in productIds array
-                consumable = 'explanationq';
-                break;
-            case 'quiz2_expla_x10':
-                addQuantity = 10;
-                consumable = 'explanationq';
-                break;
-            case 'quiz2_expla_x50':
-                addQuantity = 50;
-                consumable = 'explanationq';
-                break;
-        }
-        // obtain consumbable remaining amount
-        this.dbservice.getProperty(consumable).then(function (data) {
-            // increase consumbable quantity based on purchased item
-            value = Number(data) + addQuantity;
-            // update database accordingly
-            return _this.dbservice.setProperty(consumable, value.toString()).then(function (result) {
-                alert('You have added: ' + addQuantity + " explanations. Qty left: " + value.toString());
-            });
-        });
-    };
-    StoreService.prototype.findById = function (id) {
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].create(function (observer) {
-            observer.next(__WEBPACK_IMPORTED_MODULE_1__mock_store__["a" /* PRODUCTS */][id - 1]);
-            observer.complete();
-        });
-    };
-    return StoreService;
-}());
-StoreService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__db_service__["a" /* DbService */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["o" /* Platform */]])
-], StoreService);
-
-//# sourceMappingURL=store-service.js.map
 
 /***/ })
 
-},[212]);
+},[215]);
 //# sourceMappingURL=main.js.map

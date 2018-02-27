@@ -35,7 +35,8 @@ declare var window: any;
 
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  rootPage: any = WelcomePage;
+  // rootPage: any = WelcomePage;
+  rootPage: any = TutorialPage;
   pages: Array<{title: string, component: any, icon: string, paid: number}>;
   private readySource: any;
   dbService: any;
@@ -65,8 +66,9 @@ export class MyApp {
       this.pages = [
           {title: 'Bienvenido', component: WelcomePage, icon: 'bookmark', paid: 0},
           // {title: 'Exámenes', component: ExamListPage, icon: 'cube', paid: 0},
+          {title: 'Tutorial', component: TutorialPage, icon: 'cube', paid: 0},
           {title: 'Exámenes', component: ExamsPage, icon: 'cube', paid: 0},
-          {title: 'Resultados', component: TrackerListPage, icon: "arrow-graph-up-right", paid: 1},
+          {title: 'Resultados', component: TrackerListPage, icon: "arrow-graph-up-right", paid: 0},
           {title: 'Más Info', component: MasInfoPage, icon: "arrow-graph-up-right", paid: 0},
           // {title: 'Tienda', component: StoreListPage, icon: "card", paid: 0},
           // {title: 'PIN', component: Pin, icon: "card", paid: 0}

@@ -1,3 +1,46 @@
 page-tutorial {
 
+    .tutorial-page{
+        background-color: #fff !important;
+    }
+
+    .toolbar-background {
+        background: rgb(224, 229, 248);
+        border-color: transparent;
+      }
+    
+      .slide-zoom {
+        height: 100%;
+      }
+    
+      .slide-title {
+        margin-top: 2.8rem;
+      }
+    
+      .slide-image {
+        // max-height: 40%;
+        // max-width: 50%;
+        max-height: 230px;
+        margin: 18px 0;
+      }
+
+      .slide {
+        background-color: map-get($colors,light) !important;
+      }
+    
+      b {
+        font-weight: 500;
+      }
+    
+      p {
+        padding: 0 40px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: rgb(31, 30, 30);
+    
+        b {
+          color: #000000;
+        }
+      }
+
 }

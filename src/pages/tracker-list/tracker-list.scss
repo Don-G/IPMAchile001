@@ -43,9 +43,9 @@ tracker-list {
   }
 
   ion-list .item {
-    border-bottom: none;
-    border-bottom-style: solid;
-    border-bottom-width: 1px !important;
+    // border-bottom: none;
+    // border-bottom-style: solid;
+    // border-bottom-width: 1px !important;
     border-bottom-color: map-get($colors, primary) !important;
     background-color: map-get($colors,light) !important;
     color: map-get($colors, dark);
@@ -59,9 +59,9 @@ tracker-list {
     border-bottom-style: solid;
     border-bottom-color: map-get($colors, light);
   }
-}
 
-.item {
+
+  .item {
     align-items: baseline;
 }
 
@@ -69,3 +69,8 @@ tracker-list {
     align-self: flex-end;
     text-align: right;
 }
+
+
+}
+
+

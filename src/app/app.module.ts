@@ -29,6 +29,7 @@ import { ListReviewPage } from '../pages/list-review/list-review';
 import { DetailReviewPage } from '../pages/detail-review/detail-review';
 import { ExamsPage } from '../pages/exams/exams';
 import { ExamListCatPage } from '../pages/exam-list-cat/exam-list-cat';
+import { TutorialPage } from '../pages/tutorial/tutorial';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { ExamListCatPage } from '../pages/exam-list-cat/exam-list-cat';
     ListReviewPage,
     DetailReviewPage,
     ExamsPage,
+    TutorialPage,
     ExamListCatPage
 
   ],
@@ -75,6 +77,7 @@ import { ExamListCatPage } from '../pages/exam-list-cat/exam-list-cat';
     ListReviewPage,
     DetailReviewPage,
     ExamsPage,
+    TutorialPage,
     ExamListCatPage
   ],
   providers: [
