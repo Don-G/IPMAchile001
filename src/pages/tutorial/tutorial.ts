@@ -25,7 +25,7 @@ export class TutorialPage {
     },
     {
       title: "¿Qué es la Certificación IPMA?",
-      description: "Sistema internacional de Certificación de Competencias de un individuo en cuanto a la <b>Gestión de Proyectos</b> que cuenta con 4 niveles: <b>Nivel A</b> (Director de Cartera o Programas de Proyectos), <b>Nivel B</b> (Director de Proyecto), <b>Nive C</b> (Profesional de la Dirección y Gestión de Proyectos) y <b>Nivel D</b> (Gestor en Dirección de Proyectos)",
+      description: "Sistema internacional de Certificación de Competencias de un individuo en cuanto a la <b>Gestión de Proyectos</b> que cuenta con 4 niveles",
       image: "assets/img/logo.jpg",
     },
     {

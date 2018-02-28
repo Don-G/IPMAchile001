@@ -27,6 +27,7 @@ import { LoadingController } from 'ionic-angular';
 enableProdMode();
 
 declare var window: any;
+let introShown: any;
 
 @Component({
   selector: 'app',
@@ -38,7 +39,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   rootPage: any = WelcomePage;
   loader: any;
-  introShown: any;
+  
   // rootPage: any = TutorialPage;
   pages: Array<{title: string, component: any, icon: string, paid: number}>;
   private readySource: any;
@@ -71,13 +72,13 @@ export class MyApp {
  
     this.platform.ready().then(() => {
  
-      this.storage.get(this.introShown).then((result) => {
+      this.storage.get(introShown).then((result) => {
  
         if(result){
           this.rootPage = WelcomePage;
         } else {
           this.rootPage = TutorialPage;
-          this.storage.set(this.introShown, true);
+          this.storage.set(introShown, true);
         }
  
         this.loader.dismiss();
