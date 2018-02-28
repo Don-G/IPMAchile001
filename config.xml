@@ -2,7 +2,7 @@
 <widget id="com.ipma.quiz1" version="2.8.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>IPMA chile</name>
     <description>Simulador de Exámen IPMA Nivel D y C</description>
-    <author email="oscar.jair.it@gmail.com" href="#">Oscar Acevedo</author>
+    <author email="oscar.jair.it@gmail.com" href="https://www.linkedin.com/in/oscar-jair-acevedo-95085ba2/">Oscar Acevedo</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
