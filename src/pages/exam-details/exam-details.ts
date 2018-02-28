@@ -239,26 +239,29 @@ export class ExamDetailsPage {
           subTitle: subTit,
           buttons: [
             {
-              text: 'Ver resumen',
+              text: 'OK',
               handler: () => {
                 _examOver = true;
                 let alertTransition = alert.dismiss();
                 alertTransition.then(()=>{
-                  this.nav.pop();
+                  // this.nav.pop();
                 //   this.navCtrl.push(SecondPage, {
                 //     param1: 'John', param2: 'Johnson'
                 // });
                   console.log(this.answersReview);
-                  this.navCtrl.push(ListReviewPage, this.answersReview);
+                  // this.navCtrl.push(ListReviewPage, this.answersReview);
                   // this.nav.push(ListReviewPage);
                   // this.nav.push(ListReviewPage) // ver resumen de buenas y malas obligado
                 });
                 return false;
+                
               }
           },
       ]
       });
       alert.present();
+      this.nav.pop();
+      this.navCtrl.push(ListReviewPage, this.answersReview);
     }
 
    

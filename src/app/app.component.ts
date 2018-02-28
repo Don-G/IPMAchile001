@@ -21,6 +21,7 @@ import { ListReviewPage } from '../pages/list-review/list-review';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { ExamsPage } from '../pages/exams/exams';
 
+import { LoadingController } from 'ionic-angular';
 
 
 enableProdMode();
@@ -35,8 +36,10 @@ declare var window: any;
 
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  // rootPage: any = WelcomePage;
-  rootPage: any = TutorialPage;
+  rootPage: any = WelcomePage;
+  loader: any;
+  introShown: any;
+  // rootPage: any = TutorialPage;
   pages: Array<{title: string, component: any, icon: string, paid: number}>;
   private readySource: any;
   dbService: any;
@@ -59,9 +62,32 @@ export class MyApp {
     private statusBar: StatusBar,
     private splashScreen: SplashScreen,
     private analytics: GoogleAnalytics,
-    private admob: AdMob
+    private admob: AdMob,
+    public loadingCtrl: LoadingController
 
   ) {
+
+    this.presentLoading();
+ 
+    this.platform.ready().then(() => {
+ 
+      this.storage.get(this.introShown).then((result) => {
+ 
+        if(result){
+          this.rootPage = WelcomePage;
+        } else {
+          this.rootPage = TutorialPage;
+          this.storage.set(this.introShown, true);
+        }
+ 
+        this.loader.dismiss();
+ 
+      });
+ 
+    });
+
+
+
       //set app's pages. paid = 0, option always present in menu, paid = 1, only displayed in full version
       this.pages = [
           {title: 'Bienvenido', component: WelcomePage, icon: 'bookmark', paid: 0},
@@ -81,6 +107,16 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.initializeApp();
       //this.loadProfile(1);
+    }
+
+    presentLoading() {
+ 
+      this.loader = this.loadingCtrl.create({
+        content: "Cargando..."
+      });
+   
+      this.loader.present();
+   
     }
 
 
@@ -235,5 +271,8 @@ export class MyApp {
          }
 
     }
+
+
+    
 
 }
